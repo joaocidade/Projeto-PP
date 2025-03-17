@@ -59,3 +59,21 @@ h1 {
     height: 100px;
     width: 100px;
 }
+main #sobre_nos{
+    width: 100%;
+    height: 500px;
+    background-color: red;
+    display: block;
+}
+#sobre_nos #texto{
+    width: 50%;
+    height: 500px;
+    background-color: blue;
+}
+#texto h1{
+    color: white;
+}
+#texto p{
+    color: white;
+    font-size: 20px;
+}
