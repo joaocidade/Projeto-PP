@@ -1,0 +1,61 @@
+header{
+    height: 10px;
+    width: 10px;
+}
+main{
+    height: 1000px;
+    width: 100%;
+    border: 1px solid;
+}
+#cards{
+    border-color: red 1;
+    border: solid 1px;
+    height: 500px;
+    width: 100%;
+    display: flex ;
+    
+}
+h1 {
+    text-align: center;
+} 
+.card{
+    width: 300px;
+    height: 100px;
+
+}
+#transcrição_de_texto{
+    margin: 15px;
+}
+#leitor_de_libras{
+    margin: 15px;
+
+}
+#hub_educacional{
+    margin: 15px;
+}
+#reconhecimento_de_voz{
+    margin: 15px;
+}
+.card-body{
+    border-radius: 20px;
+    text-align: center;
+    background-color:#1E2933;
+    color: #768FA5 ;
+    box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.75) ;
+}
+#book{
+    height: 100px;
+    width: 100px;
+}
+#document{
+    height: 100px;
+    width: 100px;
+}
+#telephone{
+    height: 100px;
+    width: 100px;
+}
+#voice{
+    height: 100px;
+    width: 100px;
+}
