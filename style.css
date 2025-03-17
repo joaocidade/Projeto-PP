@@ -8,13 +8,15 @@
     position: fixed;
     height: 90px;
     width: 100%;
-    background-image: url(./ArquivosHeader/Design\ sem\ nome.png);
+    background-image: url(./ArquivosHeader/Header.png);
     background-size: 100%;
     transition: all 0.3s ease;
     z-index: 1000;
 }
 
 #logo{
+    width: 70px;
+    margin-top: 5px;
     margin-left: 60px;
     transition: all 0.3s ease;
 }
@@ -28,6 +30,7 @@
     padding-right: 10px;
     border-radius: 5px;
     border: 0px;
+    margin-top: 17.5px;
     transition: all 0.3s ease;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -37,16 +40,16 @@
     color: white;
     margin-right: 30px;
     transition: all 0.3s ease;
+    margin-top: 22.5px;
 }
 
 main{
     height: 1000px;
     width: 100%;
     border: 1px solid;
+    padding-top: 100px;
 }
 #cards{
-    border-color: red 1;
-    border: solid 1px;
     height: 500px;
     width: 100%;
     display: flex ;
