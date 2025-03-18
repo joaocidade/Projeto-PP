@@ -10,12 +10,10 @@
     color: white;
     text-align: center;
 }
-h1{
-    
-}
+
 h2{
     text-align: center;
-    margin:30px;
+    margin:25px;
     font-size: 30px;
     color: white;
 }
@@ -31,4 +29,8 @@ label{
 input{
     border-radius: 10px;
     background-color: whitesmoke;
+}
+#button{
+    width: 130px;
+    height: 20px;
 }
