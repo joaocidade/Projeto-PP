@@ -48,6 +48,8 @@ main{
     width: 100%;
     border: 1px solid;
     padding-top: 100px;
+    background-color: #358E8B;
+    
 }
 #cards{
     height: 500px;
@@ -61,20 +63,27 @@ h1 {
 .card{
     width: 300px;
     height: 100px;
-
+    
 }
 #transcrição_de_texto{
     margin: 15px;
+    border: none;
+    background-color: transparent;
 }
 #leitor_de_libras{
     margin: 15px;
-
+    border: none;
+    background-color: transparent;
 }
 #hub_educacional{
     margin: 15px;
+    border: none;
+    background-color: transparent;
 }
 #reconhecimento_de_voz{
     margin: 15px;
+    border: none;
+    background-color: transparent;
 }
 .card-body{
     border-radius: 20px;
@@ -82,6 +91,7 @@ h1 {
     background-color:#1E2933;
     color: #768FA5 ;
     box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.75) ;
+    
 }
 #book{
     height: 100px;
@@ -98,6 +108,7 @@ h1 {
 #voice{
     height: 100px;
     width: 100px;
+    
 }
 main #sobre_nos{
     width: 100%;
