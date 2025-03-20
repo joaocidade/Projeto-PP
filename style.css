@@ -1,0 +1,42 @@
+header{
+    height: 10px;
+    width: 10px;
+}
+main{
+    height: 1000px;
+    width: 100%;
+    border: 1px solid;
+}
+#cards{
+    border-color: red 1;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    margin: 150px;
+}
+h1 {
+    text-align: center;
+}
+.card{
+    display: flex;
+    width: 200PX;
+    height: 450px;
+    align-content: center;
+}
+#cd_aluno{
+    margin: 10px;
+}
+#cd_professor{
+    margin: 10px;
+ 
+}
+#cd_escola{
+    margin: 10px;
+}
+.card-body{
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    background-color: rgb(1, 41, 1);
+    color: white;
+}
