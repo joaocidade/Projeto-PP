@@ -20,6 +20,8 @@ footer {
 
 background-color: rgb(7, 7, 28);
 height: 200px;
+margin-top: 80px;
+padding-top: 203px;
 
 }
 
@@ -42,10 +44,12 @@ height: 200px;
 
     display: flex;
     color: whitesmoke;
-    padding-left: 160px;
+    padding-left: 185px;
     margin-right: 800px;
+    padding-top: 10px;
     position: fixed;
     position: absolute;
+    text-shadow: 2px 3px 2px black;
     
 }
 
@@ -61,6 +65,7 @@ height: 200px;
     list-style: none;
     color: whitesmoke;
     width: 200px;
+    text-shadow: 2px 3px 2px black;
 
 }
 
@@ -76,6 +81,7 @@ height: 200px;
     list-style: none;
     color: whitesmoke;
     width: 200px;
+    text-shadow: 2px 3px 2px black;
 
 }
 
@@ -85,13 +91,13 @@ margin-left: 600px;
 display: flex;
 padding-right: 600px;
 margin-top: -130px;
-margin-bottom: 150px;
+
 
 }
 
 .td{
 
-    margin-top: 60px; 
+
 
 }
 
