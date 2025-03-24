@@ -14,14 +14,14 @@
     z-index: 1000;
 }
 
-#logo{
+#header #logo{
     width: 70px;
     margin-top: 5px;
     margin-left: 60px;
     transition: all 0.3s ease;
 }
 
-#cadastro{
+#header #cadastro{
     float: right;
     margin-right: 30px;
     background-color: #5ce1e6;
@@ -35,7 +35,7 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#entre{
+#header #entre{
     float: right;
     color: white;
     margin-right: 30px;
@@ -44,87 +44,100 @@
 }
 
 main{
-    height: 1000px;
+    height: auto;
     width: 100%;
-    border: 1px solid;
     padding-top: 100px;
     background-color: #358E8B;
-    
 }
-#cards{
-    height: 500px;
-    width: 100%;
-    display: flex ;
-    
-}
-h1 {
+
+#funcionalidades h1 {
     text-align: center;
 } 
-.card{
+
+#funcionalidades #cards_funcionalidades{
+    height: 500px;
+    width: 100%;
+    display: flex ; 
+}
+
+#funcionalidades #cards_funcionalidades .card_funcionalidade{
     width: 300px;
     height: 100px;
-    
-}
-#transcrição_de_texto{
     margin: 15px;
     border: none;
     background-color: transparent;
 }
-#leitor_de_libras{
-    margin: 15px;
-    border: none;
-    background-color: transparent;
-}
-#hub_educacional{
-    margin: 15px;
-    border: none;
-    background-color: transparent;
-}
-#reconhecimento_de_voz{
-    margin: 15px;
-    border: none;
-    background-color: transparent;
-}
-.card-body{
+
+.card_funcionalidade .card-body{
     border-radius: 20px;
     text-align: center;
     background-color:#1E2933;
     color: #768FA5 ;
     box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.75) ;
-    
 }
-#book{
+
+.card-body img{
     height: 100px;
     width: 100px;
 }
-#document{
-    height: 100px;
-    width: 100px;
-}
-#telephone{
-    height: 100px;
-    width: 100px;
-}
-#voice{
-    height: 100px;
-    width: 100px;
-    
-}
-main #sobre_nos{
+
+#sobre_nos{
     width: 100%;
     height: 500px;
     background-color: red;
     display: block;
 }
+
 #sobre_nos #texto{
     width: 50%;
     height: 500px;
     background-color: blue;
 }
-#texto h1{
+
+#sobre_nos #texto h1{
     color: white;
 }
-#texto p{
+
+#sobre_nos #texto p{
     color: white;
     font-size: 20px;
+}
+
+#cadastro h1{
+    text-align: center;
+}
+
+#cadastro #cards{
+    border-color: red 1;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    margin: 150px;
+}
+
+#cadastro #cards .card{
+    display: flex;
+    width: 200PX;
+    height: 450px;
+    align-content: center;
+}
+
+#cards #cd_aluno{
+    margin: 10px;
+}
+
+#cards #cd_professor{
+    margin: 10px;
+}
+
+#cards #cd_escola{
+    margin: 10px;
+}
+
+.card .card-body{
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    background-color: rgb(1, 41, 1);
+    color: white;
 }
