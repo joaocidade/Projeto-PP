@@ -1,0 +1,25 @@
+body{
+    height: 1000px;
+    width: 100%;
+    background-color: gainsboro;
+}
+#apresentação{
+    height: 300px;
+    width: 700px;
+    border: 1px red solid;
+    text-align: center;
+    background-color: #358E8B;
+    align-content: center;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.75) ;
+}
+#dash{
+    height: 800px;
+    width: 100%;
+    border: 1px red solid;
+    margin-top: 10px;
+}
+#dash h2{
+    text-align: center;
+}
