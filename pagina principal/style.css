@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 #header{
     display: block;
     position: fixed;
@@ -48,6 +49,7 @@ main{
     width: 100%;
     padding-top: 100px;
     background-color: #358E8B;
+    border: 2px solid transparent;
 }
 
 #funcionalidades h1 {
