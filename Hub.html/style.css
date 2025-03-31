@@ -38,11 +38,17 @@ body{
 Aqui agora são as config do site da parte header.
 **/
 
+
+header{
+
+    padding-top: 40px;
+    background-color: #393939;
+
+}
+
 .txtinitial{
 
-    margin-left: 80px;
-    border: 2px solid transparent;
-    margin-right: 750px;
+    text-align: center;
     margin-top: 40px;
 
 }
@@ -53,7 +59,6 @@ Aqui agora são as config do site da parte header.
     font-weight: 500;
     margin-top: 20px;
     margin-left: 80px;
-    border: 2px solid transparent;
     margin-right: 750px;
 
 }
@@ -64,4 +69,151 @@ Aqui será o css do main.
 **/
 
 
+.vds{
+
+    margin-top: 50px;
+    height: 300px;
+    width: 99.5%;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.vds .caixa1{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid red;
+    border-radius: 50px;
+    margin-left: 0px;
+    text-align: center;
+
+}
+
+.vds .caixa2{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid red;
+    border-radius: 50px;
+    margin-left: 60px;
+    text-align: center;
+
+}
+
+.vds .caixa3{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid red;
+    border-radius: 50px;
+    margin-left: 60px;
+    text-align: center;
+
+}
+
+.aud{
+
+    margin-top: 200px;
+    height: 300px;
+    width: 99.5%;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+.aud .caixa4{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid red;
+    border-radius: 50px;
+    margin-left: 0px;
+    text-align: center;
+
+}
+
+.aud .caixa5{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid red;
+    border-radius: 50px;
+    margin-left: 60px;
+    text-align: center;
+
+}
+
+.aud .caixa6{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid red;
+    border-radius: 50px;
+    margin-left: 60px;
+    text-align: center;
+
+}
+
+.lib{
+
+    margin-top: 200px;
+    height: 300px;
+    width: 99.5%;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+.lib .caixa7{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid red;
+    border-radius: 50px;
+    margin-left: 0px;
+    text-align: center;
+
+}
+
+.lib .caixa8{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid red;
+    border-radius: 50px;
+    margin-left: 60px;
+    text-align: center;
+
+}
+
+.lib .caixa9{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid red;
+    border-radius: 50px;
+    margin-left: 60px;
+    text-align: center;
+
+}
 
