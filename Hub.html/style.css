@@ -38,9 +38,30 @@ body{
 Aqui agora são as config do site da parte header.
 **/
 
+.txtinitial{
 
+    margin-left: 80px;
+    border: 2px solid transparent;
+    margin-right: 750px;
+    margin-top: 40px;
+
+}
+
+.textinitial p{
+
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-left: 80px;
+    border: 2px solid transparent;
+    margin-right: 750px;
+
+}
 
 
 /**
 Aqui será o css do main.
 **/
+
+
+
