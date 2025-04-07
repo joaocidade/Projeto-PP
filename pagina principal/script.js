@@ -12,9 +12,10 @@ window.addEventListener('scroll', () => {
         entre.style.marginTop = '-5px';
 
     } else {
-        header.style.marginTop = '-0px';
-        logo.style.width = '70px';
-        logo.style.marginTop = '5px';
+        header.style.marginTop = '-5px';
+        logo.style.width = '60px';
+        logo.style.marginTop = '11px';
+        logo.style.marginBottom = '7px';
         cadastro.style.marginTop = '17.5px';
         entre.style.marginTop = '22.5px';
     }
