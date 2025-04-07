@@ -38,11 +38,17 @@ body{
 Aqui agora são as config do site da parte header.
 **/
 
+*{
+
+    list-style: none;
+    text-decoration: none;
+
+}
 
 header{
 
     padding-top:  20px;
-    background-color: #4093ff;
+    background-color: #878787;
     color: whitesmoke;
     border: 8px solid #393939;
 
@@ -77,17 +83,49 @@ header{
 Aqui será o css do main.
 **/
 
+.vds a{
+
+    color: black;
+    font-size: 200%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateY(160%);
+    
+}
+
+.aud a{
+
+    color: black;
+    font-size: 200%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateY(160%);
+
+}
+
+.lib a{
+
+    color: black;
+    font-size: 200%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateY(160%);
+
+}
 
 .vds{
 
     margin-top: 50px;
     height: 300px;
     width: 99.5%;
-    border: 2px solid rgb(66, 0, 0);
+    border: 2px solid rgb(0, 3, 33);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(52, 137, 216);
+    background-color: rgb(44, 60, 75);
 
 }
 
@@ -96,7 +134,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid rgb(0, 3, 33);
     border-radius: 50px;
     margin-left: 0px;
     text-align: center;
@@ -109,7 +147,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid rgb(0, 3, 33);
     border-radius: 50px;
     margin-left: 60px;
     text-align: center;
@@ -122,7 +160,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid rgb(0, 3, 33);
     border-radius: 50px;
     margin-left: 60px;
     text-align: center;
@@ -140,7 +178,7 @@ Aqui será o css do main.
     justify-content: center;
     text-align: center;
     align-items: center;
-    background-color: rgb(52, 137, 216);
+    background-color: rgb(44, 60, 75);
 
 }
 
@@ -149,7 +187,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid rgb(0, 3, 33);
     border-radius: 50px;
     margin-left: 0px;
     text-align: center;
@@ -162,7 +200,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid rgb(0, 3, 33);
     border-radius: 50px;
     margin-left: 60px;
     text-align: center;
@@ -175,7 +213,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid rgb(0, 3, 33);
     border-radius: 50px;
     margin-left: 60px;
     text-align: center;
@@ -193,7 +231,7 @@ Aqui será o css do main.
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgb(52, 137, 216);
+    background-color: rgb(44, 60, 75);
 
 }
 
@@ -203,7 +241,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid rgb(0, 3, 33);
     border-radius: 50px;
     margin-left: 0px;
     text-align: center;
@@ -216,7 +254,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid rgb(0, 3, 33);
     border-radius: 50px;
     margin-left: 60px;
     text-align: center;
@@ -229,7 +267,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid rgb(0, 3, 33);
     border-radius: 50px;
     margin-left: 60px;
     text-align: center;
