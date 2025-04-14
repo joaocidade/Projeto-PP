@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 
@@ -61,8 +61,7 @@ main{
 #title h1{
     text-align: center;
     color: white;
-    font-family: "Luckiest Guy", cursive;
-    font-weight: 400;
+    font-weight: 800;
     font-style: normal;
     text-shadow: -3px 3px 3px black;
 }
@@ -71,22 +70,25 @@ main{
     text-align: center;
     color: #5ce1e6;
     text-shadow: 0px 0px 5px black;
-    font-family: "Luckiest Guy", cursive;
+    font-family: "Lato", sans-serif;
     font-weight: 100;
     font-style: normal;
 }
 
-#funcionalidades h1 {
+#funcionalidades h5 {
+    font-weight: 900;
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 12px;
 } 
 
 #funcionalidades #cards_funcionalidades{
     height: 350px;
     width: 80%;
     margin-left: 10%;
-    display: flex ; 
+    display: flex;
+    font-size: 14px;
+    font-weight: 100;
 }
 
 #funcionalidades #cards_funcionalidades .card_funcionalidade{
@@ -100,7 +102,7 @@ main{
 .card_funcionalidade .card-body{
     border-radius: 10px;
     text-align: center;
-    background-color:#0b192685;
+    background-color:#0b1926af;
     color: #5ce1e6 ;
     backdrop-filter: blur(3px);
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.379);
@@ -123,7 +125,7 @@ main{
 #sobre_nos{
     width: 100%;
     height: 500px;
-    background-color: red;
+    background-color: #0b1926;
     display: block;
 }
 
