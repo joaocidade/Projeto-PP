@@ -118,7 +118,7 @@ Aqui será o css do main.
 
 .vds{
 
-    margin-top: 50px;
+    margin-top: 70px;
     height: 300px;
     width: 99.5%;
     border: 2px solid rgb(0, 3, 33);
@@ -170,7 +170,7 @@ Aqui será o css do main.
 
 .aud{
 
-    margin-top: 200px;
+    margin-top: 70px;
     height: 300px;
     width: 99.5%;
     border: 2px solid rgb(0, 4, 66);
@@ -223,7 +223,7 @@ Aqui será o css do main.
 
 .lib{
 
-    margin-top: 200px;
+    margin-top: 70px;
     height: 300px;
     width: 99.5%;
     border: 2px solid rgb(0, 4, 66);
@@ -275,7 +275,15 @@ Aqui será o css do main.
 
 }
 
+.txt1, .txt2, .txt3{
 
+    font-size: 28px;
+    color: #282828;
+    margin-top: 70px;
+    margin-left: 30px;
+    font-weight: 600;
+
+}
 
 /** hub do professor **/
 
