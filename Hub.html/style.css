@@ -3,7 +3,8 @@
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
+    list-style: none;
+    text-decoration: none;
 
 }
 
@@ -42,7 +43,7 @@ Aqui agora são as config do site da parte header.
 header{
 
     padding-top:  20px;
-    background-color: #4093ff;
+    background-color: #4277bc;
     color: whitesmoke;
     border: 8px solid #393939;
 
@@ -60,7 +61,7 @@ header{
     font-size: 35px;
     font-weight: 500;
     margin-left: 80px;
-    margin-right: 750px;
+    margin-right: 550px;
     padding-top: 40px;
 
 }
@@ -77,13 +78,45 @@ header{
 Aqui será o css do main.
 **/
 
+.vds a{
+
+    color: black;
+    font-size: 200%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateY(160%);
+    
+}
+
+.aud a{
+
+    color: black;
+    font-size: 200%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateY(160%);
+
+}
+
+.lib a{
+
+    color: black;
+    font-size: 200%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateY(160%);
+
+}
 
 .vds{
 
     margin-top: 50px;
     height: 300px;
     width: 99.5%;
-    border: 2px solid rgb(66, 0, 0);
+    border: 2px solid rgb(0, 4, 66);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +129,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid darkblue;
     border-radius: 50px;
     margin-left: 0px;
     text-align: center;
@@ -109,7 +142,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid darkblue;
     border-radius: 50px;
     margin-left: 60px;
     text-align: center;
@@ -122,7 +155,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid darkblue;
     border-radius: 50px;
     margin-left: 60px;
     text-align: center;
@@ -132,7 +165,7 @@ Aqui será o css do main.
 
 .aud{
 
-    margin-top: 200px;
+    margin-top: 50px;
     height: 300px;
     width: 99.5%;
     border: 2px solid rgb(0, 4, 66);
@@ -149,7 +182,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid darkblue;
     border-radius: 50px;
     margin-left: 0px;
     text-align: center;
@@ -162,7 +195,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid darkblue;
     border-radius: 50px;
     margin-left: 60px;
     text-align: center;
@@ -175,7 +208,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid darkblue;
     border-radius: 50px;
     margin-left: 60px;
     text-align: center;
@@ -185,7 +218,7 @@ Aqui será o css do main.
 
 .lib{
 
-    margin-top: 200px;
+    margin-top: 50px;
     height: 300px;
     width: 99.5%;
     border: 2px solid rgb(0, 4, 66);
@@ -203,7 +236,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid darkblue;
     border-radius: 50px;
     margin-left: 0px;
     text-align: center;
@@ -216,7 +249,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid darkblue;
     border-radius: 50px;
     margin-left: 60px;
     text-align: center;
@@ -229,7 +262,7 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid red;
+    border: 2px solid darkblue;
     border-radius: 50px;
     margin-left: 60px;
     text-align: center;
@@ -237,4 +270,11 @@ Aqui será o css do main.
 
 }
 
+.txt1, .txt2, .txt3{
 
+    font-size: 28px;
+    color: #282828;
+    margin-top: 70px;
+    margin-left: 30px;
+
+}
