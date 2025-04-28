@@ -1,9 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "Lato", sans-serif;
+    font-family: "Titillium Web", sans-serif;
 }
-
 
 #header{
     display: block;
@@ -26,14 +25,16 @@
 #header #cadastro{
     float: right;
     margin-right: 30px;
-    background-color: #5ce1e6;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
     padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: 0px;
-    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-color: #5ce1e6;
+    border-radius: 400px;
     margin-top: 17px;
     transition: all 0.3s ease;
+    font-weight: 600;
 }
 
 #header #entre{
@@ -47,117 +48,163 @@
 main{
     height: auto;
     width: 100%;
-    padding-top: 100px;
-    background-image: url(./ArquivosHeader/Design\ sem\ nome\ \(2\).png);
+    padding-top: 80px;
+    background-color: white;
     background-size: 100%;
     background-position-y: -80px;
 }
 
 #title{
-    padding-top: 90px;
+    display: block;
+    float: left;
+    width: 50%;
+    height: 500px;
+    padding-top: 140px;
     padding-bottom: 80px;
+    background-color: white;
+    padding-left: 80px;
+    padding-right: 150px;
 }
 
 #title h1{
-    text-align: center;
-    color: white;
-    font-weight: 800;
+    color: rgb(24, 24, 24);
+    font-size: 55px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
     font-style: normal;
-    text-shadow: -3px 3px 3px black;
 }
 
 #title p{
-    text-align: center;
-    color: #5ce1e6;
-    text-shadow: 0px 0px 5px black;
+    color: rgb(24, 24, 24);
     font-family: "Lato", sans-serif;
     font-weight: 100;
     font-style: normal;
+    font-size: 18px;
+}
+
+#title #cadastro2{
+    font-size: 20px;
+    color: black;
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-color: #5ce1e6;
+    border-radius: 400px;
+    font-weight: 600;
+}
+
+#funcionalidades{
+    display: block;
+    float: left;
+    width: 50%;
+    height: 500px;
+    background-color: white;
 }
 
 #funcionalidades h5 {
     font-weight: 900;
     text-align: center;
     color: white;
-    font-size: 12px;
+    font-size: 18px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 } 
 
-#funcionalidades #cards_funcionalidades{
-    height: 350px;
-    width: 80%;
-    margin-left: 10%;
-    display: flex;
-    font-size: 14px;
-    font-weight: 100;
-}
-
-#funcionalidades #cards_funcionalidades .card_funcionalidade{
-    width: 300px;
-    height: 100px;
+#funcionalidades .card_funcionalidade{
+    display: block;
+    float: left;
+    width: 250px;
+    height: 230px;
     margin: 15px;
     border: none;
-    background-color: transparent;
 }
 
 .card_funcionalidade .card-body{
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
-    background-color:#0b1926af;
+    background-color:#0b1926;
     color: #5ce1e6 ;
+    font-size: 14px;
     backdrop-filter: blur(3px);
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.379);
-    border: 1px solid #5ce1e6;
+    box-shadow: 0px 0px 12px rgba(0, 170, 255, 0.155);
+    border: 3px solid #5ce1e6;
 }
 
 .card-body img{
-    height: 70px;
-    width: 70px;
+    height: 50%;
+    width: 50%;
     margin-bottom: 10px;
 }
 
-.card-title{
-    font-family: "Codystar", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 20px;
-}
-
-#sobre_nos{
+#video{
+    display: block;
+    float: left;
     width: 100%;
     height: 500px;
     background-color: #0b1926;
+    margin-top: -20px;
+}
+
+#video iframe{
     display: block;
+    float: left;
+    margin-top: 80px;
+    margin-left: 60px;
+    margin-right: 40px;
 }
 
-#sobre_nos #texto{
-    width: 50%;
-    height: 500px;
-    background-color: blue;
-}
-
-#sobre_nos #texto h1{
+#video h2{
+    margin-top: 135px;
+    margin-right: 70px;
     color: white;
+    font-size: 45px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
-#sobre_nos #texto p{
+#video p{
     color: white;
-    font-size: 20px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-right: 110px;
+    margin-top: 25px;
 }
 
-#cadastro h1{
+#div_cadastro{
+    display: block;
+    float: left;
+    width: 100%;
+    height: 1000px;
+    padding-top: 40px;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
+#div_cadastro h1{
     text-align: center;
+    color: rgb(24, 24, 24);
+    font-size: 40px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
-#cadastro #cards{
+#div_cadastro #cards{
+    display: flex;
+    float: left;
+    justify-content: center;
     border-color: red 1;
     height: 500px;
     width: 100%;
-    display: flex;
-    margin: 150px;
+    margin-top: 20px;
 }
 
-#cadastro #cards .card{
-    display: flex;
+#div_cadastro #cards .card{
     width: 200PX;
     height: 450px;
     align-content: center;
@@ -184,19 +231,18 @@ main{
 }
 
     
-    footer {
-    
-        background-color: #1e2931;
-        height: 590px;
-        width: 100%;
-        background-color: #1e2931;
-        padding: 0%;
-        margin: 0%;
-        list-style: none;
-        text-decoration:none ;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
-    }
+footer {
+    display: block;
+    background-color: #1e2931;
+    height: 590px;
+    width: 100%;
+    background-color: #1e2931;
+    padding: 0%;
+    margin: 0%;
+    list-style: none;
+    text-decoration:none ;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
     
     .inicio{
     
