@@ -62,14 +62,16 @@ header{
     font-weight: 500;
     margin-left: 80px;
     margin-right: 550px;
-    padding-top: 40px;
+    margin-top: 60px;
+    margin-bottom: 30px;
 
 }
+
 
 .textinitial{
 
     background-color: rgb(0, 23, 45);
-    color:black;
+    color:rgb(231, 231, 231);
 
 }
 
@@ -89,6 +91,15 @@ Aqui será o css do main.
     
 }
 
+#videos .txt1{
+
+    background-color: rgb(52, 137, 216);
+    margin: 0%;
+    padding-left: 40px;
+    padding-top: 40px;
+
+}
+
 .aud a{
 
     color: black;
@@ -97,6 +108,15 @@ Aqui será o css do main.
     align-items: flex-end;
     justify-content: center;
     transform: translateY(160%);
+
+}
+
+#audio .txt2{
+
+    background-color: rgb(52, 137, 216);
+    margin: 0%;
+    padding-left: 40px;
+    padding-top: 20px;
 
 }
 
@@ -111,9 +131,18 @@ Aqui será o css do main.
 
 }
 
+#libras .txt3{
+
+    background-color: rgb(52, 137, 216);
+    margin: 0%;
+    padding-left: 40px;
+    padding-top: 20px;
+
+}
+
 .vds{
 
-    margin-top: 70px;
+    
     height: 300px;
     width: 100%;
     display: flex;
@@ -143,7 +172,7 @@ Aqui será o css do main.
     float: left;
     border: 2px solid darkblue;
     border-radius: 50px;
-    margin-left: 60px;
+    margin-left: 100px;
     text-align: center;
     background-color: white;
 
@@ -156,7 +185,7 @@ Aqui será o css do main.
     float: left;
     border: 2px solid darkblue;
     border-radius: 50px;
-    margin-left: 60px;
+    margin-left: 100px;
     text-align: center;
     background-color: white;
 
@@ -164,7 +193,6 @@ Aqui será o css do main.
 
 .aud{
 
-    margin-top: 70px;
     height: 300px;
     width: 100%;
     display: flex;
@@ -195,7 +223,7 @@ Aqui será o css do main.
     float: left;
     border: 2px solid darkblue;
     border-radius: 50px;
-    margin-left: 60px;
+    margin-left: 100px;
     text-align: center;
     background-color: white;
 
@@ -208,7 +236,7 @@ Aqui será o css do main.
     float: left;
     border: 2px solid darkblue;
     border-radius: 50px;
-    margin-left: 60px;
+    margin-left: 100px;
     text-align: center;
     background-color: white;
 
@@ -216,7 +244,6 @@ Aqui será o css do main.
 
 .lib{
 
-    margin-top: 70px;
     height: 300px;
     width: 100%;
     display: flex;
@@ -248,7 +275,7 @@ Aqui será o css do main.
     float: left;
     border: 2px solid darkblue;
     border-radius: 50px;
-    margin-left: 60px;
+    margin-left: 100px;
     text-align: center;
     background-color: white;
 
@@ -261,7 +288,7 @@ Aqui será o css do main.
     float: left;
     border: 2px solid darkblue;
     border-radius: 50px;
-    margin-left: 60px;
+    margin-left: 100px;
     text-align: center;
     background-color: white;
 
