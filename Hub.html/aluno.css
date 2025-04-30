@@ -92,6 +92,14 @@ Aqui será o css do main.
     transform: translateY(160%);
     
 }
+#videos .txt1{
+
+    background-color: rgb(52, 137, 216);
+    margin: 0%;
+    padding-left: 40px;
+    padding-top: 40px;
+
+}
 
 .aud a{
 
@@ -103,6 +111,14 @@ Aqui será o css do main.
     transform: translateY(160%);
 
 }
+#audio .txt2{
+
+    background-color: rgb(52, 137, 216);
+    margin: 0%;
+    padding-left: 40px;
+    padding-top: 20px;
+
+}
 
 .lib a{
 
@@ -112,6 +128,15 @@ Aqui será o css do main.
     align-items: flex-end;
     justify-content: center;
     transform: translateY(160%);
+
+}
+
+#libras .txt3{
+
+    background-color: rgb(52, 137, 216);
+    margin: 0%;
+    padding-left: 40px;
+    padding-top: 20px;
 
 }
 
