@@ -67,6 +67,7 @@ header{
     margin-left: 80px;
     margin-right: 750px;
     padding-top: 40px;
+    padding-bottom: 40px;
 
 }
 
@@ -118,7 +119,6 @@ Aqui será o css do main.
     background-color: rgb(52, 137, 216);
     margin: 0%;
     padding-left: 40px;
-    padding-top: 20px;
 
 }
 
@@ -138,13 +138,12 @@ Aqui será o css do main.
     background-color: rgb(52, 137, 216);
     margin: 0%;
     padding-left: 40px;
-    padding-top: 20px;
 
 }
 
 .vds{
 
-    margin-top: 70px;
+    
     height: 300px;
     width: 99.5%;
     border: 2px solid rgb(0, 3, 33);
@@ -196,7 +195,6 @@ Aqui será o css do main.
 
 .aud{
 
-    margin-top: 70px;
     height: 300px;
     width: 99.5%;
     border: 2px solid rgb(0, 4, 66);
@@ -249,7 +247,6 @@ Aqui será o css do main.
 
 .lib{
 
-    margin-top: 70px;
     height: 300px;
     width: 99.5%;
     border: 2px solid rgb(0, 4, 66);
@@ -305,7 +302,6 @@ Aqui será o css do main.
 
     font-size: 28px;
     color: #282828;
-    margin-top: 70px;
     margin-left: 30px;
     font-weight: 600;
 
