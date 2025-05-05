@@ -48,7 +48,7 @@ Aqui agora são as config do site da parte header.
 header{
 
     padding-top:  20px;
-    background-color: #878787;
+    background-color: #6c6c6c;
     color: whitesmoke;
 
 }
@@ -93,6 +93,15 @@ Aqui será o css do main.
     
 }
 
+#videos .txt1{
+
+    background-color: rgb(52, 137, 216);
+    margin: 0%;
+    padding-left: 40px;
+    padding-top: 40px;
+
+}
+
 .aud a{
 
     color: black;
@@ -104,6 +113,15 @@ Aqui será o css do main.
 
 }
 
+#audio .txt2{
+
+    background-color: rgb(52, 137, 216);
+    margin: 0%;
+    padding-left: 40px;
+    padding-top: 20px;
+
+}
+
 .lib a{
 
     color: black;
@@ -112,6 +130,15 @@ Aqui será o css do main.
     align-items: flex-end;
     justify-content: center;
     transform: translateY(160%);
+
+}
+
+#libras .txt3{
+
+    background-color: rgb(52, 137, 216);
+    margin: 0%;
+    padding-left: 40px;
+    padding-top: 20px;
 
 }
 
@@ -284,11 +311,5 @@ Aqui será o css do main.
 
 }
 
-/** hub do professor **/
-
-
-
-
-/** hub do aluninho **/
 
 
