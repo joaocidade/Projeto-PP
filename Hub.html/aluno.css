@@ -95,6 +95,14 @@ Aqui será o css do main.
     transform: translateY(160%);
     
 }
+#videos .txt1{
+
+    background-color: rgb(52, 137, 216);
+    margin: 0%;
+    padding-left: 40px;
+    padding-top: 40px;
+
+}
 
 #videos .txt1{
 
@@ -113,6 +121,14 @@ Aqui será o css do main.
     align-items: flex-end;
     justify-content: center;
     transform: translateY(160%);
+
+}
+#audio .txt2{
+
+    background-color: rgb(52, 137, 216);
+    margin: 0%;
+    padding-left: 40px;
+    padding-top: 20px;
 
 }
 
