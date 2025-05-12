@@ -61,9 +61,9 @@ header{
     font-size: 35px;
     font-weight: 500;
     margin-left: 80px;
-    margin-right: 550px;
-    margin-top: 60px;
-    margin-bottom: 30px;
+    margin-right: 600px;
+    padding-top: 40px;
+    color:whitesmoke;
 
 }
 
@@ -72,6 +72,7 @@ header{
 
     background-color: rgb(0, 23, 45);
     color:rgb(231, 231, 231);
+    margin-bottom: 50px;
 
 }
 
@@ -93,7 +94,7 @@ Aqui será o css do main.
 
 #videos .txt1{
 
-    background-color: rgb(52, 137, 216);
+    background-color: #4277bc;
     margin: 0%;
     padding-left: 40px;
     padding-top: 40px;
@@ -113,7 +114,7 @@ Aqui será o css do main.
 
 #audio .txt2{
 
-    background-color: rgb(52, 137, 216);
+    background-color: #4277bc;
     margin: 0%;
     padding-left: 40px;
     padding-top: 20px;
@@ -133,7 +134,7 @@ Aqui será o css do main.
 
 #libras .txt3{
 
-    background-color: rgb(52, 137, 216);
+    background-color: #4277bc;
     margin: 0%;
     padding-left: 40px;
     padding-top: 20px;
@@ -142,13 +143,12 @@ Aqui será o css do main.
 
 .vds{
 
-    
     height: 300px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(52, 137, 216);
+    background-color: #4277bc;
 
 }
 
@@ -199,7 +199,7 @@ Aqui será o css do main.
     justify-content: center;
     text-align: center;
     align-items: center;
-    background-color: rgb(52, 137, 216);
+    background-color: #4277bc;
 
 }
 
@@ -250,7 +250,7 @@ Aqui será o css do main.
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgb(52, 137, 216);
+    background-color: #4277bc;
 
 }
 
