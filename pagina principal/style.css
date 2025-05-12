@@ -17,14 +17,13 @@
 
 #header img{
     margin-top: 11px;
-    margin-left: 40px;
-    margin-bottom: 7px;
+    margin-left: 70px;
     width: 60px;
+    margin-bottom: 7px;
     transition: all 0.3s ease;
 }
 
-#header button{
-    float: right;
+.cadastre-se{
     margin-right: 30px;
     color: white;
     background-color: rgba(0, 0, 0, 0);
@@ -33,9 +32,13 @@
     padding-right: 20px;
     border-color: #5ce1e6;
     border-radius: 400px;
-    margin-top: 17px;
+    margin-top: 10px;
     transition: all 0.3s ease;
     font-weight: 600;
+}
+
+#cadastro_header{
+    float: right;
 }
 
 #header a{
@@ -43,7 +46,7 @@
     color: white;
     margin-right: 30px;
     transition: all 0.3s ease;
-    margin-top: 22px;
+    margin-top: 17px;
 }
 
 /*MAIN*/
@@ -84,17 +87,9 @@ main #title p{
     font-size: 18px;
 }
 
-main #title button{
+main #title #cadastro_title{
     font-size: 20px;
     color: black;
-    background-color: rgba(0, 0, 0, 0);
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-right: 20px;
-    padding-left: 20px;
-    border-color: #5ce1e6;
-    border-radius: 400px;
-    font-weight: 600;
 }
 
 main #funcionalidades{
@@ -130,7 +125,6 @@ main #funcionalidades h5 {
     background-color:#0b1926;
     color: #5ce1e6 ;
     font-size: 14px;
-    backdrop-filter: blur(3px);
     box-shadow: 0px 0px 12px rgba(0, 170, 255, 0.155);
     border: 3px solid #5ce1e6;
 }
@@ -147,7 +141,7 @@ main #funcionalidades h5 {
     width: 100%;
     height: 500px;
     background-color: #0b1926;
-    margin-top: -20px;
+    margin-top: 35px;
 }
 
 #video iframe{
@@ -177,14 +171,13 @@ main #funcionalidades h5 {
     margin-top: 25px;
 }
 
+/*CADASTRO*/
 #div_cadastro{
     display: block;
     float: left;
     width: 100%;
-    height: 1000px;
+    height: 700px;
     padding-top: 40px;
-    padding-right: 80px;
-    padding-left: 80px;
 }
 
 #div_cadastro h1{
@@ -194,381 +187,166 @@ main #funcionalidades h5 {
     font-family: "Titillium Web", sans-serif;
     font-weight: 700;
     font-style: normal;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 #div_cadastro #cards{
     display: flex;
     float: left;
     justify-content: center;
-    border-color: red 1;
-    height: 500px;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
-#div_cadastro #cards .card{
-    width: 200PX;
+#cards .card{
+    width: 350px;
     height: 450px;
     align-content: center;
-}
-
-#cards #cd_aluno{
-    margin: 10px;
-}
-
-#cards #cd_professor{
-    margin: 10px;
-}
-
-#cards #cd_escola{
-    margin: 10px;
-}
-
-.card .card-body{
-    text-align: center;
-    width: 300px;
-    height: 200px;
-    background-color: rgb(1, 41, 1);
+    margin: 5px;
+    padding: 25px;
+    padding-top: 35px;
+    background-color: #0b1926;
     color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 12px rgba(0, 170, 255, 0.155);
+    border: 3px solid #5ce1e6;
 }
 
-    
+#cards .card h5{
+    font-size: 30px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.card .valor{
+    display: block;
+    float: left;
+    background-color: #5ce1e6;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+}
+
+.card .valor h6{
+    float: left;
+    font-size: 40px;
+    color: #0b1926;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.card .valor p{
+    float: left;
+    margin-top: 20px;
+    margin-left: 7px;
+    color: #0b1926;
+}
+
+/*FOOTER*/   
 footer {
     display: block;
-    background-color: #1e2931;
-    height: 590px;
+    float: left;
+    background-color: #0b1926;
+    height: 440px;
     width: 100%;
-    background-color: #1e2931;
-    padding: 0%;
-    margin: 0%;
     list-style: none;
-    text-decoration:none ;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration:none;
+}
+
+.inicio{
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.inicio .logo{
+    display: grid;
+    float: left;
+    width: 50%;
+    margin-top: 45px;
+    place-content: center;
 }
     
-    .inicio{
-    
-        margin-right: 800px;
-    
-    }
-    
-    .inicio img{
-    
-        display: flex;
-        margin-left: 200px;
-        padding-top: 50px;
-        margin-right: 1000px;
-    
-    }
-    
-    .TextInicio{
-    
-        display: flex;
-        color: whitesmoke;
-        padding-left: 185px;
-        margin-right: 800px;
-        padding-top: 10px;
-        position: fixed;
-        position: absolute;
-        text-shadow: 2px 3px 2px black;
-        
-    }
-    
-    .AboutUs{
-    
-        margin-left: 50px;
-    
-    }
-    
-    .AboutUs p{
-    
-        display: list-item;
-        list-style: none;
-        color: whitesmoke;
-        width: 200px;
-        text-shadow: 2px 3px 2px black;
-    
-    }
-    
-    .More{
-    
-        margin-left: 20px;
-    
-    }
-    
-    .More p{
-    
-        display: list-item;
-        list-style: none;
-        color: whitesmoke;
-        width: 200px;
-        text-shadow: 2px 3px 2px black;
-    
-    }
-    
-    .caixas{
-    
-    margin-left: 600px;
-    display: flex;
-    padding-right: 600px;
-    margin-top: -170px;
-    text-decoration: none;
+.inicio .logo img{
+    height: 200px;
+    width: 200px;
+}
+
+.inicio .caixas{
+    display: block;
+    float: left;
+    width: 50%;
+    padding-top: 50px;
     list-style: none;
+}
     
-    }
-    
-    .caixas a{
-    
+.caixas a{
     list-style: none;
+    color: white;
+    opacity: 0.5;
     text-decoration: none;
-    color: whitesmoke;
+}
+
+.caixa a:hover{
+    opacity: 1;
+}
+
+.caixas p{
+    display: list-item;
+    list-style: none;
+}
+
+.caixas .AboutUs{
+    display: block;
+    float: left;
+    width: 50%;
+}
     
-    }
+.caixas .More{
+    display: block;
+    float: left;
+    width: 50%;
+}
     
-    .final{
+.final{
+    display: grid;
+    float: left;
+    width: 100%;
+    margin-top: 40px;
+    place-items: center;
+}
     
-        background-color: rgb(7, 7, 28);
-        height: 170px;
-        margin-top: 55px;
-        padding-top: 70px;
-        text-align: center;
-        
-        }
+.final h6{
+    color: white;
+    opacity: 0.3;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.contributor a{
+    float: left;
+    list-style: none;
+    font-size: 15px;
+    width: 130px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    opacity: 0.3;
+}
+
+.contributor a:hover{
+    color: white;
+    opacity: 1;
+    transition: 0.4s;
+}
     
-    .final h6{
-    
-        background-color: rgb(7, 7, 28);
-        color: grey;
-        padding-bottom: 20px;
-        text-align: center;
-    
-    }
-    
-    .contributor{
-    
-        text-align: center;
-    
-    }
-    
-    .contributor a{
-    
-        list-style: none;
-        text-decoration: none;
-        margin-left: 25px;
-    
-    }
-    
-    .contributor img{
-    
-        opacity: 0.2;
-        transition: 0.4s;
-    
-    }
-    
-    .contributor img:hover{
-    
-        opacity: 10;
-    
-    }
-    
-    .nomes{
-    
-    background-color: rgb(7, 7, 28);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    }
-    
-    .nomes p{
-    
-        color: rgb(223, 223, 223);
-        background-color: rgb(7, 7, 28);
-       padding-top: 15px;
-       margin-left: 35px;
-    
-    }
-    
-    .nomes a{
-    
-        text-decoration: none;
-        list-style: none;
-        color: rgb(230, 230, 230);
-        transition: 0.5s;
-        opacity: 0.2;
-    
-    }
-    
-    .nomes a:hover{
-    
-        opacity: 10;
-    
-    }
-        
-        footer {
-        
-            background-color: #1e2931;
-            height: 590px;
-            width: 100%;
-        
-        }
-        
-        .inicio{
-        
-            margin-right: 800px;
-        
-        }
-        
-        .inicio img{
-        
-            display: flex;
-            margin-left: 200px;
-            padding-top: 50px;
-            margin-right: 1000px;
-        
-        }
-        
-        .TextInicio{
-        
-            display: flex;
-            color: whitesmoke;
-            padding-left: 185px;
-            margin-right: 800px;
-            padding-top: 10px;
-            position: fixed;
-            position: absolute;
-            text-shadow: 2px 3px 2px black;
-            
-        }
-        
-        .AboutUs{
-        
-            margin-left: 50px;
-        
-        }
-        
-        .AboutUs p{
-        
-            display: list-item;
-            list-style: none;
-            color: whitesmoke;
-            width: 200px;
-            text-shadow: 2px 3px 2px black;
-        
-        }
-        
-        .More{
-        
-            margin-left: 20px;
-        
-        }
-        
-        .More p{
-        
-            display: list-item;
-            list-style: none;
-            color: whitesmoke;
-            width: 200px;
-            text-shadow: 2px 3px 2px black;
-        
-        }
-        
-        .caixas{
-        
-        margin-left: 600px;
-        display: flex;
-        padding-right: 600px;
-        margin-top: -170px;
-        text-decoration: none;
-        list-style: none;
-        
-        }
-        
-        .caixas a{
-        
-        list-style: none;
-        text-decoration: none;
-        color: whitesmoke;
-        
-        }
-        
-        .final{
-        
-            background-color: rgb(7, 7, 28);
-            height: 170px;
-            margin-top: 55px;
-            padding-top: 70px;
-            text-align: center;
-            
-            }
-        
-        .final h6{
-        
-            background-color: rgb(7, 7, 28);
-            color: grey;
-            padding-bottom: 20px;
-            text-align: center;
-        
-        }
-        
-        .contributor{
-        
-            text-align: center;
-        
-        }
-        
-        .contributor a{
-        
-            list-style: none;
-            text-decoration: none;
-            margin-left: 25px;
-        
-        }
-        
-        .contributor img{
-        
-            opacity: 0.2;
-            transition: 0.4s;
-        
-        }
-        
-        .contributor img:hover{
-        
-            opacity: 10;
-        
-        }
-        
-        .nomes{
-        
-        background-color: rgb(7, 7, 28);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        }
-        
-        .nomes p{
-        
-            color: rgb(223, 223, 223);
-            background-color: rgb(7, 7, 28);
-           padding-top: 15px;
-           margin-left: 35px;
-        
-        }
-        
-        .nomes a{
-        
-            text-decoration: none;
-            list-style: none;
-            color: rgb(230, 230, 230);
-            transition: 0.5s;
-            opacity: 0.2;
-        
-        }
-        
-        .nomes a:hover{
-        
-            opacity: 10;
-        
-        }
+.contributor img{
+    height: 50px;
+    width: 50px;
+}
     
