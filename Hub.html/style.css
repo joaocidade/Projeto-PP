@@ -43,7 +43,7 @@ Aqui agora são as config do site da parte header.
 header{
 
     padding-top:  20px;
-    background-color: #4277bc;
+    background-color: rgb(52, 137, 216);
     color: whitesmoke;
 
 
@@ -94,7 +94,7 @@ Aqui será o css do main.
 
 #videos .txt1{
 
-    background-color: #4277bc;
+    background-color: rgb(52, 137, 216);
     margin: 0%;
     padding-left: 40px;
     padding-top: 40px;
@@ -114,7 +114,7 @@ Aqui será o css do main.
 
 #audio .txt2{
 
-    background-color: #4277bc;
+    background-color: rgb(52, 137, 216);
     margin: 0%;
     padding-left: 40px;
     padding-top: 20px;
@@ -134,7 +134,7 @@ Aqui será o css do main.
 
 #libras .txt3{
 
-    background-color: #4277bc;
+    background-color: rgb(52, 137, 216);
     margin: 0%;
     padding-left: 40px;
     padding-top: 20px;
@@ -148,7 +148,7 @@ Aqui será o css do main.
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #4277bc;
+    background-color: rgb(52, 137, 216);
 
 }
 
@@ -199,7 +199,7 @@ Aqui será o css do main.
     justify-content: center;
     text-align: center;
     align-items: center;
-    background-color: #4277bc;
+    background-color: rgb(52, 137, 216);
 
 }
 
@@ -250,7 +250,7 @@ Aqui será o css do main.
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #4277bc;
+    background-color: rgb(52, 137, 216);
 
 }
 

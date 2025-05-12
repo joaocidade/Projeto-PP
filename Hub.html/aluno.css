@@ -10,7 +10,7 @@
 body{
     height: 1000px;
     width: 100%;
-    background-color: gainsboro;
+   background-color: rgb(0, 23, 45);
 }
 #apresentação{
     height: 300px;
@@ -48,7 +48,7 @@ Aqui agora são as config do site da parte header.
 header{
 
     padding-top:  20px;
-    background-color: #0d54b1;
+    background-color: rgb(52, 137, 216);
     color: whitesmoke;
 
 }
@@ -57,6 +57,7 @@ header{
 
     text-align: center;
     margin-top: 40px;
+    
 
 }
 
