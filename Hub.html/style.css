@@ -226,6 +226,19 @@ Aqui será o css do main.
     margin-left: 0px;
     text-align: center;
     background-color: white;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.aud .caixa4 img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0%;
 
 }
 
