@@ -161,7 +161,20 @@ Aqui será o css do main.
     border-radius: 50px;
     margin-left: 0px;
     text-align: center;
-    background-color: white;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.vds .caixa1 img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    margin-right: 80px;
 
 }
 
