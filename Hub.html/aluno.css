@@ -98,19 +98,10 @@ Aqui será o css do main.
 }
 #videos .txt1{
 
-    background-color: rgb(52, 137, 216);
+   background-color: rgb(52, 137, 216);
     margin: 0%;
     padding-left: 40px;
     padding-top: 40px;
-
-}
-
-#videos .txt1{
-
-    background-color: rgb(52, 137, 216);
-    margin: 0%;
-    padding-left: 40px;
-    padding-top: 50px;
 
 }
 
@@ -178,11 +169,24 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid rgb(51, 51, 51);
+    border: 2px solid darkblue;
     border-radius: 50px;
     margin-left: 0px;
     text-align: center;
-    background-color: white;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.vds .caixa1 img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    margin-right: 80px;
 
 }
 
@@ -229,11 +233,24 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid rgb(51, 51, 51);
+    border: 2px solid darkblue;
     border-radius: 50px;
     margin-left: 0px;
     text-align: center;
     background-color: white;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.aud .caixa4 img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0%;
 
 }
 
