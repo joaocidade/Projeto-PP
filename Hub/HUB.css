@@ -1,0 +1,357 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+body{
+    height: 1000px;
+    width: 100%;
+    background-color: rgb(0, 23, 45);
+}
+#apresentação{
+    height: 300px;
+    width: 700px;
+    border: 1px red solid;
+    text-align: center;
+    background-color: #358E8B;
+    align-content: center;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.75) ;
+}
+#dash{
+    height: 800px;
+    width: 100%;
+    border: 1px red solid;
+    margin-top: 10px;
+}
+#dash h2{
+    text-align: center;
+}
+
+
+/** 
+Aqui agora são as config do site da parte header.
+**/
+
+
+header{
+
+    padding-top:  20px;
+    background-color: white;
+    color: whitesmoke;
+
+
+}
+
+.txtinitial{
+
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+.textinitial p{
+
+    font-size: 35px;
+    font-weight: 500;
+    margin-left: 80px;
+    margin-right: 600px;
+    padding-top: 40px;
+    color:whitesmoke;
+
+}
+
+
+.textinitial{
+
+    background-color: rgb(0, 23, 45);
+    color:rgb(231, 231, 231);
+    margin-bottom: 50px;
+
+}
+
+
+/**
+Aqui será o css do main.
+**/
+
+.vds a{
+
+    color: black;
+    font-size: 200%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateY(160%);
+    
+}
+
+#videos .txt1{
+
+    background-color: white;
+    margin: 0%;
+    padding-left: 40px;
+    padding-top: 40px;
+
+}
+
+
+.aud a{
+
+    color: black;
+    font-size: 200%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateY(160%);
+
+}
+
+#audio .txt2{
+
+    background-color: white;
+    margin: 0%;
+    padding-left: 40px;
+    padding-top: 20px;
+
+}
+
+
+.lib a{
+
+    color: black;
+    font-size: 200%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateY(160%);
+
+}
+
+#libras .txt3{
+
+    background-color: white;
+    margin: 0%;
+    padding-left: 40px;
+    padding-top: 20px;
+
+}
+
+.vds{
+
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+}
+
+.vds .caixa1{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 0px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.vds .caixa1 img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    margin-right: 80px;
+
+}
+
+.vds .caixa2{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 100px;
+    text-align: center;
+    background-color: white;
+
+}
+
+.vds .caixa3{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 100px;
+    text-align: center;
+    background-color: white;
+
+}
+
+.aud{
+
+    height: 300px;
+    width: 100%;
+    display: flex;
+    
+    background-color: red;
+
+}
+
+
+.aud .caixa4{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 0px;
+    text-align: center;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.aud .caixa4 img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0%;
+
+}
+
+.aud .caixa5{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 100px;
+    text-align: center;
+    background-color: white;
+
+}
+
+.aud .caixa6{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 100px;
+    text-align: center;
+    background-color: white;
+
+}
+
+.lib{
+
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+
+}
+
+
+.lib .caixa7{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 0px;
+    text-align: center;
+    background-color: white;
+
+}
+
+.lib .caixa8{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 100px;
+    text-align: center;
+    background-color: white;
+
+}
+
+.lib .caixa9{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 100px;
+    text-align: center;
+    background-color: white;
+
+}
+
+.txt1, .txt2, .txt3{
+
+    font-size: 28px;
+    color: #282828;
+    margin-left: 30px;
+    font-weight: 600;
+    margin-top: 70px;
+
+}
+
+footer{
+
+    background-color: rgb(0, 23, 45);
+    height: 300px;
+
+    
+}
+
+footer p{
+
+    text-align: center;
+    color: rgb(215, 215, 215);
+    font-size: 25px;
+
+}
