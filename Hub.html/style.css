@@ -101,6 +101,7 @@ Aqui será o css do main.
 
 }
 
+
 .aud a{
 
     color: black;
@@ -120,6 +121,7 @@ Aqui será o css do main.
     padding-top: 20px;
 
 }
+
 
 .lib a{
 
@@ -212,12 +214,11 @@ Aqui será o css do main.
     height: 300px;
     width: 100%;
     display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    background-color: white;
+    
+    background-color: red;
 
 }
+
 
 .aud .caixa4{
 

@@ -55,24 +55,41 @@
         <p style="color: #282828;">
             ↳ Áudios
         </p>
+        
+    <div class="aud">
+        <div id="transcricao">
+            <h4>coloque o seu texto na caixa</h4>
+            <button onclick="reconhecerFala()">🎙️ Iniciar reconhecimento</button>
+<p id="resultado"></p>
+ 
+  <script>
+    function reconhecerFala() {
+      const reconhecimento = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      reconhecimento.lang = 'pt-BR';
+      reconhecimento.interimResults = false;
+      reconhecimento.maxAlternatives = 1;
+ 
+      reconhecimento.onstart = () => {
+        document.getElementById("resultado").textContent = "Ouvindo...";
+      };
+ 
+      reconhecimento.onresult = (event) => {
+        const texto = event.results[0][0].transcript;
+        document.getElementById("resultado").textContent = "Você disse: " + texto;
+      };
+ 
+      reconhecimento.onerror = (event) => {
+        document.getElementById("resultado").textContent = "Erro: " + event.error;
+      };
+ 
+      reconhecimento.start();
+    }
+</script>
+        </div>
+        <div id="leitura">
+
+        </div>
     </div>
-<div class="aud">
-    <div class="caixa4">
-            <a href="" target="_blank">
-            <img src="imgs/Captura de tela 2025-05-19 113707.png" alt="0">
-            </a>
-    </div>
-<div class="caixa5">
-            <a href="" target="_blank">
-            <img src="" alt="0">
-            </a>
-    </div>
-    <div class="caixa6">
-            <a href="" target="_blank">
-            <img src="" alt="0">
-            </a>
-    </div>
-</div>
 </section>
 <section id="libras">
     <div class="txt3">
