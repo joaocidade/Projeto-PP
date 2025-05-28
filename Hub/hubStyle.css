@@ -14,43 +14,36 @@ body{
 /* HEADER */
 
 header{
-    padding-top:  20px;
+    display: block;
+    float: left;
+    padding-top:  30px;
+    width: 100%;
     background-color: rgb(52, 137, 216);
-    color: whitesmoke;
-}
-
-.txtinitial{
-
+    color: white;
     text-align: center;
-    margin-top: 40px;
-    
-
 }
 
-.textinitial p{
-
+.txt_recursos{
+    display: block;
+    float: left;
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 35px;
     font-weight: 500;
-    margin-left: 80px;
-    margin-right: 600px;
-    padding-top: 40px;
+    width: 100%;
     background-color: rgb(0, 23, 45);
-    color: whitesmoke;
-
+    color: white;
 }
 
-.textinitial{
-
+/* MAIN */
+.txt{
+    font-size: 28px;
+    color: white;
+    padding-left: 30px;
+    font-weight: 600;
     background-color: rgb(0, 23, 45);
-    color:black;
-    padding-bottom: 50px;
-
 }
-
-
-/**
-Aqui será o css do main.
-**/
 
 .vds a{
 
@@ -122,46 +115,8 @@ Aqui será o css do main.
 
 }
 
-.vds .caixa1{
 
-    height: 200px;
-    width: 300px;
-    float: left;
-    border: 2px solid darkblue;
-    border-radius: 50px;
-    margin-left: 0px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-
-}
-
-.vds .caixa1 img{
-
-    width: 120%;
-    height: auto;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0%;
-    margin-right: 80px;
-
-}
-
-.vds .caixa2{
-
-    height: 200px;
-    width: 300px;
-    float: left;
-    border: 2px solid rgb(0, 3, 33);
-    border-radius: 50px;
-    margin-left: 100px;
-    text-align: center;
-    background-color: white;
-
-}
-
-.vds .caixa3{
+.vds .caixa{
 
     height: 200px;
     width: 300px;
@@ -290,20 +245,7 @@ Aqui será o css do main.
 
 }
 
-.txt1, .txt2, .txt3{
-
-    font-size: 28px;
-    color: #282828;
-    margin-left: 30px;
-    font-weight: 600;
-
-}
-
-main {
-
-    background-color: rgb(0, 23, 45);
-
-}
+/* FOOTER */
 
 footer{
 
