@@ -225,7 +225,8 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid darkblue;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 0px;
     text-align: center;
