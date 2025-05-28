@@ -1,7 +1,7 @@
 function reconhecerFala() {
       const reconhecimento = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
       reconhecimento.lang = 'pt-BR';
-      reconhecimento.interimResults = true ;
+      reconhecimento.interimResults = false;
       reconhecimento.maxAlternatives = 1;
  
       reconhecimento.onstart = () => {
@@ -18,9 +18,18 @@ function reconhecerFala() {
       };
  
       reconhecimento.start();
-    }
+    } 
     function pararReconhecimento(){
-        console.log
         const reconhecimento = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-        reconhecimento.stop();
+        reconhecimento.stop(reconhecerFala());
     }
+    function transcricao(){
+    const texto = () => document.getElementById("resultado").value;
+    const fala = new SpeechSynthesisUtterance(texto());
+    fala.lang = 'pt-BR';    
+    fala.rate = 1;           
+    fala.pitch = 1;         
+    fala.volume = 1;        
+    speechSynthesis.speak(fala);
+        
+    } 
