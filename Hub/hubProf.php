@@ -1,34 +1,29 @@
 <?php
-include_once './incluir/conexao.php';
+include_once '../incluir/conexao.php';
 
 $sql = "SELECT * FROM alunos";
 
 $resultado = mysqli_query($conn,$sql);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hub do Professor</title>
-    <link rel="stylesheet" href="prof.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="txtinitial">
-        <h1 style="font-size: 40px;" style="display: flex;">
-            Olá! Seja bem-vindo(a) ao Hub do professor!
-            <img src="https://media0.giphy.com/media/vs0L5G9jahIiP5D8bT/giphy.gif?cid=6c09b952rh8dnoz6y9z5qu7ueyoxsehcyn3co17sqsvkue8v&ep=v1_stickers_search&rid=giphy.gif&ct=s" alt="0" height="50" width="60">
-        </h1>
+            <h1 style="font-size: 40px;" style="display: flex;"> Olá! Seja bem-vindo(a) ao Hub, professor!</h1>
         </div>
         <br>
         <br>
         <br>
     </header>
      <div class="textinitial">
-        <p>
-            Estes são os seus recursos, confira;
-        </p>
+        <p>Estes são os seus recursos:</p>
     </div>
     <main>
     <section id="videos">
@@ -40,7 +35,7 @@ $resultado = mysqli_query($conn,$sql);
         <div class="vds">
             <div class="caixa1">
                 <a href="" target="_blank">
-            <img src="imgs/videoframe_2727.png" alt="0">
+            <img src="" alt="0">
             </a>
             </div>
         <div class="caixa2">
@@ -64,7 +59,7 @@ $resultado = mysqli_query($conn,$sql);
     <div class="aud">
         <div class="caixa4">
     <a href="" target="_blank">
-            <img src="imgs/Captura de tela 2025-05-19 113707.png" alt="0">
+            <img src="" alt="0">
             </a>
         </div>
     <div class="caixa5">
