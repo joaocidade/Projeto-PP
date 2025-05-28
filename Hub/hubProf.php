@@ -1,3 +1,10 @@
+<?php
+include_once './incluir/conexao.php';
+
+$sql = "SELECT * FROM alunos";
+
+$resultado = mysqli_query($conn,$sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,7 +79,7 @@
         </div>
     </div>
     </section>
-    <section id="libras">
+        <section id="libras">
         <div class="txt3">
             <p>
                 ↳ Líbras
@@ -96,6 +103,25 @@
         </div>
     </div>
     </section>
+    <section id="libras">
+        <div class="txt3">
+            <p>
+                ↳ Alunos
+            </p>
+        </div>
+    <div class="lib">
+        <?php 
+            while ($dado = mysqli_fetch_assoc($resultado)){
+        ?>
+        <tbody>
+            <ul>
+              <li><?php echo $dado['AlunoID'] ?> | <?php echo $dado['Nome'] ?></li>
+            </tr>
+          </tbody>
+        <?php 
+            }
+        ?>
+    </div>
     <br>
 <br>
 <br>
