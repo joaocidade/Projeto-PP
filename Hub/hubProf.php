@@ -11,39 +11,28 @@ $resultado = mysqli_query($conn,$sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hub do Professor</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hubStyle.css">
 </head>
 <body>
     <header>
-        <div class="txtinitial">
-            <h1 style="font-size: 40px;" style="display: flex;"> Olá! Seja bem-vindo(a) ao Hub, professor!</h1>
+        <h1> Olá! Seja bem-vindo(a) ao Hub, professor!</h1>
+        <div class="txt_recursos">
+            <p>Estes são os seus recursos:</p>
         </div>
-        <br>
-        <br>
-        <br>
     </header>
-     <div class="textinitial">
-        <p>Estes são os seus recursos:</p>
-    </div>
     <main>
     <section id="videos">
-        <div class="txt1">
-            <p>
-                ↳ Vídeos
-            </p>
-        </div>
+        <p class='txt'>↳ Vídeos</p>
         <div class="vds">
-            <div class="caixa1">
-                <a href="" target="_blank">
-            <img src="" alt="0">
-            </a>
+            <div class="caixa">
+                <a href="" target="_blank"><img src="" alt="0"></a>
             </div>
-        <div class="caixa2">
+        <div class="caixa">
     <a href="" target="_blank">
             <img src="" alt="0">
             </a>
             </div>
-            <div class="caixa3">
+            <div class="caixa">
                 <a href="" target="_blank">
             <img src="" alt="0">
             </a>
@@ -51,7 +40,7 @@ $resultado = mysqli_query($conn,$sql);
         </div>
     </section>
     <section id="audio">
-        <div class="txt2">
+        <div class="txt">
             <p>
                 ↳ Áudios
             </p>
@@ -99,7 +88,7 @@ $resultado = mysqli_query($conn,$sql);
     </div>
     </section>
     <section id="libras">
-        <div class="txt3">
+        <div class="txt">
             <p>
                 ↳ Alunos
             </p>
