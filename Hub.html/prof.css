@@ -17,7 +17,7 @@ body{
     width: 700px;
     border: 1px red solid;
     text-align: center;
-    background-color: #358E8B;
+    background-color: #f8f8f8;
     align-content: center;
     margin: auto;
     border-radius: 20px;
@@ -48,16 +48,17 @@ Aqui agora são as config do site da parte header.
 header{
 
     padding-top:  20px;
-    background-color: rgb(52, 137, 216);
+    background-color: rgb(255, 255, 255);
     color: whitesmoke;
 
 }
+
 
 .txtinitial{
 
     text-align: center;
     margin-top: 40px;
-    
+    color: rgb(0, 0, 0);
 
 }
 
@@ -99,7 +100,7 @@ Aqui será o css do main.
 
 #videos .txt1{
 
-    background-color: rgb(52, 137, 216);
+    background-color: rgb(255, 255, 255);
     margin: 0%;
     padding-left: 40px;
     padding-top: 40px;
@@ -119,7 +120,7 @@ Aqui será o css do main.
 
 #audio .txt2{
 
-    background-color: rgb(52, 137, 216);
+    background-color:white;
     margin: 0%;
     padding-left: 40px;
 
@@ -138,7 +139,7 @@ Aqui será o css do main.
 
 #libras .txt3{
 
-    background-color: rgb(52, 137, 216);
+    background-color:white;
     margin: 0%;
     padding-left: 40px;
 
@@ -152,7 +153,7 @@ Aqui será o css do main.
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(52, 137, 216);
+    background-color:white;
 
 }
 
@@ -161,7 +162,8 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid darkblue;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 0px;
     text-align: center;
@@ -187,7 +189,8 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid rgb(0, 3, 33);
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 100px;
     text-align: center;
@@ -200,7 +203,8 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid rgb(0, 3, 33);
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 100px;
     text-align: center;
@@ -216,7 +220,7 @@ Aqui será o css do main.
     justify-content: center;
     text-align: center;
     align-items: center;
-    background-color: rgb(52, 137, 216);
+    background-color:white;
 
 }
 
@@ -252,7 +256,8 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid rgb(0, 3, 33);
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 100px;
     text-align: center;
@@ -265,7 +270,8 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid rgb(0, 3, 33);
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 100px;
     text-align: center;
@@ -281,7 +287,7 @@ Aqui será o css do main.
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgb(52, 137, 216);
+    background-color:white;
 
 }
 
@@ -291,7 +297,8 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid rgb(0, 3, 33);
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 0px;
     text-align: center;
@@ -304,7 +311,8 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid rgb(0, 3, 33);
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 100px;
     text-align: center;
@@ -317,7 +325,8 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid rgb(0, 3, 33);
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 100px;
     text-align: center;
@@ -336,7 +345,7 @@ Aqui será o css do main.
 
 main {
 
-    background-color: rgb(0, 23, 45);
+    background-color: white;
 
 }
 
@@ -348,13 +357,19 @@ footer{
     
 }
 
-footer p{
-
+footer .aut p{
     text-align: center;
     color: rgb(215, 215, 215);
     font-size: 25px;
+    padding-top: 70px;
 
 }
 
+footer .copy p{
+    text-align: center;
+    color: rgb(215, 215, 215);
+    font-size: 25px;
+    padding-bottom: 50px;
 
+}
 
