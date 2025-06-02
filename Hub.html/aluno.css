@@ -201,6 +201,19 @@ Aqui será o css do main.
     margin-left: 100px;
     text-align: center;
     background-color: white;
+    overflow: hidden;
+
+}
+
+.vds .caixa2 img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    margin-right: 80px;
 
 }
 
@@ -214,6 +227,19 @@ Aqui será o css do main.
     margin-left: 100px;
     text-align: center;
     background-color: white;
+    overflow: hidden;
+
+}
+
+.vds .caixa3 img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    margin-right: 80px;
 
 }
 
@@ -294,17 +320,29 @@ Aqui será o css do main.
 
 }
 
-
 .lib .caixa7{
 
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid rgb(51, 51, 51);
+    border: 2px solid #358E8B;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 0px;
     text-align: center;
     background-color: white;
+    overflow: hidden;
+
+}
+
+.lib .caixa7 img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
 
 }
 
@@ -313,11 +351,25 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid rgb(51, 51, 51);
+    border: 2px solid #358E8B;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 100px;
     text-align: center;
     background-color: white;
+    overflow: hidden;
+
+}
+
+.lib .caixa8 img{
+
+    width: 105%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 1px;
+    margin-bottom: auto;
 
 }
 
@@ -326,11 +378,24 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid rgb(51, 51, 51);
+    border: 2px solid #358E8B;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 100px;
     text-align: center;
     background-color: white;
+    overflow: hidden;
+
+}
+
+.lib .caixa9 img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0px;
 
 }
 

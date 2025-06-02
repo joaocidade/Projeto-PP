@@ -381,6 +381,18 @@ Aqui será o css do main.
     margin-left: 100px;
     text-align: center;
     background-color: white;
+    overflow: hidden;
+
+}
+
+.lib .caixa9 img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0px;
 
 }
 
