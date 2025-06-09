@@ -222,6 +222,18 @@ Aqui será o css do main.
     margin-left: 100px;
     text-align: center;
     background-color: white;
+    overflow: hidden;
+
+}
+
+.vds .caixa3 img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0%;
 
 }
 
@@ -253,16 +265,6 @@ Aqui será o css do main.
 
 }
 
-.aud .caixa4 img{
-
-    width: 120%;
-    height: auto;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0%;
-
-}
 
 .aud .caixa5{
 
@@ -316,6 +318,18 @@ Aqui será o css do main.
     margin-left: 0px;
     text-align: center;
     background-color: white;
+    overflow:hidden;
+
+}
+
+.lib .caixa7 img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0%;
 
 }
 
@@ -330,6 +344,18 @@ Aqui será o css do main.
     margin-left: 100px;
     text-align: center;
     background-color: white;
+    overflow:hidden;
+
+}
+
+.lib .caixa8 img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0%;
 
 }
 
@@ -344,6 +370,18 @@ Aqui será o css do main.
     margin-left: 100px;
     text-align: center;
     background-color: white;
+    overflow:hidden;
+
+}
+
+.lib .caixa9 img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0%;
 
 }
 
