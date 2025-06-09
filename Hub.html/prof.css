@@ -49,7 +49,7 @@ header{
 
     padding-top:  20px;
     background-color: rgb(255, 255, 255);
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
 
 }
 
@@ -195,6 +195,19 @@ Aqui será o css do main.
     margin-left: 100px;
     text-align: center;
     background-color: white;
+    overflow: hidden;
+
+}
+
+.vds .caixa2 img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    margin-right: 80px;
 
 }
 

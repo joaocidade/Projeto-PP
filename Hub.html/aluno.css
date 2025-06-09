@@ -48,8 +48,8 @@ Aqui agora são as config do site da parte header.
 header{
 
     padding-top:  20px;
-    background-color: rgb(52, 137, 216);
-    color: whitesmoke;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 
 }
 
@@ -98,7 +98,7 @@ Aqui será o css do main.
 }
 #videos .txt1{
 
-   background-color: rgb(52, 137, 216);
+   background-color: rgb(255, 255, 255);
     margin: 0%;
     padding-left: 40px;
     padding-top: 40px;
@@ -117,7 +117,7 @@ Aqui será o css do main.
 }
 #audio .txt2{
 
-    background-color: rgb(52, 137, 216);
+    background-color: rgb(255, 255, 255);
     margin: 0%;
     padding-left: 40px;
     padding-top: 20px;
@@ -126,7 +126,7 @@ Aqui será o css do main.
 
 #audio .txt2{
 
-    background-color: rgb(52, 137, 216);
+    background-color: rgb(255, 255, 255);
     margin: 0%;
     padding-left: 40px;
     padding-top: 20px;
@@ -146,7 +146,7 @@ Aqui será o css do main.
 
 #libras .txt3{
 
-    background-color: rgb(52, 137, 216);
+    background-color: rgb(255, 255, 255);
     margin: 0%;
     padding-left: 40px;
     padding-top: 20px;
@@ -160,7 +160,7 @@ Aqui será o css do main.
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(52, 137, 216);
+    background-color: rgb(255, 255, 255);
 
 }
 
@@ -196,7 +196,8 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid rgb(51, 51, 51);
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 100px;
     text-align: center;
@@ -222,7 +223,8 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid rgb(51, 51, 51);
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 100px;
     text-align: center;
@@ -251,7 +253,7 @@ Aqui será o css do main.
     justify-content: center;
     text-align: center;
     align-items: center;
-    background-color: rgb(52, 137, 216);
+    background-color: rgb(255, 255, 255);
 
 }
 
@@ -260,7 +262,8 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid darkblue;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 0px;
     text-align: center;
@@ -286,7 +289,8 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid rgb(51, 51, 51);
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 100px;
     text-align: center;
@@ -299,7 +303,8 @@ Aqui será o css do main.
     height: 200px;
     width: 300px;
     float: left;
-    border: 2px solid rgb(51, 51, 51);
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 100px;
     text-align: center;
@@ -316,7 +321,7 @@ Aqui será o css do main.
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgb(52, 137, 216);
+    background-color: rgb(255, 255, 255);
 
 }
 
