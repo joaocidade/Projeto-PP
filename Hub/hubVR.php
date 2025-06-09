@@ -19,43 +19,9 @@ $resultado = mysqli_query($conn,$sql);
 </head>
 
 <body>
-    <nav class="menulateral">
-        <ul>
-            <li class="itemmenu">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-house"></i></span>
-                    <span class="txt">Inicio</span>
-                </a>
-            </li>
-            <li class="itemmenu">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-camera-reels"></i></span>
-                    <span class="txt">Videos</span>
-                </a>
-            </li> 
-            <li class="itemmenu">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-mic"></i></span>
-                    <span class="txt">Audio</span>
-                </a>
-            </li>
-            <li class="itemmenu">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-hand-index"></i></i></span>
-                    <span class="txt">Libras</span>
-                </a>
-            </li>
-            <li class="itemmenu">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-badge-vr"></i></span>
-                    <span class="txt">VR</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
 
     <header>
-        <h1> Olá! Seja bem-vindo(a) ao Hub, professor!</h1>
+        <h1> Olá! Seja bem-vindo(a) ao Hub, professor! VR</h1>
         <div class="txt_recursos">
             <p>Estes são os seus recursos:</p>
         </div>
