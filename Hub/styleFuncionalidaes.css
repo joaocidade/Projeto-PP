@@ -1,0 +1,45 @@
+body{
+    display: block;
+    height: 1000px;
+    width: 100%; 
+}
+#apresentacao{
+    height: 600px;
+    width: 100%;
+    border:1px solid red;
+    display: block;  
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+#aprensentacao_transcricao{
+    width: 40%;
+    height: 300px;
+    border:2px solid #358E8B;
+    justify-content: center;
+    text-align: center;
+    background-color: #1E2933;
+    color: white;
+    margin-top: 50px;
+    display: block;
+    float: left;
+    margin-left: 100px;
+  
+    
+}
+#aprensentacao_texto-voz{
+    width: 40%;
+    height: 300px;
+    border:2px solid #358E8B;
+    justify-content: center;
+    text-align: center;
+    background-color: #1E2933;
+    color: white;
+    margin-top: 50px;
+    float: left;
+    display: block;
+   margin-left: 15px;
+}   
+h1{
+ text-align: center;
+}
