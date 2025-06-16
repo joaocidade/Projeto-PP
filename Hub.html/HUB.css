@@ -241,8 +241,7 @@ Aqui será o css do main.
     height: 300px;
     width: 100%;
     display: flex;
-    
-    background-color: red;
+    text-align: center;
 
 }
 
