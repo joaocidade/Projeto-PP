@@ -21,7 +21,6 @@ $resultado = mysqli_query($conn,$sql);
 <body>
 
     <header>
-        <h1> Olá! Seja bem-vindo(a) ao Hub, professor! LIBRAS</h1>
         <div class="txt_recursos">
             <p>Estes são os seus recursos:</p>
         </div>
@@ -40,23 +39,6 @@ $resultado = mysqli_query($conn,$sql);
             <div class="caixa">
                 <a href="" target="_blank"><img src="" alt="0"></a>
             </div>
-        </div>
-    </section>
-    <section id="libras">
-        <p class="txt_sections">↳ Alunos</p>
-        <div class="caixas">
-            <?php 
-                while ($dado = mysqli_fetch_assoc($resultado)){
-            ?>
-            <tbody>
-                <ul>
-                    <li><?php echo $dado['AlunoID'] ?> | <?php echo $dado['Nome'] ?></li>
-                    </tr>
-                </ul>
-            </tbody>
-            <?php 
-                }
-            ?>
         </div>
     </section>
     </main>
