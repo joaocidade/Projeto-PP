@@ -63,7 +63,7 @@ $resultado = mysqli_query($conn,$sql);
         <div id="aprensentacao_transcricao">
             <h2>Transcrição de Texto</h2>
             <p>Uma funcionalidade focada na trnascrição de voz para texto em tempo real, auxiliando pessoas surdas a comprenderem conversas sem precissar utilizar as libras</p>
-            <button type="button">Ver a funcionalidade</button>
+            <button type="button" id="resultado">Ver a funcionalidade</button>
         </div>
         <div id="aprensentacao_texto-voz">
             <h1>Texto-Voz</h1>
@@ -73,6 +73,42 @@ $resultado = mysqli_query($conn,$sql);
     </div>
 
     <script>
+        function reconhecerFala() {
+      const reconhecimento = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      reconhecimento.lang = 'pt-BR';
+      reconhecimento.interimResults = false;
+      reconhecimento.maxAlternatives = 1;
+ 
+      reconhecimento.onstart = () => {
+        document.getElementById("resultado").textContent = "Ouvindo...";
+      };
+ 
+      reconhecimento.onresult = (event) => {
+        const texto = event.results[0][0].transcript;
+        document.getElementById("resultado").textContent = "Você disse: " + texto;
+      };
+ 
+      reconhecimento.onerror = (event) => {
+        document.getElementById("resultado").textContent = "Erro: " + event.error;
+      };
+ 
+      reconhecimento.start();
+    } 
+    function pararReconhecimento(){
+        const reconhecimento = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+        reconhecimento.stop(reconhecerFala());
+    }
+    function transcricao(){
+    const texto = () => document.getElementById("resultado").value;
+    const fala = new SpeechSynthesisUtterance(texto());
+    fala.lang = 'pt-BR';    
+    fala.rate = 1;           
+    fala.pitch = 1;         
+    fala.volume = 1;        
+    speechSynthesis.speak(fala);
+        
+    } 
+    
         function carregar(pagina) {
         fetch(pagina)
             .then(response => {
@@ -86,6 +122,8 @@ $resultado = mysqli_query($conn,$sql);
             document.getElementById('conteudo').innerHTML = '<p>Erro ao carregar o conteúdo.</p>';
             console.error(error);
             });
+
+        
         }
 
         // Carrega a home ao abrir o site
