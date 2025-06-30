@@ -150,7 +150,7 @@ main{
     align-items: flex-end;
     justify-content: center;
     transform: translateY(160%);
-}
+}   
 
 /* FOOTER */
 footer{
@@ -166,3 +166,6 @@ footer p{
     font-size: 25px;
 
 }
+
+/*Parte das funcionalidades - hubAudio*/
+
