@@ -7,9 +7,18 @@ $sql = "SELECT * FROM alunos";
 //executa e retorna os dados
 $resultado = mysqli_query($conn,$sql);
 ?>
-    <div class='header'>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="styleHub.css">
+</head>
+
+<body>
+
+    <header>
         <h1> Olá! Seja bem-vindo(a) ao Hub, professor! INICIAL</h1>
-    </div>
+    </header>
 
     <main>
         <div class="container">
@@ -17,10 +26,11 @@ $resultado = mysqli_query($conn,$sql);
             <table>
             <thead>
                 <tr>
-                <th>ID</th>
+                <th>AlunoID</th>
                 <th>Nome</th>
-                <th>Teto Salárial</th>
-                <th>Ações</th>
+                <th>Email</th>
+                <th>Senha</th>
+                <th>EscolaID</th>
                 </tr>
             </thead>
             <?php
@@ -28,13 +38,11 @@ $resultado = mysqli_query($conn,$sql);
             ?>
             <tbody>
                 <tr>
-                <td><?php echo $dado['CargoID'] ?></td>
+                <td><?php echo $dado['AlunoID'] ?></td>
                 <td><?php echo $dado['Nome'] ?></td>
-                <td><?php echo $dado['TetoSalar'] ?></td>
-                <td>
-                    <a href="./salvar-cargos.php?cargoid=<?php echo $dado['CargoID']?>" class="btn btn-edit">Editar</a>
-                    <a href="./action/cargos.php?acao=delete&cargoid=<?php echo $dado['CargoID'] ?>" class="btn btn-delete">Excluir</a>
-                </td>
+                <td><?php echo $dado['Email'] ?></td>
+                <td><?php echo $dado['Senha'] ?></td>
+                <td><?php echo $dado['EscolaID'] ?></td>
                 </tr>
             </tbody>
             <?php
@@ -44,8 +52,6 @@ $resultado = mysqli_query($conn,$sql);
         </div> 
     </main>
     
-    <footer>
-        <p>Os videoaulas não são de nossa autoria.</p>
-        <p style="font-size: 25px; margin-top:10px;">Copyright © 2024-2025, development by RA: educação e tecnologia.</p>  
-    </footer>
+</body>
 <script src="menu.js"></script>
+</html>

@@ -94,19 +94,19 @@ $resultado = mysqli_query($conn,$sql);
         
     } 
     
-        function carregar(pagina) {
-        fetch(pagina)
-            .then(response => {
-            if (!response.ok) throw new Error('Erro ao carregar a página');
-            return response.text();
-            })
-            .then(html => {
-            document.getElementById('conteudo').innerHTML = html;
-            })
-            .catch(error => {
-            document.getElementById('conteudo').innerHTML = '<p>Erro ao carregar o conteúdo.</p>';
-            console.error(error);
-            });
+    function carregar(pagina) {
+    fetch(pagina)
+        .then(response => {
+        if (!response.ok) throw new Error('Erro ao carregar a página');
+        return response.text();
+        })
+        .then(html => {
+        document.getElementById('conteudo').innerHTML = html;
+        })
+        .catch(error => {
+        document.getElementById('conteudo').innerHTML = '<p>Erro ao carregar o conteúdo.</p>';
+        console.error(error);
+        });
 
         
         }
@@ -114,6 +114,11 @@ $resultado = mysqli_query($conn,$sql);
         // Carrega a home ao abrir o site
         carregar('hubInicial.php');
     </script>
+
+    <footer>
+        <p>Os videoaulas não são de nossa autoria.</p>
+        <p style="font-size: 25px; margin-top:10px;">Copyright © 2024-2025, development by RA: educação e tecnologia.</p>  
+    </footer> 
 
 </body>
 <script src="menu.js"></script>
