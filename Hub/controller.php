@@ -14,9 +14,13 @@ $resultado = mysqli_query($conn,$sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hub do Professor</title>
+
     <link rel="stylesheet" href="styleHub.css"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <script src="funcoes.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styleHub1.css">
+    <script src="funçoes.js"></script>
 </head>
 
 <body>
@@ -55,10 +59,12 @@ $resultado = mysqli_query($conn,$sql);
         </ul>
     </nav>
 
+
     <div id='conteudo'>Carregando...</div>
     
     
     </div>
+    <main id='conteudo'>Carregando...</main>
 
     <script>
     

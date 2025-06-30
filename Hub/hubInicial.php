@@ -8,6 +8,7 @@ $sql = "SELECT * FROM alunos";
 $resultado = mysqli_query($conn,$sql);
 ?>
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -20,37 +21,47 @@ $resultado = mysqli_query($conn,$sql);
 
 <body>
 
-    <header>
+
+    <div class='header'>
+
         <h1> Olá! Seja bem-vindo(a) ao Hub, professor! INICIAL</h1>
-        <div class="txt_recursos">
-            <p>Estes são os seus recursos:</p>
-        </div>
-    </header>
+    </div>
 
     <main>
-    <section id="libras">
-        <p class="txt_sections">↳ Alunos</p>
-        <div class="caixas">
-            <?php 
+        <div class="container">
+            <h1>Lista de Alunos</h1>
+            <table>
+            <thead>
+                <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Teto Salárial</th>
+                <th>Ações</th>
+                </tr>
+            </thead>
+            <?php
                 while ($dado = mysqli_fetch_assoc($resultado)){
             ?>
             <tbody>
-                <ul>
-                    <li><?php echo $dado['AlunoID'] ?> | <?php echo $dado['Nome'] ?></li>
-                    </tr>
-                </ul>
+                <tr>
+                <td><?php echo $dado['CargoID'] ?></td>
+                <td><?php echo $dado['Nome'] ?></td>
+                <td><?php echo $dado['TetoSalar'] ?></td>
+                <td>
+                    <a href="./salvar-cargos.php?cargoid=<?php echo $dado['CargoID']?>" class="btn btn-edit">Editar</a>
+                    <a href="./action/cargos.php?acao=delete&cargoid=<?php echo $dado['CargoID'] ?>" class="btn btn-delete">Excluir</a>
+                </td>
+                </tr>
             </tbody>
-            <?php 
+            <?php
                 }
             ?>
-        </div>
-    </section>
+            </table>
+        </div> 
     </main>
     
     <footer>
         <p>Os videoaulas não são de nossa autoria.</p>
         <p style="font-size: 25px; margin-top:10px;">Copyright © 2024-2025, development by RA: educação e tecnologia.</p>  
-    </footer>     
-</body>
+    </footer>
 <script src="menu.js"></script>
-</html>
