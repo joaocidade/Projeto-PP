@@ -3,7 +3,7 @@
 $host = "localhost";
 $usuario = "root";
 $senha = "";
-$banco = "hub_db";
+$banco = "bancohub";
 
 // objeto que controla a conexao com o banco
 $conn = new mysqli($host, $usuario, $senha, $banco);
@@ -14,5 +14,4 @@ if ($conn->connect_error) {
 }
 // mensagem que deu certo a conexao - pode ser apagada depois que 
 // exibir a mensagem, pois voce conseguiu conectar ao banco
-
 ?>

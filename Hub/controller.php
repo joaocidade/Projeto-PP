@@ -1,5 +1,5 @@
 <?php
-include_once '../incluir/conexao.php';
+include_once '../Incluir/conexao.php';
 
 //comando de SQL para executar
 $sql = "SELECT * FROM alunos";
