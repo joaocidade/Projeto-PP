@@ -84,7 +84,7 @@ body{
 }
 
 /* HEADER */
-header{
+.header{
     display: block;
     float: left;
     padding-top:  30px;
@@ -139,7 +139,7 @@ main{
     transform: translateY(160%);
 }
 
-/* Tabela Alunos */
+/* HUB INICIAL */
 
 table {
     width: 100%;
