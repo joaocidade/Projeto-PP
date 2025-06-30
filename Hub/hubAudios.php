@@ -3,8 +3,6 @@ include_once '../incluir/conexao.php';
 
 // Comando SQL para executar
 $sql = "SELECT * FROM alunos";
-
-// Executa e retorna os dados
 $resultado = mysqli_query($conn, $sql);
 ?>
 
@@ -19,6 +17,7 @@ $resultado = mysqli_query($conn, $sql);
 </head>
 
 <body>
+    <script src="funcoes.js"></script>
   <header>
     <div class="txt_recursos">
       <p>Estes são os seus recursos:</p>
@@ -42,8 +41,6 @@ $resultado = mysqli_query($conn, $sql);
         <textarea id="entradaTexto" rows="4" cols="50" placeholder="Digite aqui o texto a ser falado..."></textarea>
         <br />
         <button onclick="transcricao()">Ouvir Texto</button>
-      </div>
-        </ul>
       </div>
     </div>
   </main>

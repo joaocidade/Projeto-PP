@@ -7,7 +7,6 @@ $sql = "SELECT * FROM alunos";
 //executa e retorna os dados
 $resultado = mysqli_query($conn,$sql);
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,7 +14,6 @@ $resultado = mysqli_query($conn,$sql);
 </head>
 
 <body>
-
     <header>
         <h1> Olá! Seja bem-vindo(a) ao Hub, professor! INICIAL</h1>
     </header>

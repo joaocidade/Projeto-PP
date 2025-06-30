@@ -14,6 +14,10 @@ $resultado = mysqli_query($conn,$sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hub do Professor</title>
+
+    <link rel="stylesheet" href="styleHub.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="funcoes.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styleHub1.css">
     <script src="funçoes.js"></script>
@@ -55,44 +59,14 @@ $resultado = mysqli_query($conn,$sql);
         </ul>
     </nav>
 
+
+    <div id='conteudo'>Carregando...</div>
+    
+    
+    </div>
     <main id='conteudo'>Carregando...</main>
 
     <script>
-        function reconhecerFala() {
-      const reconhecimento = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-      reconhecimento.lang = 'pt-BR';
-      reconhecimento.interimResults = false;
-      reconhecimento.maxAlternatives = 1;
- 
-      reconhecimento.onstart = () => {
-        document.getElementById("resultado").textContent = "Ouvindo...";
-      };
- 
-      reconhecimento.onresult = (event) => {
-        const texto = event.results[0][0].transcript;
-        document.getElementById("resultado").textContent = "Você disse: " + texto;
-      };
- 
-      reconhecimento.onerror = (event) => {
-        document.getElementById("resultado").textContent = "Erro: " + event.error;
-      };
- 
-      reconhecimento.start();
-    } 
-    function pararReconhecimento(){
-        const reconhecimento = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-        reconhecimento.stop(reconhecerFala());
-    }
-    function transcricao(){
-    const texto = () => document.getElementById("resultado").value;
-    const fala = new SpeechSynthesisUtterance(texto());
-    fala.lang = 'pt-BR';    
-    fala.rate = 1;           
-    fala.pitch = 1;         
-    fala.volume = 1;        
-    speechSynthesis.speak(fala);
-        
-    } 
     
     function carregar(pagina) {
     fetch(pagina)
