@@ -61,10 +61,6 @@ $resultado = mysqli_query($conn,$sql);
 
 
     <div id='conteudo'>Carregando...</div>
-    
-    
-    </div>
-    <main id='conteudo'>Carregando...</main>
 
     <script>
     
@@ -91,7 +87,7 @@ $resultado = mysqli_query($conn,$sql);
 
     <footer>
         <p>Os videoaulas não são de nossa autoria.</p>
-        <p style="font-size: 25px; margin-top:10px;">Copyright © 2024-2025, development by RA: educação e tecnologia.</p>  
+        <p>Copyright © 2024-2025, development by RA: educação e tecnologia.</p>  
     </footer> 
 
 </body>

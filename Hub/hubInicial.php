@@ -15,7 +15,7 @@ $resultado = mysqli_query($conn,$sql);
 
 <body>
     <header>
-        <h1> Olá! Seja bem-vindo(a) ao Hub, professor! INICIAL</h1>
+        <h1> Olá! Seja bem-vindo(a) ao Hub, professor!</h1>
     </header>
 
     <main>
