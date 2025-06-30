@@ -19,7 +19,6 @@ $resultado = mysqli_query($conn,$sql);
 </head>
 
 <body>
-
     <header>
         <div class="txt_recursos">
             <p>Estes são os seus recursos:</p>
