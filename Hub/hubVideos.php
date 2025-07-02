@@ -36,10 +36,6 @@ $resultado = mysqli_query($conn,$sql);
         </div>
     </section>
     </main>
-    <footer>
-        <p>Os videoaulas não são de nossa autoria.</p>
-        <p style="font-size: 25px; margin-top:10px;">Copyright © 2024-2025, development by RA: educação e tecnologia.</p>  
-    </footer>   
 </body>
 <script src="menu.js"></script>
 </html>

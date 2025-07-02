@@ -85,8 +85,12 @@ body{
 
 /* MAIN - Conteudo */
 main{
-    padding-left: 5%;
     padding-right: 5%;
+    padding-left: 5%;
+}
+
+#conteudo{
+    padding-left: 5%;
     background-color: whitesmoke;
 }
 
@@ -131,6 +135,21 @@ header{
     padding-bottom: 25px;
 }
 
+/* FOOTER */
+footer{
+    background-color:rgb(0, 23, 45);
+    padding-top: 15px;
+    height: 100px;
+    display: block;
+}
+
+footer p{
+    margin-left: 60px;
+    text-align: center;
+    color: rgb(215, 215, 215);
+    font-size: 15px;
+}
+
 /* HUB INICIAL */
 
 .container{
@@ -164,18 +183,5 @@ th {
 
 tr:hover {
     background-color: #f1f1f1;
-}
-
-/* FOOTER */
-footer{
-    background-color:red;
-    height: 300px;
-    display: block;
-}
-
-footer p{
-    text-align: center;
-    color: rgb(215, 215, 215);
-    font-size: 25px;
 }
 

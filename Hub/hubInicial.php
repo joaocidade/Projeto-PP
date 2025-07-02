@@ -13,7 +13,7 @@ $resultado = mysqli_query($conn,$sql);
 
 <body>
     <header>
-        <h1> Olá! Seja bem-vindo(a) ao Hub, professor!</h1>
+        <h1> Olá! Seja bem-vindo(a) ao Hub, professor(a)!</h1>
     </header>
 
     <main>
@@ -47,10 +47,6 @@ $resultado = mysqli_query($conn,$sql);
             </table>
         </div> 
     </main>
-    <footer>
-        <p>Os videoaulas não são de nossa autoria.</p>
-        <p>Copyright © 2024-2025, development by RA: educação e tecnologia.</p>  
-    </footer> 
 </body>
 <script src="menu.js"></script>
 </html>
