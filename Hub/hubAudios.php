@@ -8,15 +8,9 @@ $resultado = mysqli_query($conn, $sql);
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hub do Professor</title>
-  <link rel="stylesheet" href="styleHub.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-</head>
+<head></head>
 
-<body>
+<body id="">
     <script src="funcoes.js"></script>
   <header>
     <div class="txt_recursos">
@@ -24,13 +18,13 @@ $resultado = mysqli_query($conn, $sql);
     </div>
   </header>
 
-  <main>
+  <main id="mainAudio">
     <div id="apresentacao">
       <h1>Bem-vindo ao Hub de Funcionalidades</h1>
 
       <div id="apresentacao_transcricao">
         <h2>Transcrição de Texto</h2>
-        <p>Uma funcionalidade focada na transcrição de voz para texto em tempo real, auxiliando pessoas surdas a compreenderem conversas sem precisar utilizar Libras.</p>
+        <p>Uma funcionalidade focada na transcrição de voz para texto em tempo real,<br> auxiliando pessoas surdas a compreenderem conversas sem precisar utilizar Libras.</p>
         <button onclick="reconhecerFala()">Iniciar Transcrição</button>
         <div id="resultado"></div>
       </div>
@@ -44,7 +38,10 @@ $resultado = mysqli_query($conn, $sql);
       </div>
     </div>
   </main>
-
+  <footer>
+        <p>Os videoaulas não são de nossa autoria.</p>
+        <p style="font-size: 25px; margin-top:10px;">Copyright © 2024-2025, development by RA: educação e tecnologia.</p>  
+    </footer>   
   <script src="funcoes.js"></script>
   <script src="menu.js"></script>
 </body>

@@ -6,6 +6,8 @@ $sql = "SELECT * FROM alunos";
 
 //executa e retorna os dados
 $resultado = mysqli_query($conn,$sql);
+
+$atulizador = date('YmdHis').rand(0,99999999999);
 ?>
 
 <!DOCTYPE html>
@@ -14,13 +16,9 @@ $resultado = mysqli_query($conn,$sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hub do Professor</title>
-
-    <link rel="stylesheet" href="styleHub.css"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styleHub.css?t=<?php echo $atulizador;?>"> 
     <script src="funcoes.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="styleHub1.css">
-    <script src="funçoes.js"></script>
 </head>
 
 <body>
@@ -46,7 +44,7 @@ $resultado = mysqli_query($conn,$sql);
             </li>
             <li class="itemmenu">
                 <a onclick="carregar('hubLibras.php')">
-                    <span class="icon"><i class="bi bi-hand-index"></i></i></span>
+                    <span class="icon"><i class="bi bi-hand-index"></i></span>
                     <span class="txt">Libras</span>
                 </a>
             </li>
@@ -63,8 +61,6 @@ $resultado = mysqli_query($conn,$sql);
     <div id='conteudo'>Carregando...</div>
     
     
-    </div>
-    <main id='conteudo'>Carregando...</main>
 
     <script>
     
@@ -89,10 +85,7 @@ $resultado = mysqli_query($conn,$sql);
         carregar('hubInicial.php');
     </script>
 
-    <footer>
-        <p>Os videoaulas não são de nossa autoria.</p>
-        <p style="font-size: 25px; margin-top:10px;">Copyright © 2024-2025, development by RA: educação e tecnologia.</p>  
-    </footer> 
+    
 
 </body>
 <script src="menu.js"></script>
