@@ -20,11 +20,40 @@
   <body>
     <header id="header">
       <img src="./Imagens/Logo.png" alt="" id="logo">
-      <button href="" class="cadastre-se" id="cadastro_header">Cadastre-se</button>
+      <button type="button" data-toggle="modal" data-target="#exampleModal" class="cadastre-se" id="cadastro_header">Cadastre-se</button>
       <a href="" id="entre">Entre</a>
     </header>
 
     <main>
+      <!--MODAL CADASTRO-->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cadastre-se</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <div class="inputBox">
+                  <label for="nome">Nome completo</label><br>
+                  <input type="text" name="nome" id="nome" class="inputUser" required>
+                </div>
+                <div class="inputBox">
+                  <input type="text" name="email" name="email">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Continuar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div id="title">
         <h1>Aprender nunca <br>foi tão imersivo</h1>
         <p>Explore o conhecimento em 360° e transforme os estudos em uma verdadeira jornada.</p>
@@ -75,7 +104,7 @@
             <h5 class="card-title">ESTUDANTE</h5>
             <p class="card-text">Cadastre-se como estudante independente ou aluno de uma instituição parceira para impulsionar seus estudos.</p>
             <div class="valor"><h6>R$119,00</h6><p>ao mês</p></div>
-            <button href="" class="cadastre-se" style="width: 100%;">Cadastre-se como estudante</button>
+            <a href="./Hub/controller.php"><button href="" class="cadastre-se" style="width: 100%;">Cadastre-se como estudante</button></a>
             <p class="card-text">Assine e garanta:</p>
             <ul>
               <li>Conteúdos 360° imersivos</li>
@@ -85,13 +114,13 @@
             <h5 class="card-title">PROFESSOR</h5>
             <p class="card-text">Cadastre-se como professor de uma escola parceira e proporcione aprendizado imersivo e inclusivo para todos os alunos.</p>
             <div class="valor"><h6>R$119,00</h6><p>ao mês</p></div>
-            <button href="" class="cadastre-se" style="width: 100%;">Cadastre-se como professor</button>
+            <a href="./Hub/controller.php"><button href="" class="cadastre-se" style="width: 100%;">Cadastre-se como professor</button></a>
           </div>
           <div class="card">
             <h5 class="card-title">ESCOLA</h5>
             <p class="card-text">Cadastre-se como uma escola parceira e proporcione aprendizado imersivo e inclusivo para todos os alunos.</p>
             <div class="valor"><h6>R$119,00</h6><p>ao mês</p></div>
-            <button href="" class="cadastre-se" style="width: 100%;">Cadastre-se como escola</button>
+            <a href="./Hub/controller.php"><button href="" class="cadastre-se" style="width: 100%;">Cadastre-se como escola</button></a>
           </div>
         </div>
       </div>
