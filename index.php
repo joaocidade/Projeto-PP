@@ -1,3 +1,22 @@
+<?php
+
+include_once('./Incluir/conexao.php');
+
+if(isset($_POST['submit'])){
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+    $sql_insert = "INSERT INTO alunos (Nome, Email, Senha)
+    VALUES ('{$nome}','{$email}','{$senha}')";
+
+    if ($resultado = mysqli_query($conn, $sql_insert)){
+      header('Location: http://localhost:8080/Projeto-PP/Hub/controller.php');
+    };
+}
+
+?>
+
 <!doctype html>
 <html lang="pt">
   <head>
@@ -36,18 +55,21 @@
               </button>
             </div>
             <div class="modal-body">
-              <form action="">
+              <form action="index.php" method="POST">
                 <div class="inputBox">
                   <label for="nome">Nome completo</label><br>
                   <input type="text" name="nome" id="nome" class="inputUser" required>
                 </div>
                 <div class="inputBox">
-                  <input type="text" name="email" name="email">
+                  <label for="email">Email</label><br>
+                  <input type="text" name="email" id="email" class="inputUser" required>
                 </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary">Continuar</button>
+                <div class="inputBox">
+                  <label for="senha">Senha</label><br>
+                  <input type="text" name="senha" id="senha" class="inputUser" required>
+                </div>
+                <input type="submit" name="submit" id="submit" class="btn btn-primary">
+              </form><br>
             </div>
           </div>
         </div>
