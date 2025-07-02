@@ -58,7 +58,7 @@ $atulizador = date('YmdHis').rand(0,99999999999);
     </nav>
 
 
-    <div id='conteudo'>Carregando...</div>
+    <div id='conteudo'>Carregando...</div> 
 
     <script>
     

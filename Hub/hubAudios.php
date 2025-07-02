@@ -8,7 +8,9 @@ $resultado = mysqli_query($conn, $sql);
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head></head>
+<head>
+  <link rel="stylesheet" href="styleHub.css">
+</head>
 
 <body id="">
     <script src="funcoes.js"></script>
@@ -38,10 +40,7 @@ $resultado = mysqli_query($conn, $sql);
       </div>
     </div>
   </main>
-  <footer>
-        <p>Os videoaulas não são de nossa autoria.</p>
-        <p style="font-size: 25px; margin-top:10px;">Copyright © 2024-2025, development by RA: educação e tecnologia.</p>  
-    </footer>   
+  
   <script src="funcoes.js"></script>
   <script src="menu.js"></script>
 </body>
