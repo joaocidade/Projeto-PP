@@ -26,6 +26,6 @@
     fala.lang = 'pt-BR';
     fala.rate = 1;
     fala.pitch = 1;
-    fala.volume = 5;
+    fala.volume = 1;
     speechSynthesis.speak(fala);
   }
