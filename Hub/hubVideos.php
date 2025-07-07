@@ -25,13 +25,13 @@ $resultado = mysqli_query($conn,$sql);
         <p class='txt_sections'>↳ Vídeos</p>
         <div class="caixas">
             <div class="caixa">
-                <a href="https://youtu.be/WxzcD04rwc8?si=VXlkwEYzbvHpONBo" target="_blank"><img src="../Imagens/futureAR.png" alt="0"></a>
+                <a href="https://youtu.be/mOuvAJRknXk?si=50gm20OycO-sNeK8" target="_blank"><img id="img1" src="../Imagens/All_Gizah_Pyramids.jpg" alt="0"></a>
             </div>
             <div class="caixa">
-                <a href="" target="_blank"><img src="" alt="0"></a>
+                <a href="https://youtu.be/v64KOxKVLVg?si=foPVGI2QYP-RJCpb" target="_blank"><img src="../Imagens/nationalpark.png" alt="0"></a>
             </div>
             <div class="caixa">
-                <a href="" target="_blank"><img src="" alt="0"></a>
+                <a href="https://youtu.be/aogLFedcnTI?si=S2EUr3-kqOXHN_au" target="_blank"><img src="../Imagens/interbody.png" alt="0"></a>
             </div>
         </div>
     </section>
