@@ -82,12 +82,11 @@ $atulizador = date('YmdHis').rand(0,99999999999);
         // Carrega a home ao abrir o site
         carregar('hubInicial.php');
     </script>
-
-
     <footer>
         <p>Os videoaulas não são de nossa autoria.</p>
         <p>Copyright © 2024-2025, development by RA: educação e tecnologia.</p>  
-    </footer>
+
+    </footer> 
 
 
 </body>
