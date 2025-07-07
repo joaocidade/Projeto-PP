@@ -185,3 +185,25 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
+/* Links e imagens na Hub */
+
+#videos .caixas{
+
+    text-align: center;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+
+}
+
+#videos .caixas img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0%;
+
+}
+
