@@ -9,7 +9,7 @@
 
 body{
     width: 100%;
-    background-color: white;
+    background-color: whitesmoke
 }
 
 /*BARRA LETERAL*/
@@ -137,8 +137,11 @@ header{
 
 /* FOOTER */
 footer{
+
+    margin-top: 250px;
     background-color:rgb(0, 23, 45);
-    padding-top: 15px;
+    padding-top: 25px;
+    padding-bottom: 220px;
     height: 100px;
     display: block;
 }
@@ -147,7 +150,8 @@ footer p{
     margin-left: 60px;
     text-align: center;
     color: rgb(215, 215, 215);
-    font-size: 15px;
+    font-size: 16px;
+
 }
 
 /* HUB INICIAL */
@@ -159,7 +163,7 @@ footer p{
 .container h1{
     font-size: 20px;
     background-color: rgb(0, 23, 45);
-    color: white;
+    color: rgb(215, 215, 215);
     text-align: center;
     padding-bottom: 5px;    
 }
@@ -178,7 +182,7 @@ th, td {
 
 th {
     background-color: rgb(56, 56, 59);
-    color: white;
+    color: whitesmoke
 }
 
 tr:hover {
@@ -195,22 +199,24 @@ tr:hover {
     border: 2px solid #358E8B;;
     box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
-    margin-left: 0px;
+    margin-left: 50px;
     text-align: center;
-    background-color: white;
+    background-color: rgb(215, 215, 215);
     position: relative;
     overflow: hidden;
 
 }
 
-.aud .caixa4 img{
+.caixa img{
 
     width: 120%;
     height: auto;
     display: block;
     position: absolute;
     top: 0;
-    left: 0%;
+    left: -2%;
 
 }
+
+
 
