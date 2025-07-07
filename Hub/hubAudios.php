@@ -1,5 +1,5 @@
 <?php
-include_once '../incluir/conexao.php';
+include_once '../Incluir/conexao.php';
 
 // Comando SQL para executar
 $sql = "SELECT * FROM alunos";
@@ -8,8 +8,8 @@ $resultado = mysqli_query($conn, $sql);
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <link rel="stylesheet" href="styleHub.css">
+<head>  
+  <script src="funcoes.js"></script>
 </head>
 
 <body id="">
@@ -41,7 +41,6 @@ $resultado = mysqli_query($conn, $sql);
     </div>
   </main>
   
-  <script src="funcoes.js"></script>
-  <script src="menu.js"></script>
+  
 </body>
 </html>
