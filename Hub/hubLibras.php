@@ -35,11 +35,7 @@ $resultado = mysqli_query($conn,$sql);
             </div>
         </div>
     </section>
-    </main>   
-    <footer>
-        <p>Os videoaulas não são de nossa autoria.</p>
-        <p>Copyright © 2024-2025, development by RA: educação e tecnologia.</p>  
-    </footer>   
+    </main> 
 </body>
 <script src="menu.js"></script>
 </html>

@@ -85,7 +85,9 @@ $atulizador = date('YmdHis').rand(0,99999999999);
     <footer>
         <p>Os videoaulas não são de nossa autoria.</p>
         <p>Copyright © 2024-2025, development by RA: educação e tecnologia.</p>  
+
     </footer> 
+
 
 </body>
 <script src="menu.js"></script>
