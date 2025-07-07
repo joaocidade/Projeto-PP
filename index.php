@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styleInicio1.css">
+    <link rel="stylesheet" href="styleInicio.css">
     <title>Aprendizado impersivo e inclusivo online</title>
 
     <link rel="icon" href="Imagens/Logo.png" type="image/x-icon">
@@ -39,7 +39,7 @@ if(isset($_POST['submit'])){
   <body>
     <header id="header">
       <img src="./Imagens/Logo.png" alt="" id="logo">
-      <button type="button" data-toggle="modal" data-target="#exampleModal" class="cadastre-se" id="cadastro_header">Cadastre-se</button>
+      <button type="button" data-toggle="modal" data-target="#exampleModal" class="cadastre-se">Cadastre-se</button>
       <a href="" id="entre">Entre</a>
     </header>
 
@@ -121,30 +121,7 @@ if(isset($_POST['submit'])){
       
       <div id="div_cadastro">
         <H1>Comece agora e garanta acesso imediato a todos os recursos para você ou para seus alunos</H1>
-        <div id="cards">
-          <div class="card">
-            <h5 class="card-title">ESTUDANTE</h5>
-            <p class="card-text">Cadastre-se como estudante independente ou aluno de uma instituição parceira para impulsionar seus estudos.</p>
-            <div class="valor"><h6>R$119,00</h6><p>ao mês</p></div>
-            <a href="./Hub/controller.php"><button href="" class="cadastre-se" style="width: 100%;">Cadastre-se como estudante</button></a>
-            <p class="card-text">Assine e garanta:</p>
-            <ul>
-              <li>Conteúdos 360° imersivos</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h5 class="card-title">PROFESSOR</h5>
-            <p class="card-text">Cadastre-se como professor de uma escola parceira e proporcione aprendizado imersivo e inclusivo para todos os alunos.</p>
-            <div class="valor"><h6>R$119,00</h6><p>ao mês</p></div>
-            <a href="./Hub/controller.php"><button href="" class="cadastre-se" style="width: 100%;">Cadastre-se como professor</button></a>
-          </div>
-          <div class="card">
-            <h5 class="card-title">ESCOLA</h5>
-            <p class="card-text">Cadastre-se como uma escola parceira e proporcione aprendizado imersivo e inclusivo para todos os alunos.</p>
-            <div class="valor"><h6>R$119,00</h6><p>ao mês</p></div>
-            <a href="./Hub/controller.php"><button href="" class="cadastre-se" style="width: 100%;">Cadastre-se como escola</button></a>
-          </div>
-        </div>
+        <button type="button" data-toggle="modal" data-target="#exampleModal" class="cadastre-se_cadastro">Cadastre-se</button>
       </div>
     </main>
 

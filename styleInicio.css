@@ -24,6 +24,7 @@
 }
 
 .cadastre-se{
+    float: right;
     margin-right: 30px;
     color: white;
     background-color: rgba(0, 0, 0, 0);
@@ -35,10 +36,6 @@
     transition: all 0.3s ease;
     font-weight: 600;
     margin-top: 10px;
-}
-
-#cadastro_header{
-    float: right;
 }
 
 #header #entre{
@@ -153,7 +150,7 @@ main #funcionalidades h5 {
 }
 
 #video h2{
-    margin-top: 135px;
+    margin-top: 100px;
     margin-right: 70px;
     color: white;
     font-size: 45px;
@@ -176,8 +173,12 @@ main #funcionalidades h5 {
     display: block;
     float: left;
     width: 100%;
-    height: 700px;
+    height: 320px;
     padding-top: 40px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    place-items: center;
 }
 
 #div_cadastro h1{
@@ -191,60 +192,17 @@ main #funcionalidades h5 {
     padding-right: 50px;
 }
 
-#div_cadastro #cards{
-    display: flex;
-    float: left;
-    justify-content: center;
-    width: 100%;
-    margin-top: 40px;
-}
-
-#cards .card{
-    width: 350px;
-    height: 450px;
-    align-content: center;
-    margin: 5px;
-    padding: 25px;
-    padding-top: 35px;
-    background-color: #0b1926;
-    color: white;
-    border-radius: 15px;
-    box-shadow: 0px 0px 12px rgba(0, 170, 255, 0.155);
-    border: 3px solid #5ce1e6;
-}
-
-#cards .card h5{
-    font-size: 30px;
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.card .valor{
-    display: block;
-    float: left;
+.cadastre-se_cadastro{
+    color: black;
     background-color: #5ce1e6;
-    border-radius: 5px;
-    padding: 10px;
-    padding-left: 15px;
-    padding-bottom: 2px;
-    margin-bottom: 10px;
-}
-
-.card .valor h6{
-    float: left;
-    font-size: 40px;
-    color: #0b1926;
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.card .valor p{
-    float: left;
-    margin-top: 20px;
-    margin-left: 7px;
-    color: #0b1926;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-color: rgb(2, 132, 132);
+    border-radius: 400px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    margin-top: 10px;
 }
 
 /*FOOTER*/   
