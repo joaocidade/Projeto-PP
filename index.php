@@ -2,7 +2,7 @@
 
 include_once('./Incluir/conexao.php');
 
-if(isset($_POST['submit'])){
+if(isset($_POST['cadastro'])){
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
@@ -13,6 +13,13 @@ if(isset($_POST['submit'])){
     if ($resultado = mysqli_query($conn, $sql_insert)){
       header('Location: http://localhost:8080/Projeto-PP/Hub/controller.php');
     };
+}
+
+if(isset($_POST['entrar'])){
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+    $sql_insert = "?";
 }
 
 ?>
@@ -27,7 +34,7 @@ if(isset($_POST['submit'])){
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styleInicio1.css">
+    <link rel="stylesheet" href="styleInicio.css">
     <title>Aprendizado impersivo e inclusivo online</title>
 
     <link rel="icon" href="Imagens/Logo.png" type="image/x-icon">
@@ -39,13 +46,13 @@ if(isset($_POST['submit'])){
   <body>
     <header id="header">
       <img src="./Imagens/Logo.png" alt="" id="logo">
-      <button type="button" data-toggle="modal" data-target="#exampleModal" class="cadastre-se" id="cadastro_header">Cadastre-se</button>
-      <a href="" id="entre">Entre</a>
+      <button type="button" data-toggle="modal" data-target="#cadastroModal" class="cadastre-se">Cadastre-se</button>
+      <button type="button" data-toggle="modal" data-target="#entrarModal" id="entre">Entre</button>
     </header>
 
     <main>
       <!--MODAL CADASTRO-->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -67,8 +74,35 @@ if(isset($_POST['submit'])){
                 <div class="inputBox">
                   <label for="senha">Senha</label><br>
                   <input type="text" name="senha" id="senha" class="inputUser" required>
+                </div><br>
+                <input type="submit" name="cadastro" id="cadastro" class="btn btn-primary">
+              </form><br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--MODAL LOGIN-->
+      <div class="modal fade" id="entrarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Entre</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="index.php" method="POST">
+                <div class="inputBox">
+                  <label for="email">Email</label><br>
+                  <input type="text" name="email" id="email" class="inputUser" required>
                 </div>
-                <input type="submit" name="submit" id="submit" class="btn btn-primary">
+                <div class="inputBox">
+                  <label for="senha">Senha</label><br>
+                  <input type="text" name="senha" id="senha" class="inputUser" required>
+                </div><br>
+                <input type="submit" name="entrar" id="entrar" class="btn btn-primary">
               </form><br>
             </div>
           </div>
@@ -79,7 +113,7 @@ if(isset($_POST['submit'])){
       <div id="title">
         <h1>Aprender nunca <br>foi tão imersivo</h1>
         <p>Explore o conhecimento em 360° e transforme os estudos em uma verdadeira jornada.</p>
-        <button class="cadastre-se" id="cadastro_title">Cadastre-se</button>
+        <button type="button" data-toggle="modal" data-target="#cadastroModal" class="cadastre-se" id="cadastro_title">Cadastre-se</button>
       </div>
 
       <div id="funcionalidades">
@@ -121,30 +155,7 @@ if(isset($_POST['submit'])){
       
       <div id="div_cadastro">
         <H1>Comece agora e garanta acesso imediato a todos os recursos para você ou para seus alunos</H1>
-        <div id="cards">
-          <div class="card">
-            <h5 class="card-title">ESTUDANTE</h5>
-            <p class="card-text">Cadastre-se como estudante independente ou aluno de uma instituição parceira para impulsionar seus estudos.</p>
-            <div class="valor"><h6>R$119,00</h6><p>ao mês</p></div>
-            <a href="./Hub/controller.php"><button href="" class="cadastre-se" style="width: 100%;">Cadastre-se como estudante</button></a>
-            <p class="card-text">Assine e garanta:</p>
-            <ul>
-              <li>Conteúdos 360° imersivos</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h5 class="card-title">PROFESSOR</h5>
-            <p class="card-text">Cadastre-se como professor de uma escola parceira e proporcione aprendizado imersivo e inclusivo para todos os alunos.</p>
-            <div class="valor"><h6>R$119,00</h6><p>ao mês</p></div>
-            <a href="./Hub/controller.php"><button href="" class="cadastre-se" style="width: 100%;">Cadastre-se como professor</button></a>
-          </div>
-          <div class="card">
-            <h5 class="card-title">ESCOLA</h5>
-            <p class="card-text">Cadastre-se como uma escola parceira e proporcione aprendizado imersivo e inclusivo para todos os alunos.</p>
-            <div class="valor"><h6>R$119,00</h6><p>ao mês</p></div>
-            <a href="./Hub/controller.php"><button href="" class="cadastre-se" style="width: 100%;">Cadastre-se como escola</button></a>
-          </div>
-        </div>
+        <button type="button" data-toggle="modal" data-target="#cadastroModal" class="cadastre-se" id="cadastro_cadastro">Cadastre-se</button>
       </div>
     </main>
 
