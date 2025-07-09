@@ -18,7 +18,7 @@ $atulizador = date('YmdHis').rand(0,99999999999);
     <title>Hub do Professor</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styleHub.css?t=<?php echo $atulizador;?>"> 
-    <script src="funcoes.js"></script>
+    <script src="funcoes.js?t=<?php echo $atulizador;?>"></script>
 </head>
 
 <body>
@@ -85,7 +85,6 @@ $atulizador = date('YmdHis').rand(0,99999999999);
     <footer>
         <p>Os videoaulas não são de nossa autoria.</p>
         <p>Copyright © 2024-2025, development by RA: educação e tecnologia.</p>  
-
     </footer> 
 
 

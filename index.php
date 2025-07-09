@@ -2,7 +2,7 @@
 
 include_once('./Incluir/conexao.php');
 
-if(isset($_POST['submit'])){
+if(isset($_POST['cadastro'])){
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
@@ -13,6 +13,13 @@ if(isset($_POST['submit'])){
     if ($resultado = mysqli_query($conn, $sql_insert)){
       header('Location: http://localhost:8080/Projeto-PP/Hub/controller.php');
     };
+}
+
+if(isset($_POST['entrar'])){
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+    $sql_insert = "?";
 }
 
 ?>
@@ -39,13 +46,13 @@ if(isset($_POST['submit'])){
   <body>
     <header id="header">
       <img src="./Imagens/Logo.png" alt="" id="logo">
-      <button type="button" data-toggle="modal" data-target="#exampleModal" class="cadastre-se">Cadastre-se</button>
-      <a href="" id="entre">Entre</a>
+      <button type="button" data-toggle="modal" data-target="#cadastroModal" class="cadastre-se">Cadastre-se</button>
+      <button type="button" data-toggle="modal" data-target="#entrarModal" id="entre">Entre</button>
     </header>
 
     <main>
       <!--MODAL CADASTRO-->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -67,8 +74,35 @@ if(isset($_POST['submit'])){
                 <div class="inputBox">
                   <label for="senha">Senha</label><br>
                   <input type="text" name="senha" id="senha" class="inputUser" required>
+                </div><br>
+                <input type="submit" name="cadastro" id="cadastro" class="btn btn-primary">
+              </form><br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--MODAL LOGIN-->
+      <div class="modal fade" id="entrarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Entre</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="index.php" method="POST">
+                <div class="inputBox">
+                  <label for="email">Email</label><br>
+                  <input type="text" name="email" id="email" class="inputUser" required>
                 </div>
-                <input type="submit" name="submit" id="submit" class="btn btn-primary">
+                <div class="inputBox">
+                  <label for="senha">Senha</label><br>
+                  <input type="text" name="senha" id="senha" class="inputUser" required>
+                </div><br>
+                <input type="submit" name="entrar" id="entrar" class="btn btn-primary">
               </form><br>
             </div>
           </div>
@@ -79,7 +113,7 @@ if(isset($_POST['submit'])){
       <div id="title">
         <h1>Aprender nunca <br>foi tão imersivo</h1>
         <p>Explore o conhecimento em 360° e transforme os estudos em uma verdadeira jornada.</p>
-        <button class="cadastre-se" id="cadastro_title">Cadastre-se</button>
+        <button type="button" data-toggle="modal" data-target="#cadastroModal" class="cadastre-se" id="cadastro_title">Cadastre-se</button>
       </div>
 
       <div id="funcionalidades">
@@ -121,7 +155,7 @@ if(isset($_POST['submit'])){
       
       <div id="div_cadastro">
         <H1>Comece agora e garanta acesso imediato a todos os recursos para você ou para seus alunos</H1>
-        <button type="button" data-toggle="modal" data-target="#exampleModal" class="cadastre-se_cadastro">Cadastre-se</button>
+        <button type="button" data-toggle="modal" data-target="#cadastroModal" class="cadastre-se" id="cadastro_cadastro">Cadastre-se</button>
       </div>
     </main>
 
