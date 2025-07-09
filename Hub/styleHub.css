@@ -23,6 +23,7 @@ body{
     overflow: hidden;
     transition: .3s;
     align-content: center;
+    z-index: 40;
 }
 
 .menulateral:hover{
@@ -84,10 +85,6 @@ body{
 }
 
 /* MAIN - Conteudo */
-main{
-   
-}
-
 #conteudo{
     padding-left: 5%;
     background-color: whitesmoke;
@@ -101,12 +98,13 @@ main{
 
 #apresentacao{
     width: 90%;
-    height: 700px;
+    height: 800px;
     background-color:  rgb(56, 56, 59);
     margin: auto;
     text-align: center;
     justify-content: center;
     display: block;
+
 }
 
 #apresentacao_transcricao{
@@ -206,6 +204,8 @@ footer{
     display: block;
 }
 
+/** Parte 1 de vídeos Hub **/
+
 #videos .caixa{
 
     height: 200px;
@@ -215,6 +215,7 @@ footer{
     box-shadow: -5px 6px 8px 0.3px #358E8B;
     border-radius: 50px;
     margin-left: 50px;
+    margin-bottom: 100px;
     text-align: center;
     background-color: rgb(215, 215, 215);
     position: relative;
@@ -233,5 +234,262 @@ footer{
 
 }
 
+/* Parte 2 de vídeos Hub */
+
+#videos2 .caixa{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+    background-color: rgb(215, 215, 215);
+    position: relative;
+    overflow: hidden;
+
+}
+
+#videos2 .caixa img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -2%;
+
+}
+
+/* Parte 3 vídeos Hub*/
+
+#videos3 .caixa{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+    background-color: rgb(215, 215, 215);
+    position: relative;
+    overflow: hidden;
+
+}
+
+#videos3 .caixa img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -2%;
+
+}
+
+/* Parte 4 vídeos Hub*/
+#videos4 .caixa{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+    background-color: rgb(215, 215, 215);
+    position: relative;
+    overflow: hidden;
+
+}
+
+#videos4 .caixa img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -2%;
+
+}
+
+/* Parte 5 vídeos Hub*/
+#videos5 .caixa{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+    background-color: rgb(215, 215, 215);
+    position: relative;
+    overflow: hidden;
+
+}
+
+#videos5 .caixa img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -2%;
+
+}
 
 
+/* Parte6 vídeos Hub*/
+#videos6 .caixa{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+    background-color: rgb(215, 215, 215);
+    position: relative;
+    overflow: hidden;
+
+}
+
+#videos6 .caixa img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -2%;
+
+}
+/* Parte7 vídeos Hub*/
+#videos7 .caixa{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+    background-color: rgb(215, 215, 215);
+    position: relative;
+    overflow: hidden;
+
+}
+
+#videos7 .caixa img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -2%;
+
+}
+/* Parte8 vídeos Hub*/
+#videos8 .caixa{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+    background-color: rgb(215, 215, 215);
+    position: relative;
+    overflow: hidden;
+
+}
+
+#videos8 .caixa img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -2%;
+
+}
+/* Parte9 vídeos Hub*/
+#videos9 .caixa{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+    background-color: rgb(215, 215, 215);
+    position: relative;
+    overflow: hidden;
+
+}
+
+#videos9 .caixa img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -2%;
+
+}
+/* Parte10 vídeos Hub*/
+#videos10 .caixa{
+
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 2px solid #358E8B;;
+    box-shadow: -5px 6px 8px 0.3px #358E8B;
+    border-radius: 50px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+    background-color: rgb(215, 215, 215);
+    position: relative;
+    overflow: hidden;
+
+}
+
+#videos10 .caixa img{
+
+    width: 120%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -2%;
+
+}
