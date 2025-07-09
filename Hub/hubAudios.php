@@ -9,13 +9,12 @@ $resultado = mysqli_query($conn, $sql);
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>  
-  <script src="funcoes.js"></script>
 </head>
 
 <body id="">
-    <script src="funcoes.js"></script>
   <header>
     <div class="txt_recursos">
+   
       <p>Estes são os seus recursos:</p>
     </div>
   </header>
@@ -24,10 +23,11 @@ $resultado = mysqli_query($conn, $sql);
     <div id="apresentacao">
       <h1>Bem-vindo ao Hub de Funcionalidades</h1>
 
-      <div id="apresentacao_transcricao">
+      <div id="apresentacao_transcricao"> 
         <h2>Transcrição de Texto</h2>
         <p>Uma funcionalidade focada na transcrição de voz para texto em tempo real,<br> auxiliando pessoas surdas a compreenderem conversas sem precisar utilizar Libras.</p>
         <button onclick="reconhecerFala()">Iniciar Transcrição</button>
+        <button onclick="pararReconhecimento()">parar transcrição</button>
         <div id="resultado"></div>
       </div>
 

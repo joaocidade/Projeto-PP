@@ -84,10 +84,6 @@ body{
 }
 
 /* MAIN - Conteudo */
-main{
-   
-}
-
 #conteudo{
     padding-left: 5%;
     background-color: whitesmoke;
@@ -101,12 +97,13 @@ main{
 
 #apresentacao{
     width: 90%;
-    height: 700px;
+    height: 800px;
     background-color:  rgb(56, 56, 59);
     margin: auto;
     text-align: center;
     justify-content: center;
     display: block;
+
 }
 
 #apresentacao_transcricao{
