@@ -1,5 +1,6 @@
 <?php
 include_once '../Incluir/conexao.php';
+include_once '../Incluir/protect.php';
 
 //comando de SQL para executar
 $sql = "SELECT * FROM alunos";
@@ -13,7 +14,7 @@ $resultado = mysqli_query($conn,$sql);
 
 <body>
     <header>
-        <h1> Olá! Seja bem-vindo(a) ao Hub, professor(a)!</h1>
+        <h1> Olá! Seja bem-vindo(a) ao Hub, <?php echo $_SESSION['nome']; ?>!</h1>
     </header>
 
     <main>
@@ -25,7 +26,6 @@ $resultado = mysqli_query($conn,$sql);
                 <th>AlunoID</th>
                 <th>Nome</th>
                 <th>Email</th>
-                <th>Senha</th>
                 <th>EscolaID</th>
                 </tr>
             </thead>
@@ -37,7 +37,6 @@ $resultado = mysqli_query($conn,$sql);
                 <td><?php echo $dado['AlunoID'] ?></td>
                 <td><?php echo $dado['Nome'] ?></td>
                 <td><?php echo $dado['Email'] ?></td>
-                <td><?php echo $dado['Senha'] ?></td>
                 <td><?php echo $dado['EscolaID'] ?></td>
                 </tr>
             </tbody>

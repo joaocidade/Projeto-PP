@@ -1,5 +1,6 @@
 <?php
 include_once '../Incluir/conexao.php';
+include_once '../Incluir/protect.php';
 
 //comando de SQL para executar
 $sql = "SELECT * FROM alunos";
