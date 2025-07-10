@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: "Titillium Web", sans-serif;
+    scroll-behavior: smooth;
 }
 
 /*HEADER*/
@@ -10,20 +11,25 @@
     position: fixed;
     width: 100%;
     background-image: url(./Imagens/Header.png);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.500));
     background-size: 100%;
     transition: all 0.3s ease;
     z-index: 1000;
 }
 
-#header img{
-    margin-top: 11px;
+#header a{
+    width: auto;
     margin-left: 70px;
-    width: 60px;
-    margin-bottom: 7px;
-    transition: all 0.3s ease;
 }
 
-.cadastre-se{
+#header a img{
+    margin-top: 11px;
+    width: 60px;
+    margin-bottom: 7px;
+    transition: all 0.2s ease;
+}
+
+#cadastro_header{
     float: right;
     margin-right: 30px;
     color: white;
@@ -32,22 +38,30 @@
     padding-left: 20px;
     padding-right: 20px;
     border-color: #5ce1e6;
-    border-radius: 400px;
-    transition: all 0.3s ease;
+    border-radius: 10px;
+    transition: all 0.2s ease;
     font-weight: 600;
     margin-top: 10px;
 }
 
-#header #entre{
+#cadastro_header:hover, #cadastro_header:focus{
+    color: #5ce1e6;
+}
+
+#entre{
     float: right;
     color: white;
     margin-right: 30px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     margin-top: 17px;
     background-color: rgba(0, 0, 0, 0);
     border: none;
     border-style: none;
     outline-style: none;
+}
+
+#entre:hover, #entre:focus{
+    color: #5ce1e6;
 }
 
 /*MAIN*/
@@ -68,8 +82,8 @@ main #title{
     padding-top: 140px;
     padding-bottom: 80px;
     background-color: white;
-    padding-left: 80px;
-    padding-right: 150px;
+    padding-left: 6%;
+    padding-right: 6%;
 }
 
 main #title h1{
@@ -80,68 +94,153 @@ main #title h1{
     font-style: normal;
 }
 
+.title-highlight{
+    background: linear-gradient(135deg, #43b9bd, #0b1926);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 main #title p{
-    color: rgb(24, 24, 24);
+    color: rgb(112, 112, 112);
     font-family: "Lato", sans-serif;
     font-weight: 100;
     font-style: normal;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 #cadastro_title{
+    float: left;
+    background-color: #5ce1e6;
+    border-style: none;
+    padding: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    margin-top: 15px;
     font-size: 20px;
-    color: black;
+    color: #0b1926;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.250);
 }
 
-main #funcionalidades{
-    display: block;
-    float: left;
+#cadastro_title:hover, #cadastro_title:focus{
+    background-color: #0b1926;
+    color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.384);
+}
+
+/* Title - Circulos */
+
+.graficos{
+    display: flex;
+    justify-content: center;
     width: 50%;
     height: 500px;
+    padding-top: 30px;
+    padding-right: 10%;
+}
+
+.circulos{
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+}
+
+.circulo-1{
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #5ce1e6, transparent);
+}
+
+.circulo-2{
+    width: 100px;
+    height: 100px;
+    margin-top: 55%;
+    background: linear-gradient(135deg, #5ce1e6, #0b1926);
+}
+
+.circulo-3{
+    width: 150px;
+    height: 150px;
+    margin-top: 15%;
+    background: linear-gradient(135deg, #0b1926, transparent);
+}
+
+/* Funcionalidades */
+
+main #funcionalidades{
+    display: flex;
+    justify-content: center;
+    gap: 0px 30px;
+    float: left;
+    width: 100%;
+    height: 300px;
     background-color: white;
+    margin-top: 25px;
 }
 
 main #funcionalidades h5 {
     font-weight: 900;
     text-align: center;
-    color: white;
+    color: black;
     font-size: 18px;
     font-family: "Titillium Web", sans-serif;
     font-weight: 600;
     font-style: normal;
+    margin-top: 20px;
 } 
 
 #funcionalidades .card_funcionalidade{
     display: block;
     float: left;
-    width: 250px;
-    height: 230px;
-    margin: 15px;
+    width: 270px;
+    height: 500px;
     border: none;
 }
 
 .card_funcionalidade .card-body{
     border-radius: 15px;
     text-align: center;
-    background-color:#0b1926;
-    color: #5ce1e6 ;
-    font-size: 14px;
-    box-shadow: 0px 0px 12px rgba(0, 170, 255, 0.155);
-    border: 3px solid #5ce1e6;
+    background-color:white;
+    color: gray;
+    font-size: 16px;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.103);
+    padding-bottom: 40px;
+    transition: 0.15s;
+}
+
+.card-body:hover{
+    box-shadow: 0 3px 13px rgba(0, 0, 0, 0.192);
+}
+
+.img-circle{
+    border-radius: 100%;
+    padding: 5px;
+    background: linear-gradient(135deg, #5ce1e6, #0b1926);
+    height: 80px;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card-body img{
-    height: 50%;
-    width: 50%;
     margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
 }
+
+/* SECTION VIDEO */
 
 #video{
     display: block;
     float: left;
     width: 100%;
     height: 500px;
-    background-color: #0b1926;
+    background-color: whitesmoke;
     margin-top: 35px;
 }
 
@@ -156,7 +255,7 @@ main #funcionalidades h5 {
 #video h2{
     margin-top: 100px;
     margin-right: 70px;
-    color: white;
+    color: #0b1926;
     font-size: 45px;
     font-family: "Titillium Web", sans-serif;
     font-weight: 700;
@@ -164,7 +263,7 @@ main #funcionalidades h5 {
 }
 
 #video p{
-    color: white;
+    color: #0b1926;
     font-family: "Titillium Web", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -197,10 +296,24 @@ main #funcionalidades h5 {
 }
 
 #cadastro_cadastro{
-    display: flex;
-    float: none;
+    background-color: #5ce1e6;
+    border-style: none;
+    padding: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    margin-top: 15px;
     font-size: 20px;
-    color:  black;
+    color: #0b1926;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.250);
+}
+
+#cadastro_cadastro:hover, #cadastro_cadastro:focus{
+    background-color: #0b1926;
+    color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.384);
 }
 
 /*FOOTER*/   
@@ -208,52 +321,58 @@ footer {
     display: block;
     float: left;
     background-color: #0b1926;
-    height: 440px;
+    height: 360px;
     width: 100%;
     list-style: none;
     text-decoration:none;
 }
 
-/* ?? */
-.inicio{
+.td{
     display: block;
     float: left;
     width: 100%;
 }
 
-.inicio .logo{
+.td .logo{
     display: grid;
     float: left;
-    width: 50%;
-    margin-top: 45px;
+    width: 40%;
+    padding-top: 30px;
     place-content: center;
 }
     
-.inicio .logo img{
+.td .logo img{
     height: 200px;
     width: 200px;
 }
 
-.inicio .caixas{
+.td .caixas{
     display: block;
     float: left;
-    width: 50%;
-    padding-top: 50px;
+    width: 60%;
+    padding-top: 63px;
     list-style: none;
+}
+
+.caixas h5{
+    color: white;
+    margin-bottom: 20px;
 }
     
 .caixas a{
     list-style: none;
-    color: white;
-    opacity: 0.5;
+    color: rgba(255, 255, 255, 0.671);
     text-decoration: none;
+    transition: 0.2s;
 }
 
-.caixa a:hover{
-    opacity: 1;
+.caixas a:hover{
+    color: #5ce1e6;
 }
 
 .caixas p{
+    color: rgba(255, 255, 255, 0.555);
+    margin-bottom: 10px;
     display: list-item;
     list-style: none;
 }
@@ -274,35 +393,21 @@ footer {
     display: grid;
     float: left;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 20px;
     place-items: center;
+}
+
+.final hr{
+    border: none;
+    width: 90%;
+    height: 1px;
+    background-color: #ffffff59; /* ou outra cor visível */
+    margin: 20px 0;
 }
     
 .final h6{
-    color: white;
-    opacity: 0.3;
+    margin-top: 10px;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.445);
     text-align: center;
-    padding-bottom: 10px;
-}
-
-.contributor a{
-    float: left;
-    list-style: none;
-    font-size: 15px;
-    width: 130px;
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    opacity: 0.3;
-}
-
-.contributor a:hover{
-    color: white;
-    opacity: 1;
-    transition: 0.4s;
-}
-    
-.contributor img{
-    height: 50px;
-    width: 50px;
 }
