@@ -111,7 +111,7 @@ $atulizador = date('YmdHis').rand(0,99999999999);
     <link rel="stylesheet" href="styleInicio.css?t=<?php echo $atulizador;?>">
     <title>Aprendizado impersivo e inclusivo online</title>
 
-    <link rel="icon" href="Imagens/Logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Imagens/Logo.png">
   </head>
   <body>
     <header id="header">

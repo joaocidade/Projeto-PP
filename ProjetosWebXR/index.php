@@ -1,3 +1,16 @@
+<?php
+include_once '../Incluir/conexao.php';
+include_once '../Incluir/protect.php';
+
+//comando de SQL para executar
+$sql = "SELECT * FROM alunos";
+
+//executa e retorna os dados
+$resultado = mysqli_query($conn,$sql);
+
+$atulizador = date('YmdHis').rand(0,99999999999);
+?>
+
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
@@ -5,8 +18,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | WebXR1</title>
     <meta name="description" content="">
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="shortcut icon" href="../Imagens/Logo.png">
+    <link rel="stylesheet" href="TemplateData/style.css?t=<?php echo $atulizador;?>">
   </head>
   <body>
     <div id="unity-container">
@@ -23,8 +36,6 @@
         <div id="unity-webgl-logo"></div>
         <button id="entervr" value="Enter VR" disabled>VR</button>
         <button id="enterar" value="Enter AR" disabled>AR</button>
-        <div id="unity-webxr-link">Using <a href="https://github.com/De-Panther/unity-webxr-export" target="_blank" title="WebXR Export">WebXR Export</a></div>
-        <div id="unity-build-title">WebXR1</div>
       </div>
     </div>
     <script>

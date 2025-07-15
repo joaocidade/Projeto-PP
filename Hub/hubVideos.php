@@ -24,7 +24,7 @@ $resultado = mysqli_query($conn,$sql);
         <p class='txt_sections'>↳ Vídeos de história</p>
         <div class="caixas">
             <div class="caixa">
-                <a href="../ProjetosWebXR/index.html" target="_blank"><img id="img1" src="../Imagens/All_Gizah_Pyramids.jpg" alt="0"></a>
+                <a href="../ProjetosWebXR/index.php" target="_blank"><img id="img1" src="../Imagens/All_Gizah_Pyramids.jpg" alt="0"></a>
             </div>
             <div class="caixa">
                 <a href="https://youtu.be/0khdjCUIR1g?si=Wh_W06mwF5FVimOU" target="_blank"><img src="../Imagens/economyegypt.png" alt="0"></a>
