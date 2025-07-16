@@ -12,6 +12,7 @@ function reconhecerFala() {
     document.getElementById("resultado").textContent = "Ouvindo...";
   };
 
+
   reconhecimento.onresult = (event) => {
     const texto = event.results[0][0].transcript;
     document.getElementById("resultado").textContent = "Você disse: " + texto;
