@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WebXR VR com Vídeo & Rotação</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'>
+    <script src="https://immersive-web.github.io/webxr-layers-polyfill/build/webxr-layers-polyfill.js"></script>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      header { padding: 1em; max-width: 800px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <select id="videoselect">
+        <option value="https://oculus-mp4.s3.amazonaws.com/immersive+video+8K+for+Oculus+Browser/everestvr_4.3k_30s_360_h264_crf23_binaural_CREDIT_JON_GRIFFITH_injected.mp4">4.3K 360</option>
+        <!-- outras opções... -->
+      </select>
+      <button id="xr-button" disabled>Inicializando...</button>
+    </header>
+
+    <script>
+    (function() {
+      'use strict';
+      const layersPolyfill = new WebXRLayersPolyfill();
+      const xrButton = document.getElementById('xr-button');
+      let xrSession = null, xrRefSpace = null, xrMediaFactory = null;
+      let yawOffset = 0;
+      const video = document.createElement('video');
+      video.loop = false;
+      video.crossOrigin = "anonymous";
+      video.preload = 'auto';
+
+      function updateButtonState(text, enabled) {
+        xrButton.textContent = text;
+        xrButton.disabled = !enabled;
+      }
+
+      function setupVideoSelect() {
+        const sel = document.getElementById('videoselect');
+        video.src = sel.value;
+        updateButtonState('Carregando vídeo...', false);
+      }
+
+      document.getElementById('videoselect').addEventListener('change', setupVideoSelect);
+      video.oncanplaythrough = () => updateButtonState('Entrar em VR', true);
+      video.onerror = () => updateButtonState("Erro: " + (video.error?.message || 'não reproduzível'), false);
+      setupVideoSelect();
+
+      function initXR() {
+        if (navigator.xr) {
+          navigator.xr.isSessionSupported('immersive-vr')
+            .then(supported => {
+              if (supported) updateButtonState('Entrar em VR', video.readyState > 2);
+            });
+        }
+      }
+
+      xrButton.addEventListener('click', () => {
+        if (!xrSession) {
+          navigator.xr.requestSession('immersive-vr', { requiredFeatures: ['layers'] })
+            .then(onSessionStarted);
+          video.play();
+        } else
+          xrSession.end();
+      });
+
+      function onSessionStarted(session) {
+        xrSession = session;
+        updateButtonState('Sair do VR', true);
+        session.addEventListener('end', onSessionEnded);
+        xrMediaFactory = new XRMediaBinding(session);
+
+        session.requestReferenceSpace('local').then(refSpace => {
+          xrRefSpace = refSpace;
+          const is360 = !video.src.includes("180");
+          const layout = video.src.toLowerCase().includes("sbs") ? "stereo-left-right" : "stereo-top-bottom";
+          const layer = xrMediaFactory.createEquirectLayer(video, {
+            space: xrRefSpace,
+            centralHorizontalAngle: is360 ? Math.PI * 2 : Math.PI,
+            layout: layout
+          });
+          session.updateRenderState({ layers: [layer] });
+          session.requestAnimationFrame(onXRFrame);
+        });
+      }
+
+      function onSessionEnded() {
+        xrSession = null;
+        updateButtonState('Entrar em VR', video.readyState > 2);
+        video.pause();
+      }
+
+      function onXRFrame(time, frame) {
+        const session = frame.session;
+        session.requestAnimationFrame(onXRFrame);
+
+        for (let source of session.inputSources) {
+          if (source.gamepad) {
+            const gp = source.gamepad;
+            // Rotação pelo analogico direito
+            const rx = gp.axes[2] || 0;
+            if (Math.abs(rx) > 0.2) {
+              yawOffset += rx * 0.04; // ajustável
+              const rot = new XRRigidTransform({}, {
+                x: 0, y: Math.sin(yawOffset/2), z: 0,
+                w: Math.cos(yawOffset/2)
+              });
+              xrRefSpace = xrRefSpace.getOffsetReferenceSpace(rot);
+            }
+            // controles de vídeo
+            if (gp.buttons[0]?.pressed) {
+              video.currentTime = 0;
+              video.play();
+            }
+            if (gp.buttons[1]?.pressed) {
+              video.paused ? video.play() : video.pause();
+            }
+          }
+        }
+      }
+
+      initXR();
+    })();
+    </script>
+  </body>
+</html>

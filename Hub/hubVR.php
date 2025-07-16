@@ -13,56 +13,12 @@ $resultado = mysqli_query($conn,$sql);
 <head></head>
 
 <body>
-
     <header>
-        <div class="txt_recursos">
-            <p>Estes são os seus recursos:</p>
-        </div>
+        <h1>Aplicação VR</h1>
     </header>
 
     <main>
-    <section id="videos">
-        <p class='txt_sections'>↳ Vídeos</p>
-        <div class="caixas">
-            <div class="caixa">
-                <a href="" target="_blank"><img src="" alt="0"></a>
-            </div>
-            <div class="caixa">
-                <a href="" target="_blank"><img src="" alt="0"></a>
-            </div>
-            <div class="caixa">
-                <a href="" target="_blank"><img src="" alt="0"></a>
-            </div>
-        </div>
-    </section>
-    <section id="audio">
-        <p class="txt_sections">↳ Áudios</p>
-        <div class="caixas">
-            <div class="caixa">
-                <a href="" target="_blank"><img src="" alt="0"></a>
-            </div>
-            <div class="caixa">
-                <a href="" target="_blank"><img src="" alt="0"></a>
-            </div>
-            <div class="caixa">
-                <a href="" target="_blank"><img src="" alt="0"></a>
-            </div>
-        </div>
-    </section>
-    <section id="libras">
-        <p class="txt_sections">↳ Líbras</p>
-        <div class="caixas">
-            <div class="caixa">
-                <a href="" target="_blank"><img src="" alt="0"></a>
-            </div>
-            <div class="caixa">
-                <a href="" target="_blank"><img src="" alt="0"></a>
-            </div>
-            <div class="caixa">
-                <a href="" target="_blank"><img src="" alt="0"></a>
-            </div>
-        </div>
-    </section>
+
     </main>
 </body>
 <script src="menu.js"></script>

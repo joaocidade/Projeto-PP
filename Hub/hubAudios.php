@@ -13,29 +13,23 @@ $resultado = mysqli_query($conn, $sql);
 
 <body id="">
   <header>
-    <div class="txt_recursos">
-   
-      <p>Estes são os seus recursos:</p>
-    </div>
+    <h1>Recursos de Áudio</h1>
   </header>
 
   <main id="mainAudio">
-    <div id="apresentacao">
-      <h1>Bem-vindo ao Hub de Funcionalidades</h1>
-
-      <div id="apresentacao_transcricao"> 
-        <h2>Transcrição de Texto</h2>
-        <p>Uma funcionalidade focada na transcrição de voz para texto em tempo real,<br> auxiliando pessoas surdas a compreenderem conversas sem precisar utilizar Libras.</p>
+    <div id="apresentacoes">
+      <div class="apresentacao"> 
+        <h2>Voz para Texto</h2>
+        <p>Uma funcionalidade focada na transcrição de voz para texto em tempo real, auxiliando pessoas surdas a compreenderem conversas sem precisar utilizar Libras.</p>
         <button onclick="reconhecerFala()">Iniciar Transcrição</button>
-        <button onclick="pararReconhecimento()">parar transcrição</button>
+        <button onclick="pararReconhecimento()">Parar Transcrição</button>
         <div id="resultado"></div>
       </div>
 
-      <div id="apresentacao_texto_voz">
+      <div class="apresentacao">
         <h2>Texto para Voz</h2>
         <p>Essa funcionalidade auxilia pessoas com deficiência na fala a se comunicarem por meio do computador.</p>
-        <textarea id="entradaTexto" rows="4" cols="50" placeholder="Digite aqui o texto a ser falado..."></textarea>
-        <br />
+        <textarea id="entradaTexto" placeholder="Digite aqui o texto a ser falado..."></textarea><br>
         <button onclick="transcricao()">Ouvir Texto</button>
       </div>
     </div>

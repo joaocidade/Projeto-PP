@@ -2,25 +2,101 @@
 
 include_once('./Incluir/conexao.php');
 
+if(!isset($_SESSION)){
+    session_start();
+}
+
+if(isset($_SESSION['id'])){
+    header("Location: ./Hub/controller.php");
+}
+
 if(isset($_POST['cadastro'])){
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
+  if(strlen($_POST['nome']) == 0){
+    echo "Preencha seu nome.";
+  }
+  else if(strlen($_POST['email']) == 0){
+    echo "Preencha seu email.";
+  }
+  else if(strlen($_POST['senha']) == 0){
+    echo "Preencha sua senha.";
+  }
+  else {
+    $nome = $conn->real_escape_string($_POST['nome']);
+    $email = $conn->real_escape_string($_POST['email']);
     $senha = $_POST['senha'];
 
-    $sql_insert = "INSERT INTO alunos (Nome, Email, Senha)
-    VALUES ('{$nome}','{$email}','{$senha}')";
+    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+    
+    $sql_code = "SELECT * FROM alunos WHERE email = '$email'";
+    $sql_query = $conn->query($sql_code) or die("Falha na execução do código SQL: " . $conn->error);
 
-    if ($resultado = mysqli_query($conn, $sql_insert)){
-      header('Location: http://localhost:8080/Projeto-PP/Hub/controller.php');
-    };
+    if ($sql_query->num_rows == 1){
+      echo "Este email já está associado a uma conta.";
+    } else {
+      $insert = "INSERT INTO alunos (Nome, Email, Senha) VALUES ('$nome', '$email', '$senhaHash')";
+
+      if ($conn->query($insert) === TRUE) {
+        $id = $conn->insert_id;
+
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+
+        $_SESSION['id'] = $id;
+        $_SESSION['nome'] = $nome;
+
+        header('Location: ./Hub/controller.php');
+        exit;
+      } else {
+        echo "Erro ao cadastrar: " . $conn->error;
+      }
+    }
+  }
 }
 
 if(isset($_POST['entrar'])){
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    if (strlen($_POST['email_entrar']) == 0) {
+        echo "Preencha seu email.";
+    } else if (strlen($_POST['senha_entrar']) == 0) {
+        echo "Preencha sua senha.";
+    } else {
+        $email = $conn->real_escape_string($_POST['email_entrar']);
+        $senha = $_POST['senha_entrar']; // Não aplicar real_escape_string em senhas
 
-    $sql_insert = "?";
+        // Buscar o usuário pelo email
+        $sql_code = "SELECT * FROM alunos WHERE Email = '$email'";
+        $sql_query = $conn->query($sql_code) or die("Falha na execução do código SQL: " . $conn->error);
+
+        if ($sql_query->num_rows == 1) {
+            $usuario = $sql_query->fetch_assoc();
+
+            echo $senha;
+            echo $usuario['Senha'];
+
+            // Verifica se a senha está correta
+            $test = password_verify($senha, $usuario['Senha']);
+            if ($test == true) { //O PROBLEMA ESTA AQUI, NO "password_verify", pode substituir por qualquer outra condição que vai funcionar
+                // Login bem-sucedido
+                if (!isset($_SESSION)) {
+                    session_start();
+                }
+
+                $_SESSION['id'] = $usuario['AlunoID'];
+                $_SESSION['nome'] = $usuario['Nome'];
+
+                header('Location: ./Hub/controller.php');
+                exit;
+            } else if($test == false) {
+                echo "Senha incorreta.";
+            }
+        } else {
+            echo "Nenhuma conta encontrada com este email.";
+        }
+    }
 }
+
+// Atualizador de CSS e JS
+$atulizador = date('YmdHis').rand(0,99999999999);
 
 ?>
 
@@ -34,19 +110,21 @@ if(isset($_POST['entrar'])){
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styleInicio.css">
-    <title>Aprendizado impersivo e inclusivo online</title>
 
-    <link rel="icon" href="Imagens/Logo.png" type="image/x-icon">
-
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="styleInicio.css?t=<?php echo $atulizador;?>">
+    <title>Aprendizado impersivo e inclusivo online</title>
+
+    <link rel="shortcut icon" href="Imagens/Logo.png">
   </head>
   <body>
     <header id="header">
-      <img src="./Imagens/Logo.png" alt="" id="logo">
-      <button type="button" data-toggle="modal" data-target="#cadastroModal" class="cadastre-se">Cadastre-se</button>
+      <a href="#title"><img src="./Imagens/Logo.png" alt="" id="logo"></a>
+      <button type="button" data-toggle="modal" data-target="#cadastroModal" class="cadastre-se" id='cadastro_header'>Cadastre-se</button>
       <button type="button" data-toggle="modal" data-target="#entrarModal" id="entre">Entre</button>
     </header>
 
@@ -73,7 +151,7 @@ if(isset($_POST['entrar'])){
                 </div>
                 <div class="inputBox">
                   <label for="senha">Senha</label><br>
-                  <input type="text" name="senha" id="senha" class="inputUser" required>
+                  <input type="password" name="senha" id="senha" class="inputUser" required>
                 </div><br>
                 <input type="submit" name="cadastro" id="cadastro" class="btn btn-primary">
               </form><br>
@@ -96,11 +174,11 @@ if(isset($_POST['entrar'])){
               <form action="index.php" method="POST">
                 <div class="inputBox">
                   <label for="email">Email</label><br>
-                  <input type="text" name="email" id="email" class="inputUser" required>
+                  <input type="text" name="email_entrar" id="email_entrar" class="inputUser" required>
                 </div>
                 <div class="inputBox">
                   <label for="senha">Senha</label><br>
-                  <input type="text" name="senha" id="senha" class="inputUser" required>
+                  <input type="password" name="senha_entrar" id="senha_entrar" class="inputUser" required>
                 </div><br>
                 <input type="submit" name="entrar" id="entrar" class="btn btn-primary">
               </form><br>
@@ -109,40 +187,44 @@ if(isset($_POST['entrar'])){
         </div>
       </div>
 
-
       <div id="title">
-        <h1>Aprender nunca <br>foi tão imersivo</h1>
+        <h1>Educação Imersiva<br><span class='title-highlight'>Para Todos</span></h1>
         <p>Explore o conhecimento em 360° e transforme os estudos em uma verdadeira jornada.</p>
         <button type="button" data-toggle="modal" data-target="#cadastroModal" class="cadastre-se" id="cadastro_title">Cadastre-se</button>
+      </div>
+      <div class='graficos'>
+        <div class='circulos circulo-1'></div>
+        <div class='circulos circulo-2'></div>
+        <div class='circulos circulo-3'></div>
       </div>
 
       <div id="funcionalidades">
         <div class="card_funcionalidade" id="hub_educacional">
           <div class="card-body">
-            <img src="Imagens/IconeLivro.gif" alt="" id="book">
-            <h5 class="card-title">HUB EDUCACIONAL</h5>
-            <p class="card-text">Vídeos educacionais imersivos em 360°</p>
+            <div class='img-circle'><img src="Imagens/IconeLivro.gif" alt="" id="book"></div>
+            <h5 class="card-title">Hub Educacional</h5>
+            <p class="card-text">Vídeos imersivos em 360° explorando os principais conteúdos escolares</p>
           </div>
         </div>
         <div class="card_funcionalidade" id="transcrição_de_texto">
           <div class="card-body">
-            <img src="Imagens/IconeDocumento.gif" alt="" id="document">
-            <h5 class="card-title">LEITURA DE TEXTO</h5>
-            <p class="card-text">Conversão de texto para áudio em tempo real</p>
+            <div class='img-circle'><img src="Imagens/IconeDocumento.gif" alt="" id="document"></div>
+            <h5 class="card-title">Leitura de Texto</h5>
+            <p class="card-text">Conversão de texto em áudio para facilitar a comunicação de pessoas mudas</p>
           </div>
         </div>
         <div class="card_funcionalidade" id="leitor_de_libras">
           <div class="card-body">
-            <img src="Imagens/IconeJoinha.gif" alt="" id="telephone">
-            <h5 class="card-title">LEITURA DE LIBRAS</h5>
-            <p class="card-text">Conversão de libras para texto em tempo real</p>
+            <div class='img-circle'><img src="Imagens/IconeJoinha.gif" alt="" id="telephone"></div>
+            <h5 class="card-title">Leitura de Libras</h5>
+            <p class="card-text">Conversão de libras em texto para facilitar a comunicação com pessoas mudas</p>
           </div>
         </div>
         <div class="card_funcionalidade" id ="reconhecimento_de_voz">
           <div class="card-body">
-            <img src="Imagens/IconeMicrofone.gif" alt="" id="voice">
-            <h5 class="card-title">TRANSCRIÇÃO DE ÁUDIO</h5>
-            <p class="card-text">Conversão de áudio para texto em tempo real</p>
+            <div class='img-circle'><img src="Imagens/IconeMicrofone.gif" alt="" id="voice"></div>
+            <h5 class="card-title">Transcrição de Áudio</h5>
+            <p class="card-text">Conversão de áudio para texto para facilitar a comunicação com pessoas surdas</p>
           </div>
         </div>
       </div>
@@ -155,46 +237,36 @@ if(isset($_POST['entrar'])){
       
       <div id="div_cadastro">
         <H1>Comece agora e garanta acesso imediato a todos os recursos para você ou para seus alunos</H1>
-        <button type="button" data-toggle="modal" data-target="#cadastroModal" class="cadastre-se" id="cadastro_cadastro">Cadastre-se</button>
+        <button type="button" data-toggle="modal" data-target="#cadastroModal" id="cadastro_cadastro">Cadastre-se</button>
       </div>
     </main>
 
     <footer>
-      <div class="inicio">
-        <div class="td">
-          <div class="logo">
-            <img src="Imagens/Logo.png" alt="">
+      <div class="td">
+        <div class="logo">
+          <img src="Imagens/Logo.png" alt="">
+        </div>
+        <div class="caixas">
+          <div class="AboutUs">
+            <h5>Institucional</h5>
+            <p><a href="parceria.html">Sobre nós</a></p>
+            <p><a href="projetos.html">Contato</a></p>
+            <p><a href="termos.html">Perguntas frequentes</a></p>
           </div>
-          <div class="caixas">
-            <div class="AboutUs">
-              <p><a href="parceria.html">Parcerias</a></p>
-              <p><a href="projetos.html">Projetos</a></p>
-              <p><a href="termos.html">Termos de serviço</a></p>
-              <p><a href="privacidade.html">Privacidade</a></p>
-              <p><a href="estudosRA.html">Estudos e pesquisas AR</a></p>
-            </div>
-            <div class="More">
-              <p><a href="quemsomos.html">Quem somos</a></p>
-              <p><a href="ferramentas.html">Ferramentas</a></p>
-              <p><a href="eventos.html">Eventos participados</a></p>
-              <p><a href="ganhos.html">Ganhos</a></p>
-              <p><a href="">Homepage</a></p>
-            </div>
+          <div class="More">
+            <h5>Legal</h5>
+            <p><a href="quemsomos.html">Termos de Uso</a></p>
+            <p><a href="ferramentas.html">Política de Privacidade</a></p>
           </div>
         </div>
       </div>
 
       <div class="final">
-        <h6>Development by</h6>
-        <div class="contributor">
-          <a href=""><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="0"><p>Felipe R.</p></a>
-          <a href=""><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="0"><p>Gabriel A.</p></a>
-          <a href=""><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="0"><p>João Pedro C.</p></a>
-          <a href=""><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="0"><p>Francisco E.</p></a>
-        </div>
+        <hr>
+        <h6>Projeto Estudantil - Livre para fins educacionais.</h6>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js?t=<?php echo $atulizador;?>"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
