@@ -15,13 +15,11 @@ $resultado = mysqli_query($conn,$sql);
 <body>
 
     <header>
-        <div class="txt_recursos">
-            <p>Estes são os seus recursos:</p>
-        </div>
+        <h1>Videos 360°</h1>
     </header>
-    <main>
+    <main id="mainVideos">
     <section id="videos">
-        <p class='txt_sections'>↳ Vídeos de história</p>
+        <h1 class='classes'>↳ Vídeos de história</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="../ProjetosWebXR/index.php" target="_blank"><img id="img1" src="../Imagens/All_Gizah_Pyramids.jpg" alt="0"></a>
@@ -35,6 +33,7 @@ $resultado = mysqli_query($conn,$sql);
         </div>
     </section>
     <section id="videos2">
+        <h1 class='classes'>↳ Vídeos de história</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="https://youtu.be/m7h4XuvLrmg?si=Qpp-jgdLglSJ4Hmk" target="_blank"><img id="img1" src="../Imagens/trinchesletter.png" alt="0"></a>
@@ -48,6 +47,7 @@ $resultado = mysqli_query($conn,$sql);
         </div>
     </section>
     <section id="videos3">
+        <h1 class='classes'>↳ Vídeos de história</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="https://youtu.be/G_5r6HCW_DE?si=INJl0WiSZSCQ5hTa" target="_blank"><img src="../Imagens/texashistory.png" alt=""></a>
@@ -61,6 +61,7 @@ $resultado = mysqli_query($conn,$sql);
         </div>
     </section>
     <section id="videos4">
+        <h1 class='classes'>↳ Vídeos de história</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="https://youtu.be/v64KOxKVLVg?si=foPVGI2QYP-RJCpb" target="_blank"><img src="../Imagens/nationalpark.png" alt=""></a>
@@ -74,6 +75,7 @@ $resultado = mysqli_query($conn,$sql);
         </div>
     </section>
     <section id="videos5">
+        <h1 class='classes'>↳ Vídeos de história</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="https://youtu.be/kw9EJbezlK4?si=gPz01_TdLRdqy76v" target="_blank"><img src="../Imagens/wthappinsiyrbody.png" alt=""></a>
@@ -87,6 +89,7 @@ $resultado = mysqli_query($conn,$sql);
         </div>
     </section>
     <section id="videos6">
+        <h1 class='classes'>↳ Vídeos de história</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="" target="_blank"><img src="../Imagens/" alt=""></a>
@@ -100,6 +103,7 @@ $resultado = mysqli_query($conn,$sql);
         </div>
     </section>
     <section id="videos7">
+        <h1 class='classes'>↳ Vídeos de história</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="" target="_blank"><img src="../Imagens/" alt=""></a>
@@ -113,6 +117,7 @@ $resultado = mysqli_query($conn,$sql);
         </div>
     </section>
     <section id="videos8">
+        <h1 class='classes'>↳ Vídeos de história</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="" target="_blank"><img src="../Imagens/" alt=""></a>
@@ -126,6 +131,7 @@ $resultado = mysqli_query($conn,$sql);
         </div>
     </section>
     <section id="videos9">
+        <h1 class='classes'>↳ Vídeos de história</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="" target="_blank"><img src="../Imagens/" alt=""></a>
@@ -139,6 +145,7 @@ $resultado = mysqli_query($conn,$sql);
         </div>
     </section>
     <section id="videos10">
+        <h1 class='classes'>↳ Vídeos de história</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="" target="_blank"><img src="../Imagens/" alt=""></a>

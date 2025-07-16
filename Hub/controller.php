@@ -17,6 +17,12 @@ $atulizador = date('YmdHis').rand(0,99999999999);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hub do Professor</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"> 
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styleHub.css?t=<?php echo $atulizador;?>"> 
     <link rel="shortcut icon" href="../Imagens/Logo.png">
@@ -56,6 +62,12 @@ $atulizador = date('YmdHis').rand(0,99999999999);
                     <span class="txt">VR</span>
                 </a>
             </li>
+            <li class="itemmenu logout">
+                <a href="../Incluir/logout.php">
+                    <span class="icon"><i class="bi bi-person-circle"></i></span>
+                    <span class="txt">Sair</span>
+                </a>
+            </li>
         </ul>
     </nav>
 
@@ -85,9 +97,30 @@ $atulizador = date('YmdHis').rand(0,99999999999);
         carregar('hubInicial.php');
     </script>
     <footer>
-        <p>Os videoaulas não são de nossa autoria.</p>
-        <p>Copyright © 2024-2025, development by RA: educação e tecnologia.</p>  
-    </footer> 
+      <div class="td">
+        <div class="logo">
+          <img src="../Imagens/Logo.png" alt="">
+        </div>
+        <div class="caixas">
+          <div class="AboutUs">
+            <h5>Institucional</h5>
+            <p><a href="parceria.html">Sobre nós</a></p>
+            <p><a href="projetos.html">Contato</a></p>
+            <p><a href="termos.html">Perguntas frequentes</a></p>
+          </div>
+          <div class="More">
+            <h5>Legal</h5>
+            <p><a href="quemsomos.html">Termos de Uso</a></p>
+            <p><a href="ferramentas.html">Política de Privacidade</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="final">
+        <hr>
+        <h6>Projeto Estudantil - Livre para fins educacionais.</h6>
+      </div>
+    </footer>
 
 
 </body>

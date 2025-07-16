@@ -2,6 +2,14 @@
 
 include_once('./Incluir/conexao.php');
 
+if(!isset($_SESSION)){
+    session_start();
+}
+
+if(isset($_SESSION['id'])){
+    header("Location: ./Hub/controller.php");
+}
+
 if(isset($_POST['cadastro'])){
   if(strlen($_POST['nome']) == 0){
     echo "Preencha seu nome.";
