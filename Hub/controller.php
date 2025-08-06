@@ -56,12 +56,6 @@ $atulizador = date('YmdHis').rand(0,99999999999);
                     <span class="txt">Libras</span>
                 </a>
             </li>
-            <li class="itemmenu">
-                <a onclick="carregar('hubVR.php')">
-                    <span class="icon"><i class="bi bi-badge-vr"></i></span>
-                    <span class="txt">VR</span>
-                </a>
-            </li>
             <li class="itemmenu logout">
                 <a href="../Incluir/logout.php">
                     <span class="icon"><i class="bi bi-person-circle"></i></span>

@@ -24,7 +24,12 @@ if(isset($_POST['cadastro'])){
     $nome = $conn->real_escape_string($_POST['nome']);
     $email = $conn->real_escape_string($_POST['email']);
     $senha = $_POST['senha'];
-
+    $cargo = $_POST['cargo'];
+    if (empty($_POST['id_escola'])){
+      $id_escola = 0;
+    } else{
+      $id_escola = $_POST['id_escola'];
+    }
     $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
     
     $sql_code = "SELECT * FROM alunos WHERE email = '$email'";
@@ -33,7 +38,7 @@ if(isset($_POST['cadastro'])){
     if ($sql_query->num_rows == 1){
       echo "Este email já está associado a uma conta.";
     } else {
-      $insert = "INSERT INTO alunos (Nome, Email, Senha) VALUES ('$nome', '$email', '$senhaHash')";
+      $insert = "INSERT INTO $cargo (Nome, Email, Senha, EscolaID) VALUES ('$nome', '$email', '$senhaHash', '$id_escola')";
 
       if ($conn->query($insert) === TRUE) {
         $id = $conn->insert_id;
@@ -44,6 +49,7 @@ if(isset($_POST['cadastro'])){
 
         $_SESSION['id'] = $id;
         $_SESSION['nome'] = $nome;
+        $_SESSION['id_escola'] = $id_escola;
 
         header('Location: ./Hub/controller.php');
         exit;
@@ -144,14 +150,24 @@ $atulizador = date('YmdHis').rand(0,99999999999);
                 <div class="inputBox">
                   <label for="nome">Nome completo</label><br>
                   <input type="text" name="nome" id="nome" class="inputUser" required>
-                </div>
+                </div><br>
                 <div class="inputBox">
                   <label for="email">Email</label><br>
                   <input type="text" name="email" id="email" class="inputUser" required>
-                </div>
+                </div><br>
                 <div class="inputBox">
                   <label for="senha">Senha</label><br>
                   <input type="password" name="senha" id="senha" class="inputUser" required>
+                </div><br>
+                <div class="inputBox">
+                  <label for="cargo">Cargo</label><br>
+                  <input type="radio" name="cargo" value="professores" required>Professor<br>
+                  <input type="radio" name="cargo" value="alunos" required>Aluno<br>
+                  <input type="radio" name="cargo" value="autodidatas" required>Autodidata
+                </div><br>
+                <div class="inputBox">
+                  <label for="id_escola">ID da Escola <br>*deixe em branco caso não faça parte de uma Instituição de Ensino</label>
+                  <input type="number" name="id_escola">
                 </div><br>
                 <input type="submit" name="cadastro" id="cadastro" class="btn btn-primary">
               </form><br>
@@ -236,7 +252,7 @@ $atulizador = date('YmdHis').rand(0,99999999999);
       </div>        
       
       <div id="div_cadastro">
-        <H1>Comece agora e garanta acesso imediato a todos os recursos para você ou para seus alunos</H1>
+        <H1>Comece agora e garanta acesso imediato a todos os recursos para você ou para seus alunos</H1><br>
         <button type="button" data-toggle="modal" data-target="#cadastroModal" id="cadastro_cadastro">Cadastre-se</button>
       </div>
     </main>

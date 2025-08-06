@@ -2,8 +2,10 @@
 include_once '../Incluir/conexao.php';
 include_once '../Incluir/protect.php';
 
+$id_escola = $_SESSION['id_escola'];
+
 //comando de SQL para executar
-$sql = "SELECT * FROM alunos";
+$sql = "SELECT * FROM alunos WHERE EscolaID = $id_escola";
 
 //executa e retorna os dados
 $resultado = mysqli_query($conn,$sql);
