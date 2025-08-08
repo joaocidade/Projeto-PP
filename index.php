@@ -32,10 +32,10 @@ if(isset($_POST['cadastro'])){
     }
     $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
     
-    $sql_code = "SELECT * FROM alunos WHERE email = '$email'";
+    $sql_code = "SELECT * FROM alunos a, professores p, autodidatas d WHERE a.Email = '$email' OR p.Email = '$email' OR d.Email = '$email'";
     $sql_query = $conn->query($sql_code) or die("Falha na execução do código SQL: " . $conn->error);
 
-    if ($sql_query->num_rows == 1){
+    if ($sql_query->num_rows >= 1){
       echo "Este email já está associado a uma conta.";
     } else {
       $insert = "INSERT INTO $cargo (Nome, Email, Senha, EscolaID) VALUES ('$nome', '$email', '$senhaHash', '$id_escola')";
@@ -67,13 +67,13 @@ if(isset($_POST['entrar'])){
         echo "Preencha sua senha.";
     } else {
         $email = $conn->real_escape_string($_POST['email_entrar']);
-        $senha = $_POST['senha_entrar']; // Não aplicar real_escape_string em senhas
+        $senha = $_POST['senha_entrar'];
 
         // Buscar o usuário pelo email
-        $sql_code = "SELECT * FROM alunos WHERE Email = '$email'";
+        $sql_code = "SELECT * FROM alunos a, professores p, autodidatas d WHERE a.Email = '$email' OR p.Email = '$email' OR d.Email = '$email'";
         $sql_query = $conn->query($sql_code) or die("Falha na execução do código SQL: " . $conn->error);
 
-        if ($sql_query->num_rows == 1) {
+        if ($sql_query->num_rows >= 1) {
             $usuario = $sql_query->fetch_assoc();
 
             echo $senha;
@@ -81,13 +81,13 @@ if(isset($_POST['entrar'])){
 
             // Verifica se a senha está correta
             $test = password_verify($senha, $usuario['Senha']);
-            if ($test == true) { //O PROBLEMA ESTA AQUI, NO "password_verify", pode substituir por qualquer outra condição que vai funcionar
+            if ($test == true) { //TESTAR OUTRA CONDIÇÃO ACHO Q O PROBLEMA TA AQUI
                 // Login bem-sucedido
                 if (!isset($_SESSION)) {
                     session_start();
                 }
 
-                $_SESSION['id'] = $usuario['AlunoID'];
+                $_SESSION['id'] = $usuario['ID'];
                 $_SESSION['nome'] = $usuario['Nome'];
 
                 header('Location: ./Hub/controller.php');
