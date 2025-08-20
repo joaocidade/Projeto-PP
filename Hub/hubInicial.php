@@ -6,9 +6,13 @@ $id_escola = $_SESSION['id_escola'] ?? 0;
 
 //comando de SQL para executar
 $sql = "SELECT * FROM alunos WHERE EscolaID = '$id_escola'";
+$sql_escola = "SELECT * FROM escolas WHERE EscolaID = '$id_escola'";
 
 //executa e retorna os dados
 $resultado = mysqli_query($conn,$sql);
+$resultado_escola = mysqli_query($conn,$sql_escola);
+
+$dados_escola = mysqli_fetch_assoc($resultado_escola);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -22,12 +26,14 @@ $resultado = mysqli_query($conn,$sql);
     <main>
         <div class='bem-vindos'>
             <img src="../Imagens/Bem-vindos.png" alt="">
-            <h1>Bem-vindos ao Ambiente de Aprendizagem Digital Imersy!</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, soluta! Saepe, ratione accusantium. Nesciunt deleniti sapiente dicta dolorem illum veritatis ullam, nisi totam hic qui id eveniet culpa similique earum.</p>
+            <h1>Bem-vindo(a) ao Ambiente de Aprendizagem Digital Imersy!</h1>
+            <p>É com grande entusiasmo que abrimos as portas desta plataforma educacional online e imersiva para todos os estudantes. Aqui, vocês terão acesso a uma variedade de ambientes de aprendizagem projetados para impulsionar seu aprendizado das principais matérias abordadas desde o Ensino Fundamental ao Ensino Médio. <br><br> Nossa plataforma é projetada para ser inclusiva, intuitiva e fácil de usar, permitindo que vocês naveguem pelos ambientes virtuais e encontrem os conteúdos de que precisam com facilidade. <br><br> Sejam bem-vindo(a) ao Ambiente de Aprendizagem Digital Imersy, onde o futuro da educação começa!</p>
         </div>
 
+        <h1 class='section-text'>Desempenho dos Estudantes</h1>
+        <p>Veja na tabela abaixo o desempenho dos estudantes da escola <?php echo $dados_escola['Nome'];?>.</p>
+
         <div class="container">
-            <h1>Lista de Alunos</h1>
             <table>
             <thead>
                 <tr>
