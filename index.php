@@ -70,14 +70,16 @@ if(isset($_POST['entrar'])){
         $senha = $_POST['senha_entrar'];
 
         // Buscar o usuário pelo email
-        $sql_code = "SELECT * FROM alunos a, professores p, autodidatas d WHERE a.Email = '$email' OR p.Email = '$email' OR d.Email = '$email'";
+        $sql_code = " SELECT ID, Nome, Senha, Email, EscolaID FROM alunos WHERE Email = '$email'
+          UNION
+          SELECT ID, Nome, Senha, Email, EscolaID FROM professores WHERE Email = '$email'
+          UNION
+          SELECT ID, Nome, Senha, Email, EscolaID FROM autodidatas WHERE Email = '$email'";
+
         $sql_query = $conn->query($sql_code) or die("Falha na execução do código SQL: " . $conn->error);
 
         if ($sql_query->num_rows >= 1) {
             $usuario = $sql_query->fetch_assoc();
-
-            echo $senha;
-            echo $usuario['Senha'];
 
             // Verifica se a senha está correta
             $test = password_verify($senha, $usuario['Senha']);
@@ -89,6 +91,7 @@ if(isset($_POST['entrar'])){
 
                 $_SESSION['id'] = $usuario['ID'];
                 $_SESSION['nome'] = $usuario['Nome'];
+                $_SESSION['id_escola'] = $usuario['EscolaID'];
 
                 header('Location: ./Hub/controller.php');
                 exit;
