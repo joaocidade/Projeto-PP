@@ -15,11 +15,11 @@ $resultado = mysqli_query($conn,$sql);
 <body>
 
     <header>
-        <h1>Videos 360°</h1>
+        <h1>Ambientes de Aprendizado 360°</h1>
     </header>
     <main id="mainVideos">
     <section id="videos">
-        <h1 class='classes'>↳ Vídeos de história</h1>
+        <h1 class='classes'>História</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="../ProjetosWebXR/index.php" target="_blank"><img id="img1" src="../Imagens/All_Gizah_Pyramids.jpg" alt="0"></a>

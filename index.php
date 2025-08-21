@@ -49,6 +49,7 @@ if(isset($_POST['cadastro'])){
 
         $_SESSION['id'] = $id;
         $_SESSION['nome'] = $nome;
+        $_SESSION['cargo'] = $cargo;
         $_SESSION['id_escola'] = $id_escola;
 
         header('Location: ./Hub/controller.php');
@@ -70,11 +71,11 @@ if(isset($_POST['entrar'])){
         $senha = $_POST['senha_entrar'];
 
         // Buscar o usuário pelo email
-        $sql_code = " SELECT ID, Nome, Senha, Email, EscolaID FROM alunos WHERE Email = '$email'
+        $sql_code = " SELECT ID, Nome, Senha, Email, EscolaID, 'alunos' AS Origem FROM alunos WHERE Email = '$email'
           UNION
-          SELECT ID, Nome, Senha, Email, EscolaID FROM professores WHERE Email = '$email'
+          SELECT ID, Nome, Senha, Email, EscolaID, 'professores' AS Origem FROM professores WHERE Email = '$email'
           UNION
-          SELECT ID, Nome, Senha, Email, EscolaID FROM autodidatas WHERE Email = '$email'";
+          SELECT ID, Nome, Senha, Email, EscolaID, 'autodidatas' AS Origem FROM autodidatas WHERE Email = '$email'";
 
         $sql_query = $conn->query($sql_code) or die("Falha na execução do código SQL: " . $conn->error);
 
@@ -91,6 +92,7 @@ if(isset($_POST['entrar'])){
 
                 $_SESSION['id'] = $usuario['ID'];
                 $_SESSION['nome'] = $usuario['Nome'];
+                $_SESSION['cargo'] = $usuario['Origem'];
                 $_SESSION['id_escola'] = $usuario['EscolaID'];
 
                 header('Location: ./Hub/controller.php');

@@ -30,10 +30,13 @@ $dados_escola = mysqli_fetch_assoc($resultado_escola);
             <p>É com grande entusiasmo que abrimos as portas desta plataforma educacional online e imersiva para todos os estudantes. Aqui, vocês terão acesso a uma variedade de ambientes de aprendizagem projetados para impulsionar seu aprendizado das principais matérias abordadas desde o Ensino Fundamental ao Ensino Médio. <br><br> Nossa plataforma é projetada para ser inclusiva, intuitiva e fácil de usar, permitindo que vocês naveguem pelos ambientes virtuais e encontrem os conteúdos de que precisam com facilidade. <br><br> Sejam bem-vindo(a) ao Ambiente de Aprendizagem Digital Imersy, onde o futuro da educação começa!</p>
         </div>
 
-        <h1 class='section-text'>Desempenho dos Estudantes</h1>
-        <p>Veja na tabela abaixo o desempenho dos estudantes da escola <?php echo $dados_escola['Nome'];?>.</p>
-
-        <div class="container">
+        <?php
+        if($_SESSION['cargo'] == "alunos" || $_SESSION['cargo'] == "autodidatas"){
+           
+        } else{
+            echo "<h1 class='section-text'>Desempenho dos Estudantes</h1>
+            <p>Veja na tabela abaixo o desempenho dos estudantes da escola" . $dados_escola['Nome'] . "</p>
+            <div class='container'>
             <table>
             <thead>
                 <tr>
@@ -42,23 +45,21 @@ $dados_escola = mysqli_fetch_assoc($resultado_escola);
                 <th>Email</th>
                 <th>EscolaID</th>
                 </tr>
-            </thead>
-            <?php
-                while ($dado = mysqli_fetch_assoc($resultado)){
-            ?>
-            <tbody>
-                <tr>
-                <td><?php echo $dado['ID'] ?></td>
-                <td><?php echo $dado['Nome'] ?></td>
-                <td><?php echo $dado['Email'] ?></td>
-                <td><?php echo $dado['EscolaID'] ?></td>
-                </tr>
-            </tbody>
-            <?php
-                }
-            ?>
-            </table>
-        </div> 
+            </thead>";
+
+            while ($dado = mysqli_fetch_assoc($resultado)){
+                echo "<tbody>
+                    <tr>
+                    <td>" . $dado['ID'] . "</td>
+                    <td>" . $dado['Nome'] . "</td>
+                    <td>" . $dado['Email'] . "</td>
+                    <td>" . $dado['EscolaID'] . "</td>
+                    </tr>
+                </tbody>";
+            }
+        echo "</table></div>";
+        }
+        ?>
     </main>
 </body>
 <script src="menu.js"></script>
