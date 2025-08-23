@@ -34,45 +34,68 @@ $dados_escola = mysqli_fetch_assoc($resultado_escola);
         if($_SESSION['cargo'] == "alunos" || $_SESSION['cargo'] == "autodidatas"){
            
         } else{
-            echo "<section class='desempenho_section' ><h1 class='section-text'>Desempenho dos Estudantes</h1>
-            <p>Veja na tabela abaixo o desempenho dos estudantes da escola" . $dados_escola['Nome'] . "</p></section>
-            <div class='container'>
+        ?>
+        <section class='desempenho_section' ><h1 class='section-text'>Desempenho dos Estudantes</h1>
+        <p>Veja na tabela abaixo o desempenho dos estudantes da escola <?php echo $dados_escola['Nome'] ?></p></section>
+        <div class='container'>
             <table>
-            <thead>
-                <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Visualizar Desempenho</th>
-                </tr>
-            </thead>";
-
-            while ($dado = mysqli_fetch_assoc($resultado)){
-                echo "
+                <thead>
+                    <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Visualizar Desempenho</th>
+                    </tr>
+                </thead>
+                <?php
+                    while ($dado = mysqli_fetch_assoc($resultado)){
+                ?>
                 <tbody>
                     <tr>
-                    <td>" . $dado['ID'] . "</td>
-                    <td>" . $dado['Nome'] . "</td>
-                    <td>" . $dado['Email'] . "</td>
-                    <td><button type='button' data-bs-toggle='modal' data-bs-target='#desempenhoModal' class='desempenho_button'>Desempenho</button></td>
-                    </tr>
-                </tbody>
-                <div class='modal fade' id='desempenhoModal' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
-                    <div class='modal-dialog modal-dialog-centered modal-dialog-scrollable'>
-                        <div class='modal-content'>
-                            <div class='modal-header'>
-                                <h1 class='modal-title fs-5' id='exampleModalLabel' style='font-size: 26px;'>Desempenho de " . $dado['Nome'] . "</h1>
-                                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>X</button>
-                            </div>
-                            <div class='modal-body'>
-                                <p></p>
+                    <td><?php echo $dado['ID'] ?></td>
+                    <td><?php echo $dado['Nome'] ?></td>
+                    <td><?php echo $dado['Email'] ?></td>
+                    <td><button type='button' data-bs-toggle='modal' data-bs-target='#<?php echo $dado['ID'] ?>' class='desempenho_button'>Desempenho</button>
+                        <div class='modal fade' id='<?php echo $dado['ID'] ?>' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+                            <div class='modal-dialog modal-dialog-centered modal-dialog-scrollable'>
+                                <div class='modal-content'>
+                                    <div class='modal-header'>
+                                        <h1 class='modal-title fs-5' id='exampleModalLabel' style='font-size: 26px;'>Desempenho de <?php echo $dado['Nome'] ?></h1>
+                                        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>X</button>
+                                    </div>
+                                    <div class='modal-body'>
+                                        <?php
+                                            $id = $dado['ID'];
+                                            $sql_video = "SELECT * FROM desempenho WHERE ID = $id";
+                                            $sql_query_video = $conn->query($sql_video) or die("Falha na execução do código SQL: " . $conn->error);
+                                            if ($sql_query_video->num_rows == 0){
+                                                $insert = "INSERT INTO desempenho (ID, Video1) VALUES ('$id', 0)";
+                                                $conn->query($insert);
+                                            }
+                                            $resultado_video = mysqli_query($conn,$sql_video);
+                                            $dados_video = mysqli_fetch_assoc($resultado_video);
+
+                                            //Video1 - Piramides de Gizé
+                                            if ($dados_video['Video1'] == 1){
+                                                echo "Pirâmides de Gizé: ✅";
+                                            } else{
+                                                echo  "Pirâmides de Gizé: ❌";
+                                            }
+                                        ?>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>";
+                    </td>
+                    </tr>
+                </tbody>
+                <?php
+                    }
+                ?>
+            </table>
+        </div>
+        <?php
             }
-        echo "</table></div>";
-        }
         ?>
     </main>
 </body>
