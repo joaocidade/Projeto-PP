@@ -61,7 +61,7 @@ $atulizador = date('YmdHis').rand(0,99999999999);
           <!-- MediaPipe e utilitários -->
         <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script
+        <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
 
 </body>
   <script src="libras.js"></script>
