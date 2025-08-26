@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Leitor de Libras com MediaPipe</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      position: absolute;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+    }
+    video, canvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 640px;
+      height: 480px;
+    }
+  </style>
+
+  <!-- MediaPipe -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.min.js"></script>
+</head>
+
+<body>
+  <header>
+  
+  </header>
+
+  <video id="video" autoplay></video>
+  <canvas id="canvas" width="640" height="480"></canvas>
+
+  <script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    const TIPS = [8, 12, 16, 20];
+    const PIP = [6, 10, 14, 18];
+
+    const hands = new Hands({
+      locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`,
+    });
+
+    hands.setOptions({
+      maxNumHands: 1,
+      modelComplexity: 1,
+      minDetectionConfidence: 0.8,
+      minTrackingConfidence: 0.8,
+    });
+
+    hands.onResults((results) => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(results.image, 0, 0, canvas.width, canvas.height);
+
+      if (results.multiHandLandmarks) {
+        for (const landmarks of results.multiHandLandmarks) {
+          drawConnectors(ctx, landmarks, HAND_CONNECTIONS, { color: '#00FF00', lineWidth: 2 });
+          drawLandmarks(ctx, landmarks, { color: '#FF0000', lineWidth: 1 });
+
+          const gesto = detectarGesto(landmarks);
+          ctx.font = '30px Arial';
+          ctx.fillStyle = 'blue';
+          ctx.fillText(`Gesto: ${gesto}`, 10, 40);
+        }
+      }
+    });
+
+    const camera = new Camera(video, {
+      onFrame: async () => {
+        await hands.send({ image: video });
+      },
+      width: 640,
+      height: 480,
+    });
+
+    camera.start().catch(err => {
+      console.error("Erro ao acessar a câmera:", err);
+      alert("Não foi possível acessar a câmera. Verifique as permissões.");
+    });
+
+    function detectarGesto(landmarks) {
+      let dedosEstendidos = 0;
+      let articulacoesMedias = 0;
+
+      TIPS.forEach((tipIndex) => {
+        const tipY = landmarks[tipIndex].y;
+        const pipY = landmarks[tipIndex - 2].y;
+        if (tipY < pipY) dedosEstendidos++;
+      });
+
+      PIP.forEach((pipIndex) => {
+        const pipY = landmarks[pipIndex].y;
+        const pip2Y = landmarks[pipIndex - 2].y;
+        if (pipY < pip2Y) articulacoesMedias++;
+      });
+
+      const polegarX = landmarks[4].x;
+      const basePolegarX = landmarks[2].x;
+      const polegarEstendido = polegarX > basePolegarX;
+
+      const dedoMedioEstado = estadoDedoMedio(landmarks);
+
+      if (dedosEstendidos === 0 && !polegarEstendido) return "A";
+      if (dedosEstendidos === 4 && !polegarEstendido) return "B";
+      if (articulacoesMedias === 4 && polegarEstendido) return "C";
+      if (dedoMedioEstado === "meio fechado" && dedosEstendidos === 0 && polegarEstendido) {
+        return "Gesto com dedo médio meio fechado";
+      }
+
+      return "Gesto indefinido";
+    }
+
+    function estadoDedoMedio(landmarks) {
+      const mcp = landmarks[9].y;
+      const pip = landmarks[10].y;
+      const tip = landmarks[12].y;
+
+      if (tip > pip && pip < mcp) return "meio fechado";
+      if (tip < pip && pip < mcp) return "esticado";
+      return "fechado";
+    }
+  </script>
+</body>
+</html>

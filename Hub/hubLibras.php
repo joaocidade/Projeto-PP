@@ -55,15 +55,13 @@ $atulizador = date('YmdHis').rand(0,99999999999);
         <h1>Leitor de Libras</h1>
     </header>
 
-        <video id="video" autoplay></video>
-        <canvas id="canvas"></canvas>
-
+        <a href="Libras.html">Aperte aqui para ir para o leitor</a>
           <!-- MediaPipe e utilitários -->
         <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
 
 </body>
-  <script src="libras.js"></script>
+
   <script src="menu.js"></script>
 </html>
