@@ -54,8 +54,14 @@ $atulizador = date('YmdHis').rand(0,99999999999);
     <header>
         <h1>Leitor de Libras</h1>
     </header>
-
-        <a href="Libras.html">Aperte aqui para ir para o leitor</a>
+    <div id="apresentacoes">
+      <div class="apresentacao"> 
+        <h2>Sistema de Líbras</h2>
+        <p>Uma funcionalidade focada na utilização de líbras para comunicação. Clique no botão abaixo para prosseguir.</p>
+        <button><a href="../Hub/Libras.html" style="text-decoration:none;">Sistema de líbras</a></button>
+        <div id="resultado"></div>
+      </div>
+        
           <!-- MediaPipe e utilitários -->
         <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.min.js"></script>

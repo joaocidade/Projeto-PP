@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Leitor de Libras com MediaPipe</title>
-  <style>
+  <style> 
     body {
       margin: 0;
       overflow: hidden;
       font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 680px;
     }
     header {
-      position: absolute;
       z-index: 2;
       background: rgba(255, 255, 255, 0.8);
       padding: 10px;
+      
     }
     video, canvas {
       position: absolute;
-      left: 0;
-      top: 0;
       width: 640px;
       height: 480px;
     }
@@ -32,11 +34,11 @@
 
 <body>
   <header>
-  
   </header>
-
+<div class="container">
   <video id="video" autoplay></video>
   <canvas id="canvas" width="640" height="480"></canvas>
+</div>
 
   <script>
     const video = document.getElementById('video');
