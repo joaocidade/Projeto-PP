@@ -57,7 +57,7 @@ $atulizador = date('YmdHis').rand(0,99999999999);
     <div id="apresentacoes">
       <div class="apresentacao"> 
         <h2>Sistema de Líbras</h2>
-        <p>Uma funcionalidade focada na utilização de líbras para comunicação. Clique no botão abaixo para prosseguir.</p>
+        <p style="font-size: 20px;">Uma funcionalidade focada na utilização de líbras para comunicação. Clique no botão abaixo para prosseguir.</p>
         <button><a href="../Hub/Libras.html" style="text-decoration:none;">Sistema de líbras</a></button>
         <div id="resultado"></div>
       </div>
