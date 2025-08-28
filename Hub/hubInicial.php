@@ -77,9 +77,58 @@ $dados_escola = mysqli_fetch_assoc($resultado_escola);
 
                                             //Video1 - Piramides de Gizé
                                             if ($dados_video['Video1'] == 1){
-                                                echo "Pirâmides de Gizé: ✅";
+                                                echo "Pirâmides de Gizé: ✅<br>";
                                             } else{
-                                                echo  "Pirâmides de Gizé: ❌";
+                                                echo "Pirâmides de Gizé: ❌<br>";
+                                            }
+
+                                            //Video2 - Uma Carta da Trincheira
+                                            if ($dados_video['Video2'] == 1){
+                                                echo "Uma Carta da Trincheira: ✅<br>";
+                                            } else{
+                                                echo "Uma Carta da Trincheira: ❌<br>";
+                                            }
+
+                                            //Video3 - Battle Road
+                                            if ($dados_video['Video3'] == 1){
+                                                echo "Battle Road: ✅<br>";
+                                            } else{
+                                                echo "Battle Road: ❌<br>";
+                                            }
+
+                                            //Video4 - Batalha de Waterloo
+                                            if ($dados_video['Video4'] == 1){
+                                                echo "Batalha de Waterloo: ✅<br>";
+                                            } else{
+                                                echo "Batalha de Waterloo: ❌<br>";
+                                            }
+
+                                            //Video5 - História da Aviação
+                                            if ($dados_video['Video5'] == 1){
+                                                echo "História da Aviação: ✅<br>";
+                                            } else{
+                                                echo "História da Aviação: ❌<br>";
+                                            }
+
+                                            //Video6 - Evento Tunguska
+                                            if ($dados_video['Video6'] == 1){
+                                                echo "Evento Tunguska: ✅<br>";
+                                            } else{
+                                                echo "Evento Tunguska: ❌<br>";
+                                            }
+
+                                            //Video7 - Laboratório de Radioquímica
+                                            if ($dados_video['Video7'] == 1){
+                                                echo "Laboratório de Radioquímica: ✅<br>";
+                                            } else{
+                                                echo "Laboratório de Radioquímica: ❌<br>";
+                                            }
+
+                                            //Video8 - Parque Nacional Subaquático
+                                            if ($dados_video['Video8'] == 1){
+                                                echo "Parque Nacional Subaquático: ✅<br>";
+                                            } else{
+                                                echo "Parque Nacional Subaquático: ❌<br>";
                                             }
                                         ?>
                                     </div>

@@ -1,3 +1,235 @@
 Baixar o YT-DLP:  https://github.com/yt-dlp/yt-dlp/releases/latest
 yt-dlp.exe -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" -o "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=RNbNXUh3PH0"
 
+//DATABASE:
+
+
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 28/08/2025 às 23:08
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.0.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Banco de dados: `bancohub`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `alunos`
+--
+
+CREATE TABLE `alunos` (
+  `ID` int(11) NOT NULL,
+  `Nome` varchar(100) DEFAULT NULL,
+  `Email` varchar(255) DEFAULT NULL,
+  `Senha` varchar(100) DEFAULT NULL,
+  `EscolaID` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Despejando dados para a tabela `alunos`
+--
+
+INSERT INTO `alunos` (`ID`, `Nome`, `Email`, `Senha`, `EscolaID`) VALUES
+(1, 'Antônio Azevedo Gomes', 'AntonioAzevedoGomes@teleworm.us', '1234', 1),
+(2, 'Kauan Oliveira Lima', 'KauanOliveiraLima@dayrep.com', '1234', 2),
+(3, 'Larissa Melo Correia', 'LarissaMeloCorreia@armyspy.com', '1234', 3),
+(21, 'Felipe da Silva Rieger', 'lieproe@gmailasd', 'bata2', NULL),
+(22, 'Joaço', 'tatirieger@gmail.com', 'jaosdji123@1', NULL),
+(24, 'Felipe da Silva Rieger', '123', '$2y$10$3EiVp/gHEJ8wx/MckTKtk.gsITpUaLvhv6nJfeWNeYpLN3owiG7UG', 2),
+(26, 'Felipe Aluno', 'felipe@aluno', '$2y$10$PGreyHR47zrumO99ddfNbev037RGqPQuwtTzerp2UBh7vA14Y5vFa', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `autodidatas`
+--
+
+CREATE TABLE `autodidatas` (
+  `ID` int(100) NOT NULL,
+  `Nome` varchar(100) NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `Senha` varchar(100) NOT NULL,
+  `EscolaID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `autodidatas`
+--
+
+INSERT INTO `autodidatas` (`ID`, `Nome`, `Email`, `Senha`, `EscolaID`) VALUES
+(1, 'felipe@autodidata', 'felipe@autodidata', '$2y$10$Osdh5GJBlfIjGXq48jR1dufViuiwN9WBqCwwxhLy5QR7s0ccJqA32', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `desempenho`
+--
+
+CREATE TABLE `desempenho` (
+  `ID` int(100) NOT NULL,
+  `Video1` tinyint(1) DEFAULT 0,
+  `Video2` tinyint(1) DEFAULT 0,
+  `Video3` tinyint(1) NOT NULL DEFAULT 0,
+  `Video4` tinyint(1) NOT NULL DEFAULT 0,
+  `Video5` int(1) NOT NULL DEFAULT 0,
+  `Video6` int(1) NOT NULL DEFAULT 0,
+  `Video7` tinyint(1) NOT NULL DEFAULT 0,
+  `Video8` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `desempenho`
+--
+
+INSERT INTO `desempenho` (`ID`, `Video1`, `Video2`, `Video3`, `Video4`, `Video5`, `Video6`, `Video7`, `Video8`) VALUES
+(2, 0, 0, 0, 0, 0, 0, 0, 0),
+(24, 0, 0, 0, 0, 0, 0, 0, 0),
+(26, 1, 0, 0, 1, 0, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `escolas`
+--
+
+CREATE TABLE `escolas` (
+  `EscolaID` int(11) NOT NULL,
+  `Nome` varchar(100) DEFAULT NULL,
+  `Email` varchar(255) DEFAULT NULL,
+  `Senha` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `escolas`
+--
+
+INSERT INTO `escolas` (`EscolaID`, `Nome`, `Email`, `Senha`) VALUES
+(1, 'Senac RS', 'senacrs@senacrs.edu.br', '1234'),
+(2, 'Marista', 'marista@gmail.com', '1234'),
+(3, 'IFRS', 'ifrs@gmail.com', '1234');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `professores`
+--
+
+CREATE TABLE `professores` (
+  `ID` int(11) NOT NULL,
+  `Nome` varchar(100) DEFAULT NULL,
+  `Email` varchar(255) DEFAULT NULL,
+  `Senha` varchar(100) DEFAULT NULL,
+  `EscolaID` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Despejando dados para a tabela `professores`
+--
+
+INSERT INTO `professores` (`ID`, `Nome`, `Email`, `Senha`, `EscolaID`) VALUES
+(1, 'Sandro', 'sangro@teleworm.us', '1234', 1),
+(2, 'Adalberto', 'adalberto@dayrep.com', '1234', 2),
+(3, 'Déssio', 'dessio@armyspy.com', '1234', 3),
+(23, 'Felipe da Silva Rieger2', '12', '$2y$10$p8RBVrT5bOcHbzi5pC0W6OgD15U9yojKUQfBfVfYJ41', 2),
+(25, 'felipe@professor', 'felipe@professor', '$2y$10$BB/9kux3IuJJSYtPRmJYyuGL3lGDnJ7lWvGnWbYZcZM72Q4PK/Kli', 2);
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices de tabela `alunos`
+--
+ALTER TABLE `alunos`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `FK_alunos_escola` (`EscolaID`);
+
+--
+-- Índices de tabela `autodidatas`
+--
+ALTER TABLE `autodidatas`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Índices de tabela `desempenho`
+--
+ALTER TABLE `desempenho`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Índices de tabela `escolas`
+--
+ALTER TABLE `escolas`
+  ADD PRIMARY KEY (`EscolaID`);
+
+--
+-- Índices de tabela `professores`
+--
+ALTER TABLE `professores`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `FK_professores_escola` (`EscolaID`);
+
+--
+-- AUTO_INCREMENT para tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `alunos`
+--
+ALTER TABLE `alunos`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT de tabela `autodidatas`
+--
+ALTER TABLE `autodidatas`
+  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `escolas`
+--
+ALTER TABLE `escolas`
+  MODIFY `EscolaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de tabela `professores`
+--
+ALTER TABLE `professores`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- Restrições para tabelas despejadas
+--
+
+--
+-- Restrições para tabelas `alunos`
+--
+ALTER TABLE `alunos`
+  ADD CONSTRAINT `FK_alunos_escola` FOREIGN KEY (`EscolaID`) REFERENCES `escolas` (`EscolaID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Restrições para tabelas `professores`
+--
+ALTER TABLE `professores`
+  ADD CONSTRAINT `FK_professores_escola` FOREIGN KEY (`EscolaID`) REFERENCES `escolas` (`EscolaID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

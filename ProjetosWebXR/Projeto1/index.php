@@ -9,6 +9,22 @@ $sql = "SELECT * FROM alunos";
 $resultado = mysqli_query($conn,$sql);
 
 $atulizador = date('YmdHis').rand(0,99999999999);
+
+if($_SESSION['cargo'] == "professores" || $_SESSION['cargo'] == "autodidatas"){     
+} else{
+  $id = $_SESSION['id'];
+  $sql_video = "SELECT * FROM desempenho WHERE ID = $id";
+  $sql_query_video = $conn->query($sql_video) or die("Falha na execução do código SQL: " . $conn->error);
+  if ($sql_query_video->num_rows == 0){
+    $insert = "INSERT INTO desempenho (ID, Video1) VALUES ('$id', 1)";
+    $conn->query($insert);
+  } else{
+    $update = "UPDATE desempenho SET Video1 = 1 WHERE ID = '$id'";
+    $conn->query($update);
+  }
+  $resultado_video = mysqli_query($conn,$sql_video);
+  $dados_video = mysqli_fetch_assoc($resultado_video);
+}
 ?>
 
 <!DOCTYPE html>
