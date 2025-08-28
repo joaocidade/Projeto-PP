@@ -22,65 +22,81 @@ $resultado = mysqli_query($conn,$sql);
           <h1 class='classes'>↳ Vídeos de história</h1>
         <div class="caixas">
             <div class="caixa">
-                <a href="../ProjetosWebXR/index.php" target="_blank"><img id="img1" src="../Imagens/All_Gizah_Pyramids.jpg" alt="0"></a>
+                <a href="../ProjetosWebXR/Projeto1/index.php" target="_blank"><img id="img1" src="../Imagens/All_Gizah_Pyramids.jpg" alt="0"></a>
             </div>
             <div class="caixa">
-                <a href="https://youtu.be/0khdjCUIR1g?si=Wh_W06mwF5FVimOU" target="_blank"><img src="../Imagens/economyegypt.png" alt="0"></a>
+                <a href="../ProjetosWebXR/Projeto2/index.php" target="_blank"><img src="../Imagens/trinchesletter.png" alt="0"></a>
             </div>
             <div class="caixa">
-                <a href="https://youtu.be/_JttvM52Rno?si=3jQInBMRifv5VQB9" target="_blank"><img src="../Imagens/exploringegypt.png" alt="0"></a>
+                <a href="../ProjetosWebXR/Projeto3/index.php" target="_blank"><img src="../Imagens/battleroad.png" alt="0"></a>
             </div>
         </div>
     </section>
     <section id="videos2">
         <div class="caixas">
             <div class="caixa">
-                <a href="https://youtu.be/m7h4XuvLrmg?si=Qpp-jgdLglSJ4Hmk" target="_blank"><img id="img1" src="../Imagens/trinchesletter.png" alt="0"></a>
+                <a href="../ProjetosWebXR/Projeto4/index.php" target="_blank"><img id="img1" src="../Imagens/battlewaterloo.png" alt="0"></a>
             </div>
             <div class="caixa">
-                <a href="https://youtu.be/1TqvPNh18ms?si=-IHD_XkcB5b5tYp6" target="_blank"><img src="../Imagens/battleroad.png" alt="0"></a>
+                <a href="../ProjetosWebXR/Projeto5/index.php" target="_blank"><img src="../Imagens/historyofflight.png" alt="0"></a>
             </div>
             <div class="caixa">
-                <a href="https://youtu.be/Bj1aVW3LuVo?si=EeEY2PA939ZrQW7i" target="_blank"><img src="../Imagens/battlewaterloo.png" alt="0"></a>
+                <a href="" target="_blank"><img src="" alt="0"></a>
             </div>
         </div>
     </section>
     <section id="videos3">
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        <h1 class='classes'>Ciências</h1>
+>>>>>>> Stashed changes
+=======
+        <h1 class='classes'>Ciências</h1>
+>>>>>>> Stashed changes
         <div class="caixas">
             <div class="caixa">
-                <a href="https://youtu.be/G_5r6HCW_DE?si=INJl0WiSZSCQ5hTa" target="_blank"><img src="../Imagens/texashistory.png" alt=""></a>
+                <a href="" target="_blank"><img src="../Imagens/asteroid.png" alt=""></a>
             </div>
             <div class="caixa">
-                <a href="https://youtu.be/JKm3uzL_A4c?si=XdMOqW4df6oR5rLU" target="_blank"><img src="../Imagens/asteroid.png" alt=""></a>
+                <a href="" target="_blank"><img src="../Imagens/nationalpark.png" alt=""></a>
             </div>
             <div class="caixa">
-                <a href="https://youtu.be/fojmorJISL0?si=n-oRkYlmKTm3C0EF" target="_blank"><img src="../Imagens/historyofflight.png" alt=""></a>
+                <a href="" target="_blank"><img src="../Imagens/interbody.png" alt=""></a>
             </div>
         </div>
     </section>
     <section id="videos4">
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <h1 class='classes'>↳ Vídeos de biologia</h1>
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
         <div class="caixas">
             <div class="caixa">
-                <a href="https://youtu.be/v64KOxKVLVg?si=foPVGI2QYP-RJCpb" target="_blank"><img src="../Imagens/nationalpark.png" alt=""></a>
+                <a href="" target="_blank"><img src="../Imagens/HumanDigestivesys.png" alt=""></a>
             </div>
             <div class="caixa">
-                <a href="https://youtu.be/aogLFedcnTI?si=S2EUr3-kqOXHN_au" target="_blank"><img src="../Imagens/interbody.png" alt=""></a>
+                <a href="" target="_blank"><img src="../Imagens/wthappinsiyrbody.png" alt=""></a>
             </div>
             <div class="caixa">
-                <a href="https://youtu.be/r8-6Z1Efgzg?si=nrXpv-HAm4jgIbPF" target="_blank"><img src="../Imagens/" alt=""></a>
+                <a href="" target="_blank"><img src="../Imagens/cellexploringvideo.png" alt=""></a>
             </div>
         </div>
     </section>
     <section id="videos5">
         <div class="caixas">
             <div class="caixa">
-                <a href="https://youtu.be/kw9EJbezlK4?si=gPz01_TdLRdqy76v" target="_blank"><img src="../Imagens/wthappinsiyrbody.png" alt=""></a>
+                <a href="" target="_blank"><img src="../Imagens/departmentofchemistryandbioscience.png" alt=""></a>
             </div>
             <div class="caixa">
-                <a href="https://youtu.be/rmgf0VDDlH8?si=Ba2frVj7Xo0X7yte" target="_blank"><img src="../Imagens/" alt=""></a>
+                <a href="" target="_blank"><img src="../Imagens/radiochemistry.png" alt=""></a>
             </div>
             <div class="caixa">
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 <a href="https://www.youtube.com/watch?v=rmgf0VDDlH8&ab_channel=PlantEnergyBiology" target="_blank"><img src="../Imagens/cellexploringvideo.png" alt=""></a>
             </div>
         </div>
@@ -138,6 +154,12 @@ $resultado = mysqli_query($conn,$sql);
             </div>
             <div class="caixa">
                 <a href="" target="_blank"><img src="../Imagens/" alt=""></a>
+=======
+                <a href="" target="_blank"><img src="../Imagens/chemistrylab.png" alt=""></a>
+>>>>>>> Stashed changes
+=======
+                <a href="" target="_blank"><img src="../Imagens/chemistrylab.png" alt=""></a>
+>>>>>>> Stashed changes
             </div>
         </div>
     </section>
