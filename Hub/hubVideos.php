@@ -17,7 +17,7 @@ $resultado = mysqli_query($conn,$sql);
     <header>
         <h1>Ambientes de Aprendizado 360°</h1>
     </header>
-    <main id="mainVideos">
+   <main id="mainVideos">
     <section id="videos">
         <h1 class='classes'>História</h1>
         <div class="caixas">
@@ -122,6 +122,7 @@ $resultado = mysqli_query($conn,$sql);
             <div class="caixa">
                 <a href="https://www.youtube.com/watch?v=xsgS3yOBveY&t=2s&ab_channel=UniversityofBath" target="_blank"><img src="../Imagens/tourchemistrylab.png" alt=""></a>
             </div>
+            
             <div class="caixa">
                 <a href="https://www.youtube.com/watch?v=FzGZnZBs_dg&ab_channel=TheUniversityofTulsa" target="_blank"><img src="../Imagens/organicchemistry.png" alt=""></a>
             </div>
@@ -134,16 +135,17 @@ $resultado = mysqli_query($conn,$sql);
         <h1 class='classes'>↳ Vídeos de artes</h1>
         <div class="caixas">
             <div class="caixa">
-                <a href="https://www.youtube.com/watch?v=V3_XQH0Dy6I&t=20s&ab_channel=6abcPhiladelphia" target="_blank"><img src="../Imagens/" alt=""></a>
+                <a href="https://www.youtube.com/watch?v=V3_XQH0Dy6I&t=20s&ab_channel=6abcPhiladelphi" target="_blank"> <img src="../Imagens/" alt=""></a>
             </div>
             <div class="caixa">
-                <a href="https://www.youtube.com/watch?v=U4BoLPZ4qbI&ab_channel=JamesMadisonUniversity" target="_blank"><img src="../Imagens/jmusschoolofart.png" alt=""></a>
+                <a href="https://www.youtube.com/watch?v=U4BoLPZ4qbI&ab_channel=JamesMadisonUniversity" target="_blank"> <img src="../Imagens/jmusschoolofart.png" alt=""></a>
             </div>
             <div class="caixa">
-                <a href="https://www.youtube.com/watch?v=VB_2m2bwrik&t=15s&ab_channel=BryneStothard" target="_blank"><img src="../Imagens/vrartclass.png" alt=""></a>
+                <a href="https://www.youtube.com/watch?v=VB_2m2bwrik&t=15s&ab_channel=BryneStothard" target="_blank"> <img src="../Imagens/vrartclass.png" alt=""></a>
             </div>
         </div>
     </section>
+
     <section id="videos10">
         <h1 class='classes'>↳ Vídeos de artes</h1>
         <div class="caixas">
