@@ -19,7 +19,7 @@ $resultado = mysqli_query($conn,$sql);
     </header>
    <main id="mainVideos">
     <section id="videos">
-        <h1 class='classes'>História</h1>
+          <h1 class='classes'>↳ Vídeos de história</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="../ProjetosWebXR/index.php" target="_blank"><img id="img1" src="../Imagens/All_Gizah_Pyramids.jpg" alt="0"></a>
@@ -33,7 +33,6 @@ $resultado = mysqli_query($conn,$sql);
         </div>
     </section>
     <section id="videos2">
-        <h1 class='classes'>↳ Vídeos de história</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="https://youtu.be/m7h4XuvLrmg?si=Qpp-jgdLglSJ4Hmk" target="_blank"><img id="img1" src="../Imagens/trinchesletter.png" alt="0"></a>
@@ -47,7 +46,6 @@ $resultado = mysqli_query($conn,$sql);
         </div>
     </section>
     <section id="videos3">
-        <h1 class='classes'>↳ Vídeos de história</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="https://youtu.be/G_5r6HCW_DE?si=INJl0WiSZSCQ5hTa" target="_blank"><img src="../Imagens/texashistory.png" alt=""></a>
@@ -61,7 +59,7 @@ $resultado = mysqli_query($conn,$sql);
         </div>
     </section>
     <section id="videos4">
-        <h1 class='classes'>↳ Vídeos de história</h1>
+        <h1 class='classes'>↳ Vídeos de biologia</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="https://youtu.be/v64KOxKVLVg?si=foPVGI2QYP-RJCpb" target="_blank"><img src="../Imagens/nationalpark.png" alt=""></a>
@@ -75,7 +73,6 @@ $resultado = mysqli_query($conn,$sql);
         </div>
     </section>
     <section id="videos5">
-        <h1 class='classes'>↳ Vídeos de história</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="https://youtu.be/kw9EJbezlK4?si=gPz01_TdLRdqy76v" target="_blank"><img src="../Imagens/wthappinsiyrbody.png" alt=""></a>
@@ -85,20 +82,6 @@ $resultado = mysqli_query($conn,$sql);
             </div>
             <div class="caixa">
                 <a href="https://www.youtube.com/watch?v=rmgf0VDDlH8&ab_channel=PlantEnergyBiology" target="_blank"><img src="../Imagens/cellexploringvideo.png" alt=""></a>
-            </div>
-        </div>
-    </section>
-    <section id="videos6">
-        <h1 class='classes'>↳ Vídeos de história</h1>
-        <div class="caixas">
-            <div class="caixa">
-                <a href="" target="_blank"><img src="../Imagens/" alt=""></a>
-            </div>
-            <div class="caixa">
-                <a href="" target="_blank"><img src="../Imagens/" alt=""></a>
-            </div>
-            <div class="caixa">
-                <a href="" target="_blank"><img src="../Imagens/" alt=""></a>
             </div>
         </div>
     </section>
@@ -112,12 +95,11 @@ $resultado = mysqli_query($conn,$sql);
                 <a href="https://www.youtube.com/watch?v=z9Jm5zR3iSk&ab_channel=UniversityofHelsinki" target="_blank"><img src="../Imagens/radiochemistry.png" alt=""></a>
             </div>
             <div class="caixa">
-                <a href="https://www.youtube.com/watch?v=RNbNXUh3PH0&ab_channel=UBCOkanaganARCampusTOUR" target="_blank"><img src="../Imagens/" alt=""></a>
+                <a href="https://www.youtube.com/watch?v=RNbNXUh3PH0&ab_channel=UBCOkanaganARCampusTOUR" target="_blank"><img src="../Imagens/chemistry360video.png" alt=""></a>
             </div>
         </div>
     </section>
     <section id="videos8">
-        <h1 class='classes'>↳ Vídeos de química</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="https://www.youtube.com/watch?v=xsgS3yOBveY&t=2s&ab_channel=UniversityofBath" target="_blank"><img src="../Imagens/tourchemistrylab.png" alt=""></a>
@@ -147,7 +129,6 @@ $resultado = mysqli_query($conn,$sql);
     </section>
 
     <section id="videos10">
-        <h1 class='classes'>↳ Vídeos de artes</h1>
         <div class="caixas">
             <div class="caixa">
                 <a href="" target="_blank"><img src="../Imagens/" alt=""></a>
